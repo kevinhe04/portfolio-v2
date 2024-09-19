@@ -137,9 +137,16 @@ export default function Home() {
             Feel free to reach out to me through the following platforms.
           </p>
           <div className="flex justify-center gap-4">
-            <SocialIcon url="https://www.instagram.com/he_is_kevin_/" />
-            <SocialIcon url="https://www.linkedin.com/in/kevinhe04/" />
-            <SocialIcon url="mailto:kvn.04he@gmail.com" />
+            <SocialIcon
+              target="_blank"
+              url="https://www.linkedin.com/in/kevinhe04/"
+            />
+            <SocialIcon target="_blank" url="https://github.com/kevinhe04" />
+            <SocialIcon target="_blank" url="mailto:kvn.04he@gmail.com" />
+            <SocialIcon
+              target="_blank"
+              url="https://www.instagram.com/he_is_kevin_/"
+            />
           </div>
         </div>
       </section>
@@ -202,10 +209,8 @@ function ProjectCard({ title, description, imageUrl, projectLink, skills }) {
         />
         <div className="p-6 flex flex-col justify-between md:w-2/3">
           <div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              {title}
-            </h3>
-            <p className="text-gray-600 mb-4">{description}</p>
+            <h3 className="text-xl font-semibold text-black mb-2">{title}</h3>
+            <p className="text-black mb-4">{description}</p>
           </div>
           <div className="flex flex-wrap gap-2 pointer-events-none">
             {skills.map((skill) => (

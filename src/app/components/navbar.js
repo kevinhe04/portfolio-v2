@@ -9,9 +9,12 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-full">
             <ul className="hidden md:flex gap-x-6 text-white absolute right-10 p-2 rounded-xl border-white border-2 hover:text-black hover:bg-white transition-all duration-500">
               <li>
-                <Link href="/about">
+                <a
+                  href="https://drive.google.com/file/d/1JWfl8-4oR-525v0Jn7hS2tYlR8kE_zR9/view?usp=sharing"
+                  target="_blank"
+                >
                   <p>Resume</p>
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
