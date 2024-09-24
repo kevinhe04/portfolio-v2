@@ -68,6 +68,15 @@ export default function MenuPortfolio() {
               Contact
             </a>
           </ListItemButton>
+          <ListItemButton>
+            <a
+              href="https://drive.google.com/file/d/1JWfl8-4oR-525v0Jn7hS2tYlR8kE_zR9/view?usp=sharing"
+              target="_blank"
+              className="font-petrona text-lg"
+            >
+              Resume
+            </a>
+          </ListItemButton>
         </List>
       </Drawer>
     </div>
