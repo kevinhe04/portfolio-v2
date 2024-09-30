@@ -93,16 +93,17 @@ export default function Home() {
               ]}
             />
             <ProjectCard
-              title="Flutter Mobile Application - September 2024"
-              description="Flutter mobile application to assist users in selecting restaurants in Montreal. Implemented a custom API using Flask, deployed on Render, which incorporates web scraping via BeautifulSoup to gather up-to-date restaurant information. Stored API data and user preferences in a PostgreSQL database for efficient retrieval and scalability."
+              title="React Native Mobile Application - September 2024"
+              description="React Native mobile application to assist users in selecting restaurants in Montreal. Implemented a custom API using Flask, deployed on Render, which incorporates web scraping via BeautifulSoup to gather up-to-date restaurant information. Currently working on storing fetched restaurants information in a database for efficient retrieval and scalability."
               imageUrl="images/flutter.png"
-              projectLink=""
+              projectLink="https://drive.google.com/file/d/1ooS0tPZ4b8Ci149ko9YQiK1LiPsQkNSv/view?usp=sharing"
               skills={[
-                "Dart",
-                "Flutter",
+                "React Native",
+                "RESTful API",
                 "postgreSQL",
                 "BeautifulSoup (Web Scraping)",
                 "Python",
+                "Render",
               ]}
             />
             <ProjectCard
