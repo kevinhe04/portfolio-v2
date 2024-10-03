@@ -96,7 +96,7 @@ export default function Home() {
               title="React Native Mobile Application - September 2024"
               description="React Native mobile application to assist users in selecting restaurants in Montreal. Implemented a custom API using Flask, deployed on Render, which incorporates web scraping via BeautifulSoup to gather up-to-date restaurant information. Currently working on storing fetched restaurants information in a database for efficient retrieval and scalability."
               imageUrl="images/flutter.png"
-              projectLink="https://drive.google.com/file/d/1ooS0tPZ4b8Ci149ko9YQiK1LiPsQkNSv/view?usp=sharing"
+              projectLink="https://drive.google.com/file/d/17Kctx144gQB4A_c66bR2cjPaAX_bRR6D/view?usp=sharing"
               skills={[
                 "React Native",
                 "RESTful API",
@@ -104,6 +104,7 @@ export default function Home() {
                 "BeautifulSoup (Web Scraping)",
                 "Python",
                 "Render",
+                "Flask",
               ]}
             />
             <ProjectCard
