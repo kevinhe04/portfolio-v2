@@ -94,7 +94,7 @@ export default function Home() {
             />
             <ProjectCard
               title="React Native Mobile Application - September 2024"
-              description="React Native mobile application to assist users in selecting restaurants in Montreal. Implemented a custom API using Flask, deployed on Render, which incorporates web scraping via BeautifulSoup to gather up-to-date restaurant information. Currently working on scraping images and addresses of restaurants."
+              description="React Native mobile application to assist users in selecting restaurants in Montreal. Implemented a custom API using Flask, deployed on Render, which incorporates web scraping via BeautifulSoup to gather up-to-date restaurant information. Data sourced from RestoMontreal"
               imageUrl="images/flutter.png"
               projectLink="https://drive.google.com/file/d/17Kctx144gQB4A_c66bR2cjPaAX_bRR6D/view?usp=sharing"
               skills={[
