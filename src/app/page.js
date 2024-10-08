@@ -128,6 +128,13 @@ export default function Home() {
               projectLink="https://kevinhe.vercel.app/"
               skills={["React.js", "JavaScript", "Node.Js"]}
             />
+            <ProjectCard
+              title="Ukulele DIY - May 2023"
+              description="My first ever coding project, made in HTML/CSS/JavaScript. Website on how to make your own cardboard ukulele. Don't be too harsh on my first ever project please..."
+              imageUrl="images/music.png"
+              projectLink="https://kevinhe04.github.io/Arts-and-Science-IA-Project/"
+              skills={["HTML", "CSS", "JavaScript"]}
+            />
           </div>
         </div>
       </section>
