@@ -94,7 +94,7 @@ export default function Home() {
             />
             <ProjectCard
               title="React Native Mobile Application - September 2024"
-              description="React Native mobile application to assist users in selecting restaurants in Montreal. Implemented a custom API using Flask, deployed on Render, which incorporates web scraping via BeautifulSoup to gather up-to-date restaurant information. Data sourced from RestoMontreal."
+              description="Developed a React Native mobile application to help users select restaurants in Montreal. Scraped data with Flask and BeautifulSoup (Python) from RestoMontreal. Built a Node.js RESTful API, deployed on AWS Lambda and API Gateway, with data stored in a PostgreSQL database deployed on Render for efficient retrieval and scalability. Data sourced from RestoMontreal."
               imageUrl="images/flutter.png"
               projectLink="https://drive.google.com/file/d/17Kctx144gQB4A_c66bR2cjPaAX_bRR6D/view?usp=sharing"
               skills={[
@@ -130,7 +130,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Ukulele DIY - May 2023"
-              description="My first ever coding project, made in HTML/CSS/JavaScript. Website on how to make your own cardboard ukulele. Don't be too harsh on my first ever project please..."
+              description="My first ever coding project, made in HTML/CSS/JavaScript. Website on how to make your own cardboard ukulele. Design was quite atrocious..."
               imageUrl="images/music.png"
               projectLink="https://kevinhe04.github.io/Arts-and-Science-IA-Project/"
               skills={["HTML", "CSS", "JavaScript"]}
