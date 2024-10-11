@@ -78,6 +78,21 @@ export default function Home() {
           </h2>
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
             <ProjectCard
+              title="Picky Eats - Ongoing"
+              description="Developed a React Native mobile application to help users select restaurants in Montreal. Scraped data with Flask and BeautifulSoup (Python) from RestoMontreal. Built a Node.js RESTful API, deployed on AWS Lambda and API Gateway, with data stored in a PostgreSQL database deployed on Render for efficient retrieval and scalability. Data sourced from RestoMontreal."
+              imageUrl="images/flutter.png"
+              projectLink="https://drive.google.com/file/d/17Kctx144gQB4A_c66bR2cjPaAX_bRR6D/view?usp=sharing"
+              skills={[
+                "React Native",
+                "RESTful API",
+                "postgreSQL",
+                "BeautifulSoup (Web Scraping)",
+                "Python",
+                "Render",
+                "Flask",
+              ]}
+            />
+            <ProjectCard
               title="Chéri E-Commerce Website - September 2024"
               description="Full-stack E-Commerce website developed using Next.js, Supabase authentication and database management systems, Stripe for payments, and the use-shopping-cart library for cart functionality."
               imageUrl="images/cheri.png"
@@ -90,21 +105,6 @@ export default function Home() {
                 "use-shopping-cart",
                 "postgreSQL",
                 "React.Js",
-              ]}
-            />
-            <ProjectCard
-              title="React Native Mobile Application - September 2024"
-              description="Developed a React Native mobile application to help users select restaurants in Montreal. Scraped data with Flask and BeautifulSoup (Python) from RestoMontreal. Built a Node.js RESTful API, deployed on AWS Lambda and API Gateway, with data stored in a PostgreSQL database deployed on Render for efficient retrieval and scalability. Data sourced from RestoMontreal."
-              imageUrl="images/flutter.png"
-              projectLink="https://drive.google.com/file/d/17Kctx144gQB4A_c66bR2cjPaAX_bRR6D/view?usp=sharing"
-              skills={[
-                "React Native",
-                "RESTful API",
-                "postgreSQL",
-                "BeautifulSoup (Web Scraping)",
-                "Python",
-                "Render",
-                "Flask",
               ]}
             />
             <ProjectCard
