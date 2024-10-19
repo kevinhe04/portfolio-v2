@@ -79,9 +79,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
             <ProjectCard
               title="Picky Eats - Ongoing"
-              description="Developed a React Native mobile application to help users select restaurants in Montreal. Scraped data with Flask and BeautifulSoup (Python) from RestoMontreal. Built a Node.js RESTful API, deployed on AWS Lambda and API Gateway, with data stored in a PostgreSQL database deployed on Render for efficient retrieval and scalability. Data sourced from RestoMontreal."
-              imageUrl="images/flutter.png"
-              projectLink="https://drive.google.com/file/d/17Kctx144gQB4A_c66bR2cjPaAX_bRR6D/view?usp=sharing"
+              description="Developed a React Native Mobile Application and a Web Application that recommends restaurants in Montreal based on user-specified choices. Built a waitlist of 300+ users anticipating the mobile app launch. Launched a successful marketing campaign on TikTok, with the first video reaching over 180,000 views and 20,000 likes. Web application currently live; iOS and Google Play versions in final stages of development."
+              imageUrl="images/pickyeats.jpg"
+              projectLink="http://www.pickyeats.tech"
               skills={[
                 "React Native",
                 "RESTful API",
@@ -90,6 +90,10 @@ export default function Home() {
                 "Python",
                 "Render",
                 "Flask",
+                "AWS Lambda",
+                "AWS API Gateway",
+                "Node.js",
+                "Google Apps Script",
               ]}
             />
             <ProjectCard
