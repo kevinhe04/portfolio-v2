@@ -29,6 +29,32 @@ export default function Home() {
           </h2>
           <div className="flex flex-col gap-8">
             <ExperienceItem
+              dates="September 2024 - Present"
+              title="Founder"
+              company="PickyEats, Montreal, Canada"
+              description={[
+                "Developed a React Native mobile application for restaurant selection in Montreal, with over 300+ users on the waitlist.",
+                "Leveraged TikTok for app promotion, reahing over 180,000 people and accumulating more than 20,000 likes.",
+                "Web application currently live; iOS and Google Play versions in final stages of development.",
+                "Established a collaborative partnership with RestoMontreal.ca and planning on initiating outreach efforts to various food companies for potential partnerships and collaborations.",
+              ]}
+              skills={[
+                "React Native",
+                "RESTful API",
+                "postgreSQL",
+                "BeautifulSoup (Web Scraping)",
+                "Python",
+                "Render",
+                "Flask",
+                "AWS Lambda",
+                "AWS API Gateway",
+                "Node.js",
+                "Google Apps Script",
+                "TypeScript",
+              ]}
+              link="https://www.tedy.app/?r=0"
+            />
+            <ExperienceItem
               dates="May 2024 - August 2024"
               title="Full-Stack Web Developer Intern"
               company="Tedy, Montreal, Canada"
@@ -51,7 +77,7 @@ export default function Home() {
 
             <ExperienceItem
               dates="Contract"
-              title="Web Developer"
+              title="Developer"
               company="Chéri, Montreal, Canada"
               description={[
                 "Developed Chéri's responsive e-commerce platform using Next.js, generating $10,000 in first-week sales.",
@@ -84,6 +110,7 @@ export default function Home() {
               projectLink="http://www.pickyeats.tech"
               skills={[
                 "React Native",
+                "TypeScript",
                 "RESTful API",
                 "postgreSQL",
                 "BeautifulSoup (Web Scraping)",
