@@ -34,7 +34,7 @@ export default function Home() {
               company="PickyEats, Montreal, Canada"
               description={[
                 "Developed a React Native mobile application for restaurant selection in Montreal, with over 300+ users on the waitlist.",
-                "Leveraged TikTok for app promotion, reahing over 180,000 people and accumulating more than 20,000 likes.",
+                "Leveraged TikTok for app promotion, reahing over 200,000 views and accumulating more than 20,000 likes.",
                 "Web application currently live; iOS and Google Play versions in final stages of development.",
                 "Established a collaborative partnership with RestoMontreal.ca and planning on initiating outreach efforts to various food companies for potential partnerships and collaborations.",
               ]}
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
             <ProjectCard
               title="Picky Eats - Ongoing"
-              description="Developed a React Native Mobile Application and a Web Application that recommends restaurants in Montreal based on user-specified choices. Built a waitlist of 300+ users anticipating the mobile app launch. Launched a successful marketing campaign on TikTok, with the first video reaching over 180,000 views and 20,000 likes. Web application currently live; iOS and Google Play versions in final stages of development."
+              description="Developed a React Native Mobile Application and a Web Application that recommends restaurants in Montreal based on user-specified choices. Built a waitlist of 300+ users anticipating the mobile app launch. Launched a successful marketing campaign on TikTok, with the first video reaching over 200,000 views and 20,000 likes. Web application currently live; iOS and Google Play versions in final stages of development."
               imageUrl="images/pickyeats.jpg"
               projectLink="http://www.pickyeats.tech"
               skills={[
