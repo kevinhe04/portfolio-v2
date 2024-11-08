@@ -17,7 +17,7 @@ export default function Home() {
       >
         <h1 className="text-4xl md:text-7xl font-bold mt-2">Kevin He</h1>
         <p className="text-lg md:text-xl mt-4">
-          Second-year McGill Software Engineering Co-op Student.
+          McGill Software Engineering Co-op Student.
         </p>
         <p className="text-lg md:text-xl mt-4">Schulich Leader 2023.</p>
       </section>
@@ -33,9 +33,8 @@ export default function Home() {
               title="Founder"
               company="PickyEats, Montreal, Canada"
               description={[
-                "Developed a React Native mobile application for restaurant selection in Montreal, with 250+ users on the waitlist.",
-                "Leveraged TikTok for app promotion, reahing over 200,000 views and accumulating more than 20,000 likes.",
-                "Web application currently live; iOS and Google Play versions in final stages of development.",
+                "Developed a React Native mobile application for restaurant selection in Montreal, with 800+ downloads on Apple Store.",
+                "Leveraged TikTok and Instagram for app promotion, accumulating over 30,000 likes.",
                 "Established a collaborative partnership with RestoMontreal.ca and planning on initiating outreach efforts to various food companies for potential partnerships and collaborations.",
               ]}
               skills={[
@@ -49,14 +48,16 @@ export default function Home() {
                 "AWS Lambda",
                 "AWS API Gateway",
                 "Node.js",
-                "Google Apps Script",
+                "AWS S3",
                 "TypeScript",
+                "iOS Development",
               ]}
-              link="https://www.tedy.app/?r=0"
+              link="https://apps.apple.com/us/app/pickyeats/id6737159291"
+              image="images/pickyeats.jpg"
             />
             <ExperienceItem
               dates="May 2024 - August 2024"
-              title="Full-Stack Web Developer Intern"
+              title="Web Developer Intern"
               company="Tedy, Montreal, Canada"
               description={[
                 "Led UI/UX enhancements of the platform, coding in TypeScript and JavaScript, and employing Next.js with Next-Intl for internalization to implement intuitive design improvements that boosted user satisfaction.",
@@ -73,6 +74,7 @@ export default function Home() {
                 "Next.Js",
               ]}
               link="https://www.tedy.app/?r=0"
+              image="images/tedy.png"
             />
 
             <ExperienceItem
@@ -92,6 +94,7 @@ export default function Home() {
                 "Next.Js",
               ]}
               link="https://cherimtl.com"
+              image="images/cherimtl_logo.jpg"
             />
           </div>
         </div>
@@ -105,9 +108,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
             <ProjectCard
               title="Picky Eats - Ongoing"
-              description="Developed a React Native Mobile Application and a Web Application that recommends restaurants in Montreal based on user-specified choices. Built a waitlist of 250+ users anticipating the mobile app launch. Launched a successful marketing campaign on TikTok, with the first video reaching over 200,000 views and 20,000 likes. Web application currently live; iOS and Google Play versions in final stages of development."
-              imageUrl="images/pickyeats.jpg"
-              projectLink="http://www.pickyeats.tech"
+              description="Developed a React Native Mobile Application and a Web Application that recommends restaurants in Montreal based on user-specified choices. Reached 1,000+ users in the span of two weeks on the web app. 800+ downloads on Apple Store."
+              imageUrl="images/pickyscreen.png"
+              projectLink="https://apps.apple.com/us/app/pickyeats/id6737159291"
               skills={[
                 "React Native",
                 "TypeScript",
@@ -120,7 +123,8 @@ export default function Home() {
                 "AWS Lambda",
                 "AWS API Gateway",
                 "Node.js",
-                "Google Apps Script",
+                "AWS S3",
+                "iOS Development",
               ]}
             />
             <ProjectCard
@@ -159,13 +163,6 @@ export default function Home() {
               projectLink="https://kevinhe.vercel.app/"
               skills={["React.js", "JavaScript", "Node.Js"]}
             />
-            <ProjectCard
-              title="Ukulele DIY - May 2023"
-              description="My first ever coding project, made in HTML/CSS/JavaScript. Website on how to make your own cardboard ukulele. Design was quite atrocious..."
-              imageUrl="images/music.png"
-              projectLink="https://kevinhe04.github.io/Arts-and-Science-IA-Project/"
-              skills={["HTML", "CSS", "JavaScript"]}
-            />
           </div>
         </div>
       </section>
@@ -198,7 +195,15 @@ export default function Home() {
   );
 }
 
-function ExperienceItem({ dates, title, company, description, skills, link }) {
+function ExperienceItem({
+  dates,
+  title,
+  company,
+  description,
+  skills,
+  link,
+  image,
+}) {
   return (
     <a
       href={link}
@@ -209,8 +214,11 @@ function ExperienceItem({ dates, title, company, description, skills, link }) {
         <ExternalLink size={20} />
       </div>
       <div className="flex flex-col md:flex-row gap-4">
-        <div className="md:w-1/4 text-center md:text-left">
+        <div className="md:w-1/4 text-center md:text-left flex flex-col">
           <p className="font-semibold">{dates}</p>
+          <div className="flex-1 flex items-center justify-center">
+            <img src={image} className="rounded-2xl"></img>
+          </div>
         </div>
         <div className="md:w-3/4">
           <h3 className="text-xl md:text-2xl font-semibold mb-2">{title}</h3>
