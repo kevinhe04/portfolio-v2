@@ -7,7 +7,7 @@ import Menu from "./components/menu";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-r from-gray-900 to-stone-800 text-white">
+    <div className="bg-[radial-gradient(ellipse_at_bottom_right,_rgba(15,23,42,0.9)_0%,_rgba(0,0,0,0.5)_50%,_rgba(15,23,42,0.7)_100%)] min-h-screen">
       <Sidebar />
       <Navbar />
       <Menu />
@@ -33,8 +33,7 @@ export default function Home() {
               title="Founder"
               company="PickyEats, Montreal, Canada"
               description={[
-                "Developed a React Native mobile application for restaurant selection in Montreal, with 800+ downloads on Apple Store.",
-                "Leveraged TikTok and Instagram for app promotion, accumulating over 30,000 likes.",
+                "Developed a React Native mobile application for restaurant selection in Montreal, with 2k+ downloads on App Store.",
                 "Established a collaborative partnership with RestoMontreal.ca and planning on initiating outreach efforts to various food companies for potential partnerships and collaborations.",
               ]}
               skills={[
@@ -60,10 +59,10 @@ export default function Home() {
               title="Web Developer Intern"
               company="Tedy, Montreal, Canada"
               description={[
-                "Led UI/UX enhancements of the platform, coding in TypeScript and JavaScript, and employing Next.js with Next-Intl for internalization to implement intuitive design improvements that boosted user satisfaction.",
-                "Managed Supabase databases and automated user email notifications using Inngest cron jobs and React Resend.",
-                "Developed Retool workflows that sent daily Slack messages with critical user analytics to the team, leveraging SQL queries to provide Tedy with accurate, real-time data insights every morning.",
-                "Contributed to agile processes, including daily stand-ups, sprint planning, code reviews, QA testing, and retrospectives, and developed unit tests to maintain code quality.",
+                "Led UI/UX enhancements of the platform, coding in TypeScript and employing Next.js.",
+                "Managed Supabase databases and automated emails using Inngest cron jobs and React Resend.",
+                "Developed Retool workflows that sent daily Slack messages with user analytics to the dev team, leveraging SQL queries to provide Tedy with data insights every morning.",
+                "Contributed to agile processes, including daily stand-ups, sprint planning, code reviews, QA testing, and unit testing.",
               ]}
               skills={[
                 "TypeScript",
@@ -84,7 +83,6 @@ export default function Home() {
               description={[
                 "Developed Chéri's responsive e-commerce platform using Next.js, generating $10,000 in first-week sales.",
                 "Integrated Supabase for authentication and database management, Stripe for payments, and use-shopping-cart library for seamless purchasing.",
-                "Ensured cross-device responsiveness to maximize user engagement and conversions.",
               ]}
               skills={[
                 "JavaScript",
@@ -108,9 +106,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
             <ProjectCard
               title="Picky Eats - Ongoing"
-              description="Developed a React Native Mobile Application and a Web Application that recommends restaurants in Montreal based on user-specified choices. Reached 1,000+ users in the span of two weeks on the web app. 800+ downloads on Apple Store."
+              description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 2k+ downloads on the App Store."
               imageUrl="images/pickyscreen.png"
-              projectLink="https://apps.apple.com/us/app/pickyeats/id6737159291"
+              projectLink="https://pickyeats.me"
               skills={[
                 "React Native",
                 "TypeScript",
@@ -129,7 +127,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Chéri E-Commerce Website - September 2024"
-              description="Full-stack E-Commerce website developed using Next.js, Supabase authentication and database management systems, Stripe for payments, and the use-shopping-cart library for cart functionality."
+              description="E-Commerce website developed using Next.js, Supabase authentication and database management systems, Stripe for payments, and the use-shopping-cart library for cart functionality."
               imageUrl="images/cheri.png"
               projectLink="https://www.cherimtl.com/"
               skills={[
