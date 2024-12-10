@@ -33,7 +33,7 @@ export default function Home() {
               title="Founder"
               company="PickyEats, Montreal, Canada"
               description={[
-                "Developed a React Native mobile application for restaurant selection in Montreal, with 2k+ downloads on App Store.",
+                "Developed a React Native mobile application for restaurant selection in Montreal, with 4,000+ downloads on App Store.",
                 "Established a collaborative partnership with RestoMontreal.ca and planning on initiating outreach efforts to various food companies for potential partnerships and collaborations.",
               ]}
               skills={[
@@ -106,7 +106,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
             <ProjectCard
               title="Picky Eats - Ongoing"
-              description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 2k+ downloads on the App Store."
+              description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 4,000+ downloads on the App Store."
               imageUrl="images/pickyscreen.png"
               projectLink="https://pickyeats.me"
               skills={[
