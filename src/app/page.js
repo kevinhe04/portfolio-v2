@@ -7,7 +7,7 @@ import Menu from "./components/menu";
 
 export default function Home() {
   return (
-    <div className="bg-[radial-gradient(ellipse_at_bottom_right,_rgba(15,23,42,0.9)_0%,_rgba(0,0,0,0.5)_50%,_rgba(15,23,42,0.7)_100%)] min-h-screen">
+    <div className="bg-slate-950 min-h-screen">
       <Sidebar />
       <Navbar />
       <Menu />
