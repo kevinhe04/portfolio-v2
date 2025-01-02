@@ -126,6 +126,12 @@ export default function Home() {
               ]}
             />
             <ProjectCard
+              title="Virtual Assistant - December 2024"
+              description="Built a task management console app in C++ with dynamic task handling, URL shortcuts, and file-based storage. Mainly designed to learn C++ and streamline my daily tasks and improve productivity through efficient task management."
+              imageUrl="images/virtual-assistant.png"
+              skills={["C++"]}
+            />
+            <ProjectCard
               title="Chéri E-Commerce Website - September 2024"
               description="E-Commerce website developed using Next.js, Supabase authentication and database management systems, Stripe for payments, and the use-shopping-cart library for cart functionality."
               imageUrl="images/cheri.png"
