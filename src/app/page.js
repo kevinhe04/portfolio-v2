@@ -127,9 +127,9 @@ export default function Home() {
             />
             <ProjectCard
               title="Virtual Assistant - December 2024"
-              description="Built a task management console app in C++ with dynamic task handling, URL shortcuts, and file-based storage. Mainly designed to learn C++ and streamline my daily tasks and improve productivity through efficient task management."
+              description="Built a task management console app in C++. Designed to streamline personal daily tasks and improve productivity. Integrated dynamic task handling, Google Drive API for automated document updates, and a VBA macro for Word-to-PDF conversions."
               imageUrl="images/virtual-assistant.png"
-              skills={["C++"]}
+              skills={["C++, Google API, VBA"]}
             />
             <ProjectCard
               title="Chéri E-Commerce Website - September 2024"
