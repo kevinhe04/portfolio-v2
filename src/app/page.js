@@ -38,18 +38,14 @@ export default function Home() {
               ]}
               skills={[
                 "React Native",
+                "TypeScript",
                 "RESTful API",
                 "postgreSQL",
-                "BeautifulSoup (Web Scraping)",
                 "Python",
-                "Render",
                 "Flask",
-                "AWS Lambda",
-                "AWS API Gateway",
+                "AWS",
                 "Node.js",
-                "AWS S3",
-                "TypeScript",
-                "iOS Development",
+                "Firebase",
               ]}
               link="https://apps.apple.com/us/app/pickyeats/id6737159291"
               image="images/pickyeats.jpg"
@@ -114,15 +110,11 @@ export default function Home() {
                 "TypeScript",
                 "RESTful API",
                 "postgreSQL",
-                "BeautifulSoup (Web Scraping)",
                 "Python",
-                "Render",
                 "Flask",
-                "AWS Lambda",
-                "AWS API Gateway",
+                "AWS",
                 "Node.js",
-                "AWS S3",
-                "iOS Development",
+                "Firebase",
               ]}
             />
             <ProjectCard
