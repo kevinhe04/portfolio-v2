@@ -105,7 +105,7 @@ export default function Home() {
           </h2>
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
             <ProjectCard
-              title="Picky Eats - Ongoing"
+              title="PickyEats - Ongoing"
               description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 5,000+ downloads on the App Store."
               imageUrl="images/pickyscreen.png"
               projectLink="https://pickyeats.me"
