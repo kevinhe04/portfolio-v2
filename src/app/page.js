@@ -121,7 +121,7 @@ export default function Home() {
               title="Virtual Assistant - December 2024"
               description="Built a task management console app in C++. Designed to streamline personal daily tasks and improve productivity. Integrated dynamic task handling, Google Drive API for automated document updates, and a VBA macro for Word-to-PDF conversions."
               imageUrl="images/va.jpg"
-              skills={["C++, Google API, VBA"]}
+              skills={["C++", "Google API", "VBA"]}
             />
             <ProjectCard
               title="Chéri E-Commerce Website - September 2024"
