@@ -33,8 +33,10 @@ export default function Home() {
               title="Founder"
               company="PickyEats, Montreal, Canada"
               description={[
-                "Developed a React Native mobile application for restaurant selection in Montreal, with 5,000+ downloads on App Store.",
-                "Established a collaborative partnership with RestoMontreal.ca and planning on initiating outreach efforts to various food companies for potential partnerships and collaborations.",
+                "Founded a mobile app recommending restaurants tailored to users’ choices, resulting in 5,000+ active users.",
+                "Partnered with RestoMontreal.ca to integrate restaurant data via Flask web scraping, offering users over 10k+ restaurants.",
+                "Developed the app’s core features with AWS and Firestore, ensuring a smooth and dynamic user experience.",
+                "Leveraged social media platforms to produce short videos promoting PickyEats, achieving over 1M+ views.",
               ]}
               skills={[
                 "React Native",
@@ -55,9 +57,9 @@ export default function Home() {
               title="Web Developer Intern"
               company="Tedy, Montreal, Canada"
               description={[
-                "Led UI/UX enhancements of the platform, coding in TypeScript and employing Next.js.",
-                "Managed Supabase databases and automated emails using Inngest cron jobs and React Resend.",
-                "Developed Retool workflows that sent daily Slack messages with user analytics to the dev team, leveraging SQL queries to provide Tedy with data insights every morning.",
+                "Enhanced the platform’s functionality, using TypeScript and Next.js, delivering a smooth and intuitive user experience.",
+                "Managed databases and automated user emails with cron jobs, streamlining communication and backend processes.",
+                "Built Retool workflows to send daily Slack messages with user analytics, delivering insights to the team every morning.",
                 "Contributed to agile processes, including daily stand-ups, sprint planning, code reviews, QA testing, and unit testing.",
               ]}
               skills={[
