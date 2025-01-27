@@ -49,7 +49,7 @@ export default function Home() {
                 "Node.js",
                 "Firebase",
               ]}
-              link="https://apps.apple.com/us/app/pickyeats/id6737159291"
+              link="https://pickyeats.me"
               image="images/pickyeats.jpg"
             />
             <ExperienceItem
