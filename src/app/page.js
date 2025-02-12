@@ -22,9 +22,9 @@ export default function Home() {
       >
         <h1 className="text-4xl md:text-7xl font-bold mt-2">Kevin He</h1>
         <p className="text-lg md:text-xl mt-4">
-          McGill Software Engineering Co-op Student.
+          McGill Software Engineering Co-op Student
         </p>
-        <p className="text-lg md:text-xl mt-4">Schulich Leader 2023.</p>
+        <p className="text-lg md:text-xl mt-4">Aspiring Content Creator.</p>
       </section>
 
       <section id="experience" className="py-16 px-4">
@@ -40,7 +40,6 @@ export default function Home() {
               description={[
                 "Founded a mobile app recommending restaurants tailored to users’ choices, resulting in 5,000+ active users.",
                 "Partnered with RestoMontreal.ca to integrate restaurant data via Flask web scraping, offering users over 10k+ restaurants.",
-                "Developed the app’s core features with AWS and Firestore, ensuring a smooth and dynamic user experience.",
                 "Leveraged social media platforms to produce short videos promoting PickyEats, achieving over 1M+ views.",
               ]}
               skills={[
@@ -63,7 +62,7 @@ export default function Home() {
               company="Tedy, Montreal, Canada"
               description={[
                 "Enhanced the platform’s functionality, using TypeScript and Next.js, delivering a smooth and intuitive user experience.",
-                "Managed databases and automated user emails with cron jobs, streamlining communication and backend processes.",
+                "Managed SQL databases and automated user emails with cron jobs, streamlining communication and backend processes.",
                 "Built Retool workflows to send daily Slack messages with user analytics, delivering insights to the team every morning.",
                 "Contributed to agile processes, including daily stand-ups, sprint planning, code reviews, QA testing, and unit testing.",
               ]}
@@ -78,29 +77,9 @@ export default function Home() {
               link="https://www.tedy.app/?r=0"
               image="images/tedy.png"
             />
-
-            <ExperienceItem
-              dates="Contract"
-              title="Developer"
-              company="Chéri, Montreal, Canada"
-              description={[
-                "Developed Chéri's responsive e-commerce platform using Next.js, generating $10,000 in first-week sales.",
-                "Integrated Supabase for authentication and database management, Stripe for payments, and use-shopping-cart library for seamless purchasing.",
-              ]}
-              skills={[
-                "JavaScript",
-                "Node.Js",
-                "Stripe",
-                "Supabase",
-                "Next.Js",
-              ]}
-              link="https://cherimtl.com"
-              image="images/cherimtl_logo.jpg"
-            />
           </div>
         </div>
       </section>
-
       <section id="projects" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
@@ -132,7 +111,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Chéri E-Commerce Website - September 2024"
-              description="E-Commerce website developed using Next.js, Supabase authentication and database management systems, Stripe for payments, and the use-shopping-cart library for cart functionality."
+              description="Developed Chéri's responsive e-commerce platform using Next.js, generating $10,000 in first-week sales. Integrated Supabase for authentication and database management, Stripe for payments, and use-shopping-cart library for seamless purchasing."
               imageUrl="images/cheri.png"
               projectLink="https://www.cherimtl.com/"
               skills={[
@@ -145,36 +124,15 @@ export default function Home() {
                 "React.Js",
               ]}
             />
-            <ProjectCard
-              title="Pomodoro Study App - January 2024"
-              description="Created a Pomodoro timer website, incorporating Spotify's API to boost study efficiency. This site combines the focused work sessions of the Pomodoro technique with personalized Spotify playlists, enhancing concentration and making study sessions more enjoyable and productive."
-              imageUrl="images/pomodoro.png"
-              projectLink="https://studypomodoro.vercel.app/"
-              skills={["HTML", "CSS", "JavaScript", "Spotify API"]}
-            />
-            <ProjectCard
-              title="CodeJam Hackathon Challenge - November 2023"
-              description="Led the integration of real-time front-end and back-end systems for a logistics platform at CodeJam. Utilized WebSocket technology for live server-client communication, enabling dynamic updates of truck and load information and instant matching notifications for truckers."
-              imageUrl="images/loadboard.jpg"
-              projectLink="https://devpost.com/software/loadboard"
-              skills={["JavaScript", "Node.Js", "React.Js", "WebSockets"]}
-            />
-            <ProjectCard
-              title="Portfolio V1 - October 2023"
-              description="Very first design of my portfolio."
-              imageUrl="images/portfoliov1.png"
-              projectLink="https://kevinhe.vercel.app/"
-              skills={["React.js", "JavaScript", "Node.Js"]}
-            />
           </div>
         </div>
       </section>
       <section id="social-media" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-center">
             Social Media
           </h2>
-          <div className="flex flex-col md:flex-row gap-8 scale-75 justify-center">
+          <div className="flex flex-col md:flex-row justify-center gap-32 md:gap-5 mt-20 items-center">
             <Tiktok />
             <Tiktok1 />
             <Tiktok2 />
@@ -197,12 +155,12 @@ export default function Home() {
             <SocialIcon target="_blank" url="mailto:kvn.04he@gmail.com" />
             <SocialIcon
               target="_blank"
-              url="https://www.instagram.com/he_is_kevin_/"
+              url="https://www.instagram.com/kvin.he/"
             />
+            <SocialIcon target="_blank" url="https://www.tiktok.com/@kvin.he" />
           </div>
         </div>
       </section>
-
       <footer className="py-6 bg-gray-800 text-white text-center">
         <p>&copy; 2024 Kevin He. All rights reserved.</p>
       </footer>

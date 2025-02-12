@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 
-const Tiktok1 = () => {
+const Tiktok1 = ({ scale = "0.75" }) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -16,12 +16,18 @@ const Tiktok1 = () => {
   if (!isClient) return null;
 
   return (
-    <div>
+    <div
+      className="flex justify-center items-center"
+      style={{
+        width: `${scale * 325}px`, // Dynamically shrink width
+        height: `${scale * 600}px`,
+      }}
+    >
       <blockquote
         class="tiktok-embed font-petrona"
         cite="https://www.tiktok.com/@kvin.he/video/7469206174420847878"
         data-video-id="7469206174420847878"
-        style={{ maxWidth: "605px", minWidth: "325px" }}
+        style={{ maxWidth: "605px", minWidth: "325px", scale }}
       >
         <section>
           <a

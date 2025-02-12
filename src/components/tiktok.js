@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 
-const Tiktok = () => {
+const Tiktok = ({ scale = "0.75" }) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -16,16 +16,20 @@ const Tiktok = () => {
   if (!isClient) return null;
 
   return (
-    <div>
+    <div
+      className="flex justify-center items-center"
+      style={{
+        width: `${scale * 325}px`,
+        height: `${scale * 620}px`,
+      }}
+    >
       <blockquote
         class="tiktok-embed font-petrona"
         cite="https://www.tiktok.com/@kvin.he/video/7451827081287109894"
         data-video-id="7451827081287109894"
-        style={{ maxWidth: "605px", minWidth: "325px" }}
+        style={{ maxWidth: "605px", minWidth: "325px", scale }}
       >
-        {" "}
         <section>
-          {" "}
           <a
             target="_blank"
             title="@kvin.he"
