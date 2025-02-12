@@ -16,11 +16,9 @@
   }
 }
 
-body,
-html {
+body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Petrona" !important;
 }
 
 @layer utilities {
@@ -33,12 +31,4 @@ html {
   :root {
     --radius: 0.5rem;
   }
-}
-
-.tiktok-embed {
-  font-family: inherit !important;
-}
-
-.tiktok-wrapper {
-  font-family: "Petrona", serif !important;
 }
