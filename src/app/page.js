@@ -1,9 +1,14 @@
+"use client";
+
 import Sidebar from "./components/sidebar";
 import { ExternalLink } from "lucide-react";
 import Navbar from "./components/navbar";
 import { Badge } from "@/components/ui/badge";
 import { SocialIcon } from "react-social-icons";
 import Menu from "./components/menu";
+import Tiktok from "@/components/tiktok";
+import Tiktok1 from "@/components/tiktok1";
+import Tiktok2 from "@/components/tiktok2";
 
 export default function Home() {
   return (
@@ -161,6 +166,18 @@ export default function Home() {
               projectLink="https://kevinhe.vercel.app/"
               skills={["React.js", "JavaScript", "Node.Js"]}
             />
+          </div>
+        </div>
+      </section>
+      <section id="social-media" className="py-16 px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+            Social Media
+          </h2>
+          <div className="flex flex-col md:flex-row gap-8 scale-75 justify-center">
+            <Tiktok />
+            <Tiktok1 />
+            <Tiktok2 />
           </div>
         </div>
       </section>

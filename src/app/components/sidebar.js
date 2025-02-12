@@ -56,6 +56,16 @@ export default function Sidebar() {
             Projects
           </a>
           <a
+            href="#social-media"
+            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${
+              activeSection === "#social-media"
+                ? "text-white"
+                : "text-gray-500 hover:text-white"
+            }`}
+          >
+            Social Media
+          </a>
+          <a
             href="#contact"
             className={`block text-lg hover:translate-x-10 transition-all duration-300 ${
               activeSection === "#contact"

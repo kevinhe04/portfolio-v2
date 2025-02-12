@@ -62,6 +62,14 @@ export default function MenuPortfolio() {
           </ListItemButton>
           <ListItemButton>
             <a
+              href="#social-media"
+              className="block text-lg hover:underline font-petrona transition-all duration-300"
+            >
+              Social Media
+            </a>
+          </ListItemButton>
+          <ListItemButton>
+            <a
               href="#contact"
               className="block text-lg hover:underline font-petrona transition-all duration-300"
             >
