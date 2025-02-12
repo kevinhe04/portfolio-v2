@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect } from "react";
 
 const Tiktok2 = () => {
@@ -15,7 +16,7 @@ const Tiktok2 = () => {
         class="tiktok-embed"
         cite="https://www.tiktok.com/@kvin.he/video/7424209625005722885"
         data-video-id="7424209625005722885"
-        style={{ maxWidth: "605px", minWidth: "325px" }}
+        style={{ maxWidth: "605px", minWidth: "325px", fontFamily: "Petrona" }}
       >
         {" "}
         <section>
