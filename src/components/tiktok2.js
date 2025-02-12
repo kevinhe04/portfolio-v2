@@ -13,10 +13,10 @@ const Tiktok2 = () => {
   return (
     <div>
       <blockquote
-        class="tiktok-embed"
+        class="tiktok-embed font-petrona"
         cite="https://www.tiktok.com/@kvin.he/video/7424209625005722885"
         data-video-id="7424209625005722885"
-        style={{ maxWidth: "605px", minWidth: "325px", fontFamily: "Petrona" }}
+        style={{ maxWidth: "605px", minWidth: "325px" }}
       >
         {" "}
         <section>
