@@ -20,14 +20,19 @@ const Tiktok2 = ({ scale = "0.75" }) => {
       className="flex justify-center items-center"
       style={{
         width: `${scale * 325}px`,
-        height: `${scale * 600}px`,
+        height: `${scale * 620}px`,
       }}
     >
       <blockquote
         class="tiktok-embed font-petrona"
         cite="https://www.tiktok.com/@kvin.he/video/7424209625005722885"
         data-video-id="7424209625005722885"
-        style={{ maxWidth: "605px", minWidth: "325px", scale }}
+        style={{
+          maxWidth: "605px",
+          minWidth: "325px",
+          scale,
+          borderRadius: "32px",
+        }}
       >
         <section>
           <a

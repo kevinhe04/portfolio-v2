@@ -1,14 +1,15 @@
 "use client";
 
 import Sidebar from "./components/sidebar";
-import { ExternalLink } from "lucide-react";
 import Navbar from "./components/navbar";
-import { Badge } from "@/components/ui/badge";
 import { SocialIcon } from "react-social-icons";
 import Menu from "./components/menu";
 import Tiktok from "@/components/tiktok";
 import Tiktok1 from "@/components/tiktok1";
 import Tiktok2 from "@/components/tiktok2";
+import * as motion from "motion/react-client";
+import ProjectCard from "@/components/projectCard";
+import ExperienceItem from "@/components/experienceItem";
 
 export default function Home() {
   return (
@@ -20,11 +21,39 @@ export default function Home() {
         id="home"
         className="min-h-screen flex flex-col justify-center items-center text-center px-4"
       >
-        <h1 className="text-4xl md:text-7xl font-bold mt-2">Kevin He</h1>
-        <p className="text-lg md:text-xl mt-4">
-          McGill Software Engineering Co-op Student
-        </p>
-        <p className="text-lg md:text-xl mt-4">Aspiring Content Creator.</p>
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-center"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-4xl md:text-7xl font-bold mt-2"
+          >
+            Kevin He
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-lg md:text-xl mt-4"
+          >
+            McGill Software Engineering Co-op Student
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-lg md:text-xl mt-4"
+          >
+            Aspiring Content Creator.
+          </motion.p>
+        </motion.section>
       </section>
 
       <section id="experience" className="py-16 px-4">
@@ -127,15 +156,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="social-media" className="py-16 px-4">
+      <section id="content-creation" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center">
-            Social Media
+            Content Creation
           </h2>
           <div className="flex flex-col md:flex-row justify-center gap-32 md:gap-5 mt-20 items-center">
-            <Tiktok />
             <Tiktok1 />
             <Tiktok2 />
+            <Tiktok />
           </div>
         </div>
       </section>
@@ -165,83 +194,5 @@ export default function Home() {
         <p>&copy; 2024 Kevin He. All rights reserved.</p>
       </footer>
     </div>
-  );
-}
-
-function ExperienceItem({
-  dates,
-  title,
-  company,
-  description,
-  skills,
-  link,
-  image,
-}) {
-  return (
-    <a
-      href={link}
-      target="_blank"
-      className="block bg-white md:bg-opacity-85 hover:bg-opacity-100 text-black shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105 cursor-pointer group"
-    >
-      <div className="absolute top-4 right-4 text-gray-400 group-hover:text-black transition-colors duration-300">
-        <ExternalLink size={20} />
-      </div>
-      <div className="flex flex-col md:flex-row gap-4">
-        <div className="md:w-1/4 text-center md:text-left flex flex-col">
-          <p className="font-semibold">{dates}</p>
-          <div className="flex-1 flex items-center justify-center">
-            <img src={image} className="rounded-2xl"></img>
-          </div>
-        </div>
-        <div className="md:w-3/4">
-          <h3 className="text-xl md:text-2xl font-semibold mb-2">{title}</h3>
-          <p className="mb-4">{company}</p>
-          <ul className="list-disc list-inside mb-4">
-            {description.map((item, index) => (
-              <li key={index} className="mb-2">
-                {item}
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-wrap gap-2 pointer-events-none">
-            {skills.map((skill) => (
-              <Badge key={skill} className="bg-blue-100 text-blue-800">
-                {skill}
-              </Badge>
-            ))}
-          </div>
-        </div>
-      </div>
-    </a>
-  );
-}
-
-function ProjectCard({ title, description, imageUrl, projectLink, skills }) {
-  return (
-    <a href={projectLink} target="_blank" rel="noopener noreferrer">
-      <div className="bg-white md:bg-opacity-85 hover:bg-opacity-100 rounded-lg shadow-lg overflow-hidden flex transition-all transform hover:scale-105 cursor-pointer group">
-        <div className="absolute top-4 right-4 text-gray-400 group-hover:text-black transition-colors duration-300">
-          <ExternalLink size={20} />
-        </div>
-        <img
-          src={imageUrl}
-          alt={title}
-          className="w-1/3 object-cover hidden md:block"
-        />
-        <div className="p-6 flex flex-col justify-between md:w-2/3">
-          <div>
-            <h3 className="text-xl font-semibold text-black mb-2">{title}</h3>
-            <p className="text-black mb-4">{description}</p>
-          </div>
-          <div className="flex flex-wrap gap-2 pointer-events-none">
-            {skills.map((skill) => (
-              <Badge key={skill} className="bg-blue-100 text-blue-800">
-                {skill}
-              </Badge>
-            ))}
-          </div>
-        </div>
-      </div>
-    </a>
   );
 }

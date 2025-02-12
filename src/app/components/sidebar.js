@@ -9,7 +9,12 @@ export default function Sidebar() {
     document.documentElement.style.scrollBehavior = "smooth";
 
     const handleScroll = () => {
-      const sections = ["#experience", "#projects", "#contact"];
+      const sections = [
+        "#experience",
+        "#projects",
+        "#content-creation",
+        "#contact",
+      ];
       sections.forEach((sectionId) => {
         const section = document.querySelector(sectionId);
         const rect = section?.getBoundingClientRect();
@@ -56,14 +61,14 @@ export default function Sidebar() {
             Projects
           </a>
           <a
-            href="#social-media"
+            href="#content-creation"
             className={`block text-lg hover:translate-x-10 transition-all duration-300 ${
-              activeSection === "#social-media"
+              activeSection === "#content-creation"
                 ? "text-white"
                 : "text-gray-500 hover:text-white"
             }`}
           >
-            Social Media
+            Content Creation
           </a>
           <a
             href="#contact"

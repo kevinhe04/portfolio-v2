@@ -27,7 +27,12 @@ const Tiktok = ({ scale = "0.75" }) => {
         class="tiktok-embed font-petrona"
         cite="https://www.tiktok.com/@kvin.he/video/7451827081287109894"
         data-video-id="7451827081287109894"
-        style={{ maxWidth: "605px", minWidth: "325px", scale }}
+        style={{
+          maxWidth: "605px",
+          minWidth: "325px",
+          scale,
+          borderRadius: "32px",
+        }}
       >
         <section>
           <a

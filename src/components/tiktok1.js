@@ -19,15 +19,20 @@ const Tiktok1 = ({ scale = "0.75" }) => {
     <div
       className="flex justify-center items-center"
       style={{
-        width: `${scale * 325}px`, // Dynamically shrink width
-        height: `${scale * 600}px`,
+        width: `${scale * 325}px`,
+        height: `${scale * 620}px`,
       }}
     >
       <blockquote
         class="tiktok-embed font-petrona"
         cite="https://www.tiktok.com/@kvin.he/video/7469206174420847878"
         data-video-id="7469206174420847878"
-        style={{ maxWidth: "605px", minWidth: "325px", scale }}
+        style={{
+          maxWidth: "605px",
+          minWidth: "325px",
+          scale,
+          borderRadius: "32px",
+        }}
       >
         <section>
           <a
@@ -65,7 +70,7 @@ const Tiktok1 = ({ scale = "0.75" }) => {
             href="https://www.tiktok.com/tag/cs?refer=embed"
           >
             #cs
-          </a>{" "}
+          </a>
           <a
             title="jobless"
             target="_blank"
@@ -79,9 +84,9 @@ const Tiktok1 = ({ scale = "0.75" }) => {
             href="https://www.tiktok.com/music/original-sound-7469206225403595526?refer=embed"
           >
             ♬ original sound - Kevin He
-          </a>{" "}
-        </section>{" "}
-      </blockquote>{" "}
+          </a>
+        </section>
+      </blockquote>
       <script async src="https://www.tiktok.com/embed.js"></script>
     </div>
   );
