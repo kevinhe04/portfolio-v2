@@ -24,7 +24,7 @@ const Tiktok2 = ({ scale = "0.75" }) => {
       }}
     >
       <blockquote
-        class="tiktok-embed font-petrona"
+        class="tiktok-embed"
         cite="https://www.tiktok.com/@kvin.he/video/7424209625005722885"
         data-video-id="7424209625005722885"
         style={{
