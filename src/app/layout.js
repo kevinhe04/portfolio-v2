@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={petrona.className}>
-      <body>{children}</body>
+      <body className="[&:not(.tiktok-embed)]:!font-inherit">{children}</body>
     </html>
   );
 }
