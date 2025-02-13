@@ -69,6 +69,7 @@ export default function Home() {
               description={["Will be contributing to the iOS mobile platform."]}
               skills={["Swift", "SwiftUI"]}
               image="images/SunLife.png"
+              link="https://www.sunlife.ca/en/"
             />
             <ExperienceItem
               dates="September 2024 - Present"
