@@ -51,7 +51,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg md:text-xl mt-4"
           >
-            Aspiring Content Creator.
+            Content Creator (one day maybe...)
           </motion.p>
         </motion.section>
       </section>
@@ -63,12 +63,20 @@ export default function Home() {
           </h2>
           <div className="flex flex-col gap-8">
             <ExperienceItem
+              dates="May 2025 - August 2025"
+              title="Incoming Mobile Developer Intern"
+              company="Sun Life Financial, Montreal, Canada"
+              description={["Will be contributing to the iOS mobile platform."]}
+              skills={["Swift", "SwiftUI"]}
+              image="images/SunLife.png"
+            />
+            <ExperienceItem
               dates="September 2024 - Present"
               title="Founder"
               company="PickyEats, Montreal, Canada"
               description={[
                 "Founded a mobile app recommending restaurants tailored to users’ choices, resulting in 5,000+ active users.",
-                "Partnered with RestoMontreal.ca to integrate restaurant data via Flask web scraping, offering users over 10k+ restaurants.",
+                "Partnered with RestoMontreal.ca to integrate restaurant data, offering users over 10k+ restaurants.",
                 "Leveraged social media platforms to produce short videos promoting PickyEats, achieving over 1M+ views.",
               ]}
               skills={[
@@ -90,10 +98,8 @@ export default function Home() {
               title="Web Developer Intern"
               company="Tedy, Montreal, Canada"
               description={[
-                "Enhanced the platform’s functionality, using TypeScript and Next.js, delivering a smooth and intuitive user experience.",
-                "Managed SQL databases and automated user emails with cron jobs, streamlining communication and backend processes.",
-                "Built Retool workflows to send daily Slack messages with user analytics, delivering insights to the team every morning.",
-                "Contributed to agile processes, including daily stand-ups, sprint planning, code reviews, QA testing, and unit testing.",
+                "Delivered 40+ completed PRs, coding mainly in TypeScript.",
+                "Managed SQL databases and created Retool workflows to streamline user data retrieval.",
               ]}
               skills={[
                 "TypeScript",
