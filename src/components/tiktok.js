@@ -25,8 +25,8 @@ const Tiktok = ({ scale = "0.75" }) => {
     >
       <blockquote
         class="tiktok-embed"
-        cite="https://www.tiktok.com/@kvin.he/video/7451827081287109894"
-        data-video-id="7451827081287109894"
+        cite="https://www.tiktok.com/@kvin.he/video/7485845040401517879"
+        data-video-id="7485845040401517879"
         style={{
           maxWidth: "605px",
           minWidth: "325px",
@@ -34,7 +34,9 @@ const Tiktok = ({ scale = "0.75" }) => {
           borderRadius: "32px",
         }}
       >
+        {" "}
         <section>
+          {" "}
           <a
             target="_blank"
             title="@kvin.he"
@@ -42,44 +44,52 @@ const Tiktok = ({ scale = "0.75" }) => {
           >
             @kvin.he
           </a>{" "}
-          Kevin He x Kevin He collab??? @Winnipeg Jets{" "}
+          I was awake for 36 hours 😎{" "}
           <a
-            title="kevinhe"
+            title="cs"
             target="_blank"
-            href="https://www.tiktok.com/tag/kevinhe?refer=embed"
+            href="https://www.tiktok.com/tag/cs?refer=embed"
           >
-            #kevinhe
+            #cs
           </a>{" "}
           <a
-            title="NHL"
+            title="computerscience"
             target="_blank"
-            href="https://www.tiktok.com/tag/NHL?refer=embed"
+            href="https://www.tiktok.com/tag/computerscience?refer=embed"
           >
-            #NHL
+            #computerscience
           </a>{" "}
           <a
-            title="hockey"
+            title="software"
             target="_blank"
-            href="https://www.tiktok.com/tag/hockey?refer=embed"
+            href="https://www.tiktok.com/tag/software?refer=embed"
           >
-            #hockey
+            #software
           </a>{" "}
           <a
-            title="winnipegjets"
+            title="coding"
             target="_blank"
-            href="https://www.tiktok.com/tag/winnipegjets?refer=embed"
+            href="https://www.tiktok.com/tag/coding?refer=embed"
           >
-            #winnipegjets
+            #coding
+          </a>{" "}
+          <a
+            title="hackathon"
+            target="_blank"
+            href="https://www.tiktok.com/tag/hackathon?refer=embed"
+          >
+            #hackathon
           </a>{" "}
           <a
             target="_blank"
             title="♬ original sound - Kevin He"
-            href="https://www.tiktok.com/music/original-sound-7451827091154750213?refer=embed"
+            href="https://www.tiktok.com/music/original-sound-7485845055661673222?refer=embed"
           >
             ♬ original sound - Kevin He
           </a>{" "}
-        </section>{" "}
-      </blockquote>{" "}
+        </section>
+      </blockquote>
+      <script async src="https://www.tiktok.com/embed.js"></script>
       <script async src="https://www.tiktok.com/embed.js"></script>
     </div>
   );

@@ -51,7 +51,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg md:text-xl mt-4"
           >
-            Content Creator (one day maybe...)
+            Content Creator (on the side)
           </motion.p>
         </motion.section>
       </section>
@@ -66,7 +66,7 @@ export default function Home() {
               dates="May 2025 - August 2025"
               title="Incoming Mobile Developer Intern"
               company="Sun Life Financial, Montreal, Canada"
-              description={["Will be contributing to the iOS mobile platform."]}
+              description={["???"]}
               skills={["Swift", "SwiftUI"]}
               image="images/SunLife.png"
               link="https://www.sunlife.ca/en/"
@@ -122,6 +122,13 @@ export default function Home() {
             Projects
           </h2>
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
+            <ProjectCard
+              title="ZenOS - Ongoing"
+              description="Developed a cross-platform application using Electron.js and TypeScript (Desktop), and Swift (Mobile), designed to enhance productivity by providing a distraction-free environment."
+              imageUrl="images/zenos.png"
+              projectLink="https://tryzenos.com"
+              skills={["TypeScript", "Swift", "Electron.js", "Firebase"]}
+            />
             <ProjectCard
               title="PickyEats - Ongoing"
               description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 5,000+ downloads on the App Store."
