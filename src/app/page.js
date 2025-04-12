@@ -201,6 +201,10 @@ export default function Home() {
               url="https://www.instagram.com/kvin.he/"
             />
             <SocialIcon target="_blank" url="https://www.tiktok.com/@kvin.he" />
+            <SocialIcon
+              target="_blank"
+              url="https://www.youtube.com/@kvin.he1"
+            />
           </div>
         </div>
       </section>
