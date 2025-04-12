@@ -51,7 +51,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg md:text-xl mt-4"
           >
-            Content Creator (on the side)
+            Part-Time Content Creator
           </motion.p>
         </motion.section>
       </section>
