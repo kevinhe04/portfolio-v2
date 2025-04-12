@@ -8,6 +8,7 @@ const petrona = Petrona({
 
 export const metadata = {
   title: "Kevin He",
+  description: "Kevin He - McGill Software Engineering Co-op Student",
   icons: {
     icon: "/favicon.ico",
   },
