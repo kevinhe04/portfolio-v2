@@ -184,7 +184,7 @@ export default function Home() {
             <h1 className="text-white text-4xl font-bold text-center">
               Support me !
             </h1>
-            <div className="flex flex-row gap-5 mt-10 justify-center">
+            <div className="flex flex-col md:flex-row gap-5 mt-10 justify-center">
               <div className="flex flex-col items-center">
                 <h1 className="text-white text-2xl font-bold">TikTok</h1>
                 <iframe
