@@ -60,7 +60,7 @@ export default function Home() {
             className="text-lg md:text-xl mt-6"
           >
             <img
-              className="size-52 rounded-full object-cover m-auto"
+              className="size-52 rounded-full object-cover m-auto border-2 border-white"
               src="images\headshot.jpeg"
             ></img>
           </motion.div>
