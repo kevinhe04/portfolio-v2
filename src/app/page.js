@@ -53,6 +53,17 @@ export default function Home() {
           >
             Part-Time Content Creator
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-lg md:text-xl mt-6"
+          >
+            <img
+              className="size-52 rounded-full object-cover m-auto"
+              src="images\headshot.jpeg"
+            ></img>
+          </motion.div>
         </motion.section>
       </section>
 
