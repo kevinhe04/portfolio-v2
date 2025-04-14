@@ -11,6 +11,7 @@ export default function Sidebar() {
     const handleScroll = () => {
       const sections = [
         "#experience",
+        "#about",
         "#projects",
         "#content-creation",
         "#contact",
@@ -40,6 +41,16 @@ export default function Sidebar() {
 
       <div className="flex-grow flex items-center">
         <nav className="text-white space-y-8 text-left">
+          <a
+            href="#about"
+            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${
+              activeSection === "#about"
+                ? "text-white"
+                : "text-gray-500 hover:text-white"
+            }`}
+          >
+            About Me
+          </a>
           <a
             href="#experience"
             className={`block text-lg hover:translate-x-10 transition-all duration-300 ${

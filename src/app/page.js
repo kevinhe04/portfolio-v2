@@ -66,6 +66,31 @@ export default function Home() {
           </motion.div>
         </motion.section>
       </section>
+      <section id="about" className="py-16 px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+            Who is this guy ?
+          </h2>
+          <p className="text-xl text-center">
+            Hi ! <span className="animate-pulse">👋</span>
+            <br />
+            I love creating content that inspires people or makes them laugh.
+            <br />
+            <br />
+            On a more technical note, I like to build stuff that leaves a big
+            impact on the community. My goal is to make people's lives easier
+            and if I am capable of inspiring people in the process, I would have
+            accomplished everything I wanted.
+            <br />
+            <br />
+            Thank you for reading through my portfolio, I hope our paths cross
+            one day.
+            <br />
+            <br />
+            Enjoy !
+          </p>
+        </div>
+      </section>
 
       <section id="experience" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
@@ -77,7 +102,7 @@ export default function Home() {
               dates="May 2025 - August 2025"
               title="Incoming Mobile Developer Intern"
               company="Sun Life Financial, Montreal, Canada"
-              description={["???"]}
+              description={["Incoming Summer Intern"]}
               skills={["Swift", "SwiftUI"]}
               image="images/SunLife.png"
               link="https://www.sunlife.ca/en/"
@@ -266,7 +291,7 @@ export default function Home() {
         </div>
       </section>
       <footer className="py-6 bg-gray-800 text-white text-center">
-        <p>&copy; 2024 Kevin He. All rights reserved.</p>
+        <p>&copy; 2025 Kevin He. All rights reserved.</p>
       </footer>
     </div>
   );
