@@ -176,9 +176,55 @@ export default function Home() {
             Content Creation
           </h2>
           <div className="flex flex-col md:flex-row justify-center gap-32 md:gap-5 mt-20 items-center">
-            <Tiktok1 />
-            <Tiktok2 />
             <Tiktok />
+            <Tiktok2 />
+            <Tiktok1 />
+          </div>
+          <div className="mt-20">
+            <h1 className="text-white text-4xl font-bold text-center">
+              Support me !
+            </h1>
+            <div className="flex flex-row gap-5 mt-10 justify-center">
+              <div className="flex flex-col items-center">
+                <h1 className="text-white text-2xl font-bold">TikTok</h1>
+                <iframe
+                  height="80px"
+                  width="auto"
+                  src="https://livecounts.io/embed/tiktok-live-follower-counter/kvin.he"
+                  href="https://google.com"
+                  style={{
+                    border: "0",
+                    width: "250px",
+                    height: "80px",
+                  }}
+                ></iframe>
+                <div className="w-28 p-2 text-center font-bold mt-4 rounded-lg text-lg bg-transparent text-white hover:bg-white hover:text-black transition-all duration-500 border-2 border-white">
+                  <a href="https://www.tiktok.com/@kvin.he" target="_blank">
+                    Follow
+                  </a>
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-col items-center">
+                  <h1 className="text-white text-2xl font-bold">YouTube</h1>
+                  <iframe
+                    height="80px"
+                    width="auto"
+                    src="https://livecounts.io/embed/youtube-live-subscriber-counter/UChfHENDTz2IBStA4PL8GJDw"
+                    style={{
+                      border: "0",
+                      width: "250px",
+                      height: "80px",
+                    }}
+                  ></iframe>
+                  <div className="w-28 p-2 text-center font-bold mt-4 rounded-lg text-lg bg-transparent text-white hover:bg-white hover:text-black transition-all duration-500 border-2 border-white">
+                    <a href="https://www.youtube.com/@kvin.he1" target="_blank">
+                      Subscribe
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
