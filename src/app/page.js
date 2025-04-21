@@ -225,12 +225,10 @@ export default function Home() {
                 <h1 className="text-white text-2xl font-bold">TikTok</h1>
                 <iframe
                   height="80px"
-                  width="auto"
                   src="https://livecounts.io/embed/tiktok-live-follower-counter/kvin.he"
-                  href="https://google.com"
                   style={{
                     border: "0",
-                    width: "250px",
+                    width: "220px",
                     height: "80px",
                   }}
                 ></iframe>
@@ -245,17 +243,35 @@ export default function Home() {
                   <h1 className="text-white text-2xl font-bold">YouTube</h1>
                   <iframe
                     height="80px"
-                    width="auto"
                     src="https://livecounts.io/embed/youtube-live-subscriber-counter/UChfHENDTz2IBStA4PL8GJDw"
                     style={{
                       border: "0",
-                      width: "250px",
+                      width: "220px",
                       height: "80px",
                     }}
                   ></iframe>
                   <div className="w-28 p-2 text-center font-bold mt-4 rounded-lg text-lg bg-transparent text-white hover:bg-white hover:text-black transition-all duration-500 border-2 border-white">
                     <a href="https://www.youtube.com/@kvin.he1" target="_blank">
                       Subscribe
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-col items-center">
+                  <h1 className="text-white text-2xl font-bold">Twitch</h1>
+                  <iframe
+                    height="80px"
+                    src="https://livecounts.io/embed/twitch-live-follower-counter/kvinhe"
+                    style={{
+                      border: "0",
+                      width: "220px",
+                      height: "80px",
+                    }}
+                  ></iframe>
+                  <div className="w-28 p-2 text-center font-bold mt-4 rounded-lg text-lg bg-transparent text-white hover:bg-white hover:text-black transition-all duration-500 border-2 border-white">
+                    <a href="https://www.twitch.tv/kvinhe" target="_blank">
+                      Follow
                     </a>
                   </div>
                 </div>
