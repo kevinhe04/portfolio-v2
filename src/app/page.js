@@ -112,7 +112,7 @@ export default function Home() {
               title="Founder"
               company="PickyEats, Montreal, Canada"
               description={[
-                "Founded a mobile app recommending restaurants tailored to users’ choices, resulting in 10,000+ active users.",
+                "Founded a mobile app recommending restaurants tailored to users’ choices, resulting in 10,000+ downloads.",
                 "Partnered with RestoMontreal.ca to integrate restaurant data, offering users over 10k+ restaurants.",
                 "Leveraged social media platforms to produce short videos promoting PickyEats, achieving over 1M+ views.",
               ]}
