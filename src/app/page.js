@@ -112,7 +112,7 @@ export default function Home() {
               title="Founder"
               company="PickyEats, Montreal, Canada"
               description={[
-                "Founded a mobile app recommending restaurants tailored to users’ choices, resulting in 5,000+ active users.",
+                "Founded a mobile app recommending restaurants tailored to users’ choices, resulting in 10,000+ active users.",
                 "Partnered with RestoMontreal.ca to integrate restaurant data, offering users over 10k+ restaurants.",
                 "Leveraged social media platforms to produce short videos promoting PickyEats, achieving over 1M+ views.",
               ]}
@@ -167,7 +167,7 @@ export default function Home() {
             />
             <ProjectCard
               title="PickyEats - Ongoing"
-              description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 5,000+ downloads on the App Store."
+              description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 10,000+ downloads on the App Store."
               imageUrl="images/pickyscreen.png"
               projectLink="https://pickyeats.me"
               skills={[
