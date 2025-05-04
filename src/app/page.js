@@ -60,35 +60,39 @@ export default function Home() {
             className="text-lg md:text-xl mt-6"
           >
             <img
-              className="size-52 rounded-full object-cover m-auto border-2 border-white"
+              className="size-52 rounded-full object-cover m-auto"
               src="images\headshot.jpeg"
             ></img>
           </motion.div>
         </motion.section>
       </section>
       <section id="about" className="py-16 px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+        <div className="relative max-w-3xl w-full mx-auto backdrop-blur-md bg-white/20 rounded-xl p-8 shadow-lg border border-white/50">
+          <div className="absolute top-10 -left-30 w-32 h-32 md:bg-white/30 rounded-full blur-xl"></div>
+
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-white drop-shadow-sm">
             About Me
           </h2>
-          <p className="text-xl text-center">
-            Hi ! <span className="animate-pulse">👋</span>
-            <br />
-            I love creating content that inspires people or makes them laugh.
-            <br />
-            <br />
-            On a more technical note, I like to build stuff that leaves a big
-            impact on the community. My goal is to make people's lives easier
-            and if I am capable of inspiring people in the process, I would have
-            accomplished everything I wanted.
-            <br />
-            <br />
-            Thank you for reading through my portfolio, I hope our paths cross
-            one day.
-            <br />
-            <br />
-            Enjoy !
-          </p>
+
+          <div className="text-xl text-center text-white/90 space-y-6">
+            <p>
+              I love creating content that inspires people or makes them laugh.
+            </p>
+
+            <p>
+              On a more technical note, I like to build stuff that leaves a big
+              impact on the community. My goal is to make people's lives easier
+              and if I am capable of inspiring people in the process, I would
+              have accomplished everything I wanted.
+            </p>
+
+            <p>
+              Thank you for reading through my portfolio, I hope our paths cross
+              one day.
+            </p>
+          </div>
+          <div className="absolute bottom-5 right-5 w-20 h-20 md:bg-white/20 rounded-full blur-md"></div>
+          <div className="absolute top-1/2 right-10 w-10 h-10 md:bg-white/30 rounded-full blur-sm"></div>
         </div>
       </section>
 
@@ -167,7 +171,7 @@ export default function Home() {
             />
             <ProjectCard
               title="PickyEats - Ongoing"
-              description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 10,000+ downloads on the App Store."
+              description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 10,000+ downloads."
               imageUrl="images/pickyscreen.png"
               projectLink="https://pickyeats.me"
               skills={[
