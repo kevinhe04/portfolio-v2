@@ -31,7 +31,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-4xl md:text-7xl font-bold mt-2"
+            className="text-4xl md:text-7xl font-bold mt-2 text-white"
           >
             Kevin He
           </motion.h1>
@@ -40,7 +40,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg md:text-xl mt-4"
+            className="text-lg md:text-xl mt-4 text-white"
           >
             McGill Software Engineering Co-op Student
           </motion.p>
@@ -49,7 +49,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl mt-4"
+            className="text-lg md:text-xl mt-4 text-white"
           >
             Part-Time Content Creator
           </motion.p>
@@ -98,7 +98,7 @@ export default function Home() {
 
       <section id="experience" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-white">
             Experience
           </h2>
           <div className="flex flex-col gap-8">
@@ -158,7 +158,7 @@ export default function Home() {
       </section>
       <section id="projects" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-white">
             Projects
           </h2>
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
@@ -212,7 +212,7 @@ export default function Home() {
       </section>
       <section id="content-creation" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-white">
             Content Creation
           </h2>
           <div className="flex flex-col md:flex-row justify-center gap-32 md:gap-5 mt-20 items-center">
@@ -287,8 +287,8 @@ export default function Home() {
 
       <section id="contact" className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Contact</h2>
-          <p className="text-lg mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Contact</h2>
+          <p className="text-lg mb-8 text-white">
             Feel free to reach out to me through the following platforms.
           </p>
           <div className="flex justify-center gap-4">
