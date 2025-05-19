@@ -104,10 +104,10 @@ export default function Home() {
           <div className="flex flex-col gap-8">
             <ExperienceItem
               dates="May 2025 - August 2025"
-              title="Incoming Mobile Developer Intern"
+              title="Mobile Developer Intern"
               company="Sun Life Financial, Montreal, Canada"
-              description={["Incoming Summer Intern"]}
-              skills={["Swift", "SwiftUI"]}
+              description={["Integrating Push Notifications within the hybrid Sun Life app through Kotlin and TypeScript."]}
+              skills={["Kotlin", "TypeScript", "Ionic Framework"]}
               image="images/SunLife.png"
               link="https://www.sunlife.ca/en/"
             />
