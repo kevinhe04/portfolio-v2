@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+
 function ExperienceItem({
   dates,
   title,
@@ -13,38 +14,54 @@ function ExperienceItem({
     <a
       href={link}
       target="_blank"
-      className="block bg-white md:bg-opacity-85 hover:bg-opacity-100 text-black shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105 cursor-pointer group"
+      className="block bg-gray-900/50 border border-gray-800 hover:border-white backdrop-blur-sm rounded-xl p-6 transition-all duration-300 hover:bg-gray-700 group"
     >
-      <div className="absolute top-4 right-4 text-gray-400 group-hover:text-black transition-colors duration-300">
-        <ExternalLink size={20} />
-      </div>
-      <div className="flex flex-col md:flex-row gap-4">
-        <div className="md:w-1/4 text-center md:text-left flex flex-col">
-          <p className="font-semibold">{dates}</p>
-          <div className="flex-1 flex items-center justify-center">
-            <img src={image} className="rounded-2xl"></img>
-          </div>
+      <div className="flex justify-between items-start mb-4">
+        <div className="text-sm text-white font-medium">
+          {dates}
         </div>
-        <div className="md:w-3/4">
-          <h3 className="text-xl md:text-2xl font-semibold mb-2">{title}</h3>
-          <p className="mb-4">{company}</p>
-          <ul className="list-disc list-inside mb-4">
+        <div className="text-gray-500 group-hover:text-gray-300 transition-colors duration-300">
+          <ExternalLink size={18} />
+        </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row gap-6">
+        <div className="lg:w-20 flex-shrink-0">
+          <img
+            src={image}
+            alt={`${company} logo`}
+            className="w-16 h-16 lg:w-20 lg:h-20 rounded-xl object-contain bg-white/5 p-2"
+          />
+        </div>
+
+        <div className="flex-1">
+          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+            {title}
+          </h3>
+          <p className="text-gray-400 mb-4 font-medium">
+            {company}
+          </p>
+
+          <div className="mb-6">
             {description.map((item, index) => (
-              <li key={index} className="mb-2">
-                {item}
-              </li>
+              <p key={index} className="text-gray-400 leading-relaxed mb-2">
+                • {item}
+              </p>
             ))}
-          </ul>
-          <div className="flex flex-wrap gap-2 pointer-events-none">
+          </div>
+
+          <div className="flex flex-wrap gap-2">
             {skills.map((skill) => (
-              <Badge key={skill} className="bg-blue-100 text-blue-800">
+              <span
+                key={skill}
+                className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30 hover:border-blue-400 transition-colors duration-200">
                 {skill}
-              </Badge>
+              </span>
             ))}
           </div>
         </div>
       </div>
-    </a>
+    </a >
   );
 }
 
