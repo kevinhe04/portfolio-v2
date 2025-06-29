@@ -154,7 +154,9 @@ export default function Home() {
                     <span className="px-3 py-1 bg-green-500/20 text-green-300 text-sm rounded-lg border border-green-500/30">Python</span>
                     <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-sm rounded-lg border border-orange-500/30">Swift</span>
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-lg border border-purple-500/30">Kotlin</span>
+                    <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-lg border border-blue-500/30">PostgreSQL</span>
                     <span className="px-3 py-1 bg-red-500/20 text-red-300 text-sm rounded-lg border border-red-500/30">C++</span>
+                    <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-sm rounded-lg border border-orange-500/30">Java</span>
                   </div>
                 </div>
 
@@ -173,7 +175,6 @@ export default function Home() {
                   <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-sm rounded-lg border border-yellow-500/30">AWS</span>
                     <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-sm rounded-lg border border-orange-500/30">Firebase</span>
-                    <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-lg border border-blue-500/30">PostgreSQL</span>
                     <span className="px-3 py-1 bg-green-500/20 text-green-300 text-sm rounded-lg border border-green-500/30">Supabase</span>
                   </div>
                 </div>
