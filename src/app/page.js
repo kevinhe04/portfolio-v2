@@ -278,7 +278,7 @@ export default function Home() {
               title="ZenOS - Ongoing"
               description="Developed a cross-platform application using Electron.js and TypeScript (Desktop), and Swift (Mobile), designed to enhance productivity by providing a distraction-free environment."
               imageUrl="images/zenos.png"
-              projectLink="https://tryzenos.com"
+              projectLink="https://www.youtube.com/watch?v=3vmHrCJ-nJs"
               skills={["TypeScript", "Swift", "Electron.js", "Firebase"]}
             />
             <ProjectCard
