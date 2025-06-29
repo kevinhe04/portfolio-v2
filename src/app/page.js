@@ -60,21 +60,21 @@ export default function Home() {
                 <div className="text-center p-4 rounded-lg bg-gradient-to-br from-blue-500/10 to-blue-600/10 border border-blue-500/20">
                   <div className="text-3xl font-bold text-blue-400 mb-2">20K+</div>
                   <div className="flex flex-row justify-center gap-2 items-center">
-                    <CircleUser size={18} color={"white"} />
+                    <CircleUser size={18} color={"#99a1af"} />
                     <div className="text-sm text-gray-400">Followers </div>
                   </div>
                 </div>
                 <div className="text-center p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-purple-600/10 border border-purple-500/20">
                   <div className="text-3xl font-bold text-purple-400 mb-2">7M+</div>
                   <div className="flex flex-row justify-center gap-2 items-center">
-                    <Play size={18} color={"white"} />
+                    <Play size={18} color={"#99a1af"} />
                     <div className="text-sm text-gray-400">Video Views</div>
                   </div>
                 </div>
                 <div className="text-center p-4 rounded-lg bg-gradient-to-br from-green-500/10 to-green-600/10 border border-green-500/20">
                   <div className="text-3xl font-bold text-green-400 mb-2">3+</div>
                   <div className="flex flex-row justify-center gap-2 items-center">
-                    <Calendar size={18} color={"white"} />
+                    <Calendar size={18} color={"#99a1af"} />
                     <div className="text-sm text-gray-400">Years Experience</div>
                   </div>
 
@@ -82,7 +82,7 @@ export default function Home() {
                 <div className="text-center p-4 rounded-lg bg-gradient-to-br from-orange-500/10 to-orange-600/10 border border-orange-500/20">
                   <div className="text-3xl font-bold text-orange-400 mb-2">15+</div>
                   <div className="flex flex-row justify-center gap-2 items-center">
-                    <Presentation size={18} color={"white"} />
+                    <Presentation size={18} color={"#99a1af"} />
                     <div className="text-sm text-gray-400">Projects Built</div>
                   </div>
                 </div>
