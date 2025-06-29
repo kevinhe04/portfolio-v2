@@ -61,21 +61,21 @@ export default function Home() {
                   <div className="text-3xl font-bold text-blue-400 mb-2">20K+</div>
                   <div className="flex flex-row justify-center gap-2 items-center">
                     <div className="text-sm text-gray-400">Followers </div>
-                    <CircleUser size={18} />
+                    <CircleUser size={18} color={"white"} />
                   </div>
                 </div>
                 <div className="text-center p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-purple-600/10 border border-purple-500/20">
                   <div className="text-3xl font-bold text-purple-400 mb-2">7M+</div>
                   <div className="flex flex-row justify-center gap-2 items-center">
                     <div className="text-sm text-gray-400">Video Views</div>
-                    <Play size={18} />
+                    <Play size={18} color={"white"} />
                   </div>
                 </div>
                 <div className="text-center p-4 rounded-lg bg-gradient-to-br from-green-500/10 to-green-600/10 border border-green-500/20">
                   <div className="text-3xl font-bold text-green-400 mb-2">3+</div>
                   <div className="flex flex-row justify-center gap-2 items-center">
                     <div className="text-sm text-gray-400">Years Experience</div>
-                    <Calendar size={18} />
+                    <Calendar size={18} color={"white"} />
                   </div>
 
                 </div>
@@ -83,7 +83,7 @@ export default function Home() {
                   <div className="text-3xl font-bold text-orange-400 mb-2">15+</div>
                   <div className="flex flex-row justify-center gap-2 items-center">
                     <div className="text-sm text-gray-400">Projects Built</div>
-                    <Presentation size={18} />
+                    <Presentation size={18} color={"white"} />
                   </div>
                 </div>
               </div>
