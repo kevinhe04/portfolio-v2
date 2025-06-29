@@ -10,6 +10,7 @@ import Tiktok2 from "@/components/tiktok2";
 import * as motion from "motion/react-client";
 import ProjectCard from "@/components/projectCard";
 import ExperienceItem from "@/components/experienceItem";
+import { CircleUser, Play, Calendar, Presentation } from "lucide-react";
 
 export default function Home() {
   return (
@@ -58,19 +59,32 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-4 rounded-lg bg-gradient-to-br from-blue-500/10 to-blue-600/10 border border-blue-500/20">
                   <div className="text-3xl font-bold text-blue-400 mb-2">20K+</div>
-                  <div className="text-sm text-gray-400">Followers</div>
+                  <div className="flex flex-row justify-center gap-2 items-center">
+                    <div className="text-sm text-gray-400">Followers </div>
+                    <CircleUser size={18} />
+                  </div>
                 </div>
                 <div className="text-center p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-purple-600/10 border border-purple-500/20">
                   <div className="text-3xl font-bold text-purple-400 mb-2">7M+</div>
-                  <div className="text-sm text-gray-400">Video Views</div>
+                  <div className="flex flex-row justify-center gap-2 items-center">
+                    <div className="text-sm text-gray-400">Video Views</div>
+                    <Play size={18} />
+                  </div>
                 </div>
                 <div className="text-center p-4 rounded-lg bg-gradient-to-br from-green-500/10 to-green-600/10 border border-green-500/20">
                   <div className="text-3xl font-bold text-green-400 mb-2">3+</div>
-                  <div className="text-sm text-gray-400">Years Experience</div>
+                  <div className="flex flex-row justify-center gap-2 items-center">
+                    <div className="text-sm text-gray-400">Years Experience</div>
+                    <Calendar size={18} />
+                  </div>
+
                 </div>
                 <div className="text-center p-4 rounded-lg bg-gradient-to-br from-orange-500/10 to-orange-600/10 border border-orange-500/20">
                   <div className="text-3xl font-bold text-orange-400 mb-2">15+</div>
-                  <div className="text-sm text-gray-400">Projects Built</div>
+                  <div className="flex flex-row justify-center gap-2 items-center">
+                    <div className="text-sm text-gray-400">Projects Built</div>
+                    <Presentation size={18} />
+                  </div>
                 </div>
               </div>
 
@@ -90,8 +104,8 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
+        </div >
+      </section >
 
       <section id="about" className="py-24 px-8">
         <div className="max-w-4xl mx-auto">
@@ -487,6 +501,6 @@ export default function Home() {
       <footer className="py-6 bg-gray-800 text-white text-center">
         <p>&copy; 2025 Kevin He. All rights reserved.</p>
       </footer>
-    </div>
+    </div >
   );
 }
