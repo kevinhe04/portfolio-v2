@@ -303,7 +303,7 @@ export default function Home() {
               description="Built a task management console app in C++. Designed to streamline personal daily tasks and improve productivity. Integrated dynamic task handling, Google Drive API for automated document updates, and a VBA macro for Word-to-PDF conversions."
               imageUrl="images/va.jpg"
               skills={["C++", "Google API", "VBA"]}
-            />
+              projectLink="https://github.com/kevinhe04/VirtualAssistant" />
             <ProjectCard
               title="Chéri E-Commerce Website - September 2024"
               description="Developed Chéri's responsive e-commerce platform using Next.js, generating $10,000 in first-week sales. Integrated Supabase for authentication and database management, Stripe for payments, and use-shopping-cart library for seamless purchasing."
