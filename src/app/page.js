@@ -30,7 +30,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-center lg:text-left"
             >
-              <div className="md:mb-8 mb-20">
+              <div className="mb-8 mt-20 md:mt-0">
                 <img
                   src="images/headshot.jpeg"
                   alt="Kevin He"
