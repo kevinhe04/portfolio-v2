@@ -282,7 +282,7 @@ export default function Home() {
               skills={["TypeScript", "Swift", "Electron.js", "Firebase"]}
             />
             <ProjectCard
-              title="PickyEats - November 2024"
+              title="PickyEats - February 2024"
               description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 10,000+ downloads."
               imageUrl="images/pickyscreen.png"
               projectLink="https://pickyeats.me"
