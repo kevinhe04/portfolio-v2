@@ -413,7 +413,7 @@ export default function Home() {
             <div className="relative text-center mb-16">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-3xl"></div>
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-16 text-center">
-                Content Creation
+                Contact Me
               </h2>
             </div>
           </div>
