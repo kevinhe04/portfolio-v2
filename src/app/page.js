@@ -221,7 +221,7 @@ export default function Home() {
               link="https://www.sunlife.ca/en/"
             />
             <ExperienceItem
-              dates="September 2024 - Present"
+              dates="September 2024 - March 2025"
               title="Founder"
               company="PickyEats, Montreal, Canada"
               description={[
@@ -275,14 +275,14 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
             <ProjectCard
-              title="ZenOS - Ongoing"
+              title="ZenOS - March 2025"
               description="Developed a cross-platform application using Electron.js and TypeScript (Desktop), and Swift (Mobile), designed to enhance productivity by providing a distraction-free environment."
               imageUrl="images/zenos.png"
               projectLink="https://www.youtube.com/watch?v=3vmHrCJ-nJs"
               skills={["TypeScript", "Swift", "Electron.js", "Firebase"]}
             />
             <ProjectCard
-              title="PickyEats - Ongoing"
+              title="PickyEats - November 2024"
               description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 10,000+ downloads."
               imageUrl="images/pickyscreen.png"
               projectLink="https://pickyeats.me"
