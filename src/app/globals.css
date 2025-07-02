@@ -16,10 +16,12 @@
   }
 }
 
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: "Petrona", serif !important;
+  background-color: #020617;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+  overflow-x: hidden;
 }
 
 @layer utilities {
