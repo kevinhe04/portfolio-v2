@@ -275,6 +275,13 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
             <ProjectCard
+              title="LeetCode 2.0 - July 2025"
+              description="Developed a SwiftUI app for reviewing coding interview problems. Really just because no mobile apps exist for this purpose and I'm really bad at LeetCode."
+              imageUrl="images/lc.png"
+              projectLink=""
+              skills={["Swift", "SwiftUI"]}
+            />
+            <ProjectCard
               title="ZenOS - March 2025"
               description="Developed a cross-platform application using Electron.js and TypeScript (Desktop), and Swift (Mobile), designed to enhance productivity by providing a distraction-free environment."
               imageUrl="images/zenos.png"
