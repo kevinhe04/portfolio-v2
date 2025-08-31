@@ -121,24 +121,21 @@ export default function Home() {
               <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-blue-600/5 border border-blue-500/10">
                 <h3 className="text-xl font-semibold text-blue-400 mb-4">Developer</h3>
                 <p className="text-white leading-relaxed">
-                  I build impactful software solutions that make people's lives easier.
-                  Currently studying Software Engineering at McGill University.
+                  I like building products that make people's lives easier.
                 </p>
               </div>
 
               <div className="p-6 rounded-xl bg-gradient-to-br from-purple-500/5 to-purple-600/5 border border-purple-500/10">
                 <h3 className="text-xl font-semibold text-purple-400 mb-4">Creator</h3>
                 <p className="text-white leading-relaxed">
-                  Through content creation, I inspire and entertain audiences
-                  across multiple platforms with over 7M+ views and 20k+ followers.
+                  I post vlogs and funny videos. Also known as a yapper.
                 </p>
               </div>
 
               <div className="p-6 rounded-xl bg-gradient-to-br from-green-500/5 to-green-600/5 border border-green-500/10">
                 <h3 className="text-xl font-semibold text-green-400 mb-4">Vision</h3>
                 <p className="text-white leading-relaxed">
-                  If I can inspire people in the process, I would have accomplished
-                  everything I wanted. Thank you for reading through my portfolio.
+                  I want to inspire and entertain others.
                 </p>
               </div>
             </div>
@@ -179,24 +176,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-              <div className="mt-8 pt-6 border-t border-gray-800">
-                <h4 className="text-sm font-medium text-gray-400 mb-4">Currently Working On</h4>
-                <div className="space-y-3">
-                  <div className="flex items-center text-gray-300 text-sm p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
-                    <span className="text-blue-400 mr-2">📱</span>
-                    PickyEats Mobile App
-                  </div>
-                  <div className="flex items-center text-gray-300 text-sm p-2 rounded-lg bg-purple-500/10 border border-purple-500/20">
-                    <span className="text-purple-400 mr-2">💻</span>
-                    ZenOS Productivity Suite
-                  </div>
-                  <div className="flex items-center text-gray-300 text-sm p-2 rounded-lg bg-red-500/10 border border-red-500/20">
-                    <span className="text-red-400 mr-2">🎥</span>
-                    Content Creation
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -212,11 +191,24 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-8">
             <ExperienceItem
+              dates="September 2025 - December 2025"
+              title="Software Developer Intern"
+              company="Autodesk, Montreal, Canada"
+              description={["Incoming"
+              ]}
+              skills={["C++", "TypeScript"]}
+              image="images/autodesk.jpg"
+              link="https://www.autodesk.com/"
+            />
+            <ExperienceItem
               dates="May 2025 - August 2025"
               title="Mobile Developer Intern"
               company="Sun Life Financial, Montreal, Canada"
-              description={["Integrating Push Notifications within the hybrid Sun Life app through Kotlin and TypeScript."]}
-              skills={["Kotlin", "TypeScript", "Ionic Framework"]}
+              description={["Integrated push notifications and refactored login flow for Sun Life MPF (HK) using TypeScript, Angular, and Ionic.",
+                "Enhanced AI chatbot features in the my Sun Life (CA) iOS app to improve customer experience using Swift & SwiftUI.",
+                "Implemented read receipt functionality in AWS Connect chat interface to enhance user clarity and engagement."
+              ]}
+              skills={["Swift", "TypeScript", "Ionic Framework"]}
               image="images/SunLife.png"
               link="https://www.sunlife.ca/en/"
             />
@@ -245,7 +237,7 @@ export default function Home() {
             />
             <ExperienceItem
               dates="May 2024 - August 2024"
-              title="Web Developer Intern"
+              title="Software Developer Intern"
               company="Tedy, Montreal, Canada"
               description={[
                 "Delivered 40+ completed PRs, coding mainly in TypeScript.",
@@ -341,74 +333,6 @@ export default function Home() {
             <Tiktok />
             <Tiktok2 />
             <Tiktok1 />
-          </div>
-          <div className="mt-20">
-            <div className="relative text-center mb-16">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-3xl"></div>
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-16 text-center">
-                Join the Fun!
-              </h2>
-            </div>
-            <div className="flex flex-col md:flex-row gap-5 mt-10 justify-center">
-              <div className="flex flex-col items-center">
-                <h1 className="text-white text-2xl font-bold">TikTok</h1>
-                <iframe
-                  height="80px"
-                  src="https://livecounts.io/embed/tiktok-live-follower-counter/kvin.he"
-                  style={{
-                    border: "0",
-                    width: "220px",
-                    height: "80px",
-                  }}
-                ></iframe>
-                <a
-                  href="https://www.tiktok.com/@kvin.he"
-                  target="_blank"
-                  className="group relative inline-flex items-center justify-center px-6 py-3 mt-4 text-sm font-semibold text-white bg-gradient-to-r from-gray-800 to-gray-900 border border-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:from-white hover:to-gray-100 hover:text-black hover:border-gray-300 hover:shadow-lg hover:scale-105"
-                >
-                  <span className="relative z-10">Follow</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </a>
-              </div>
-              <div>
-                <div className="flex flex-col items-center">
-                  <h1 className="text-white text-2xl font-bold">YouTube</h1>
-                  <iframe
-                    height="80px"
-                    src="https://livecounts.io/embed/youtube-live-subscriber-counter/UChfHENDTz2IBStA4PL8GJDw"
-                    style={{
-                      border: "0",
-                      width: "220px",
-                      height: "80px",
-                    }}
-                  ></iframe>
-                  <a href="https://www.youtube.com/@kvin.he1" target="_blank" className="group relative inline-flex items-center justify-center px-6 py-3 mt-4 text-sm font-semibold text-white bg-gradient-to-r from-gray-800 to-gray-900 border border-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:from-white hover:to-gray-100 hover:text-black hover:border-gray-300 hover:shadow-lg hover:scale-105"
-                  >
-                    <span className="relative z-10">Subscribe</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </a>
-                </div>
-              </div>
-              <div>
-                <div className="flex flex-col items-center">
-                  <h1 className="text-white text-2xl font-bold">Twitch</h1>
-                  <iframe
-                    height="80px"
-                    src="https://livecounts.io/embed/twitch-live-follower-counter/kvinhe"
-                    style={{
-                      border: "0",
-                      width: "220px",
-                      height: "80px",
-                    }}
-                  ></iframe>
-                  <a href="https://www.twitch.tv/kvinhe" target="_blank" className="group relative inline-flex items-center justify-center px-6 py-3 mt-4 text-sm font-semibold text-white bg-gradient-to-r from-gray-800 to-gray-900 border border-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:from-white hover:to-gray-100 hover:text-black hover:border-gray-300 hover:shadow-lg hover:scale-105"
-                  >
-                    <span className="relative z-10">Follow</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

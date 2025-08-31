@@ -38,7 +38,7 @@ function ExperienceItem({
           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
             {title}
           </h3>
-          <p className="text-gray-400 mb-4 font-medium">
+          <p className="text-white mb-4 font-medium">
             {company}
           </p>
 
