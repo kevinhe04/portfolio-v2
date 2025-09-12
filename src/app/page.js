@@ -10,7 +10,6 @@ import Tiktok2 from "@/components/tiktok2";
 import * as motion from "motion/react-client";
 import ProjectCard from "@/components/projectCard";
 import ExperienceItem from "@/components/experienceItem";
-import { CircleUser, Play, Calendar, Presentation } from "lucide-react";
 
 export default function Home() {
   return (
@@ -49,138 +48,9 @@ export default function Home() {
               </p>
 
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 backdrop-blur-sm"
-            >
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-4 rounded-lg bg-gradient-to-br from-blue-500/10 to-blue-600/10 border border-blue-500/20">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">20K+</div>
-                  <div className="flex flex-row justify-center gap-2 items-center">
-                    <CircleUser size={18} color={"#99a1af"} />
-                    <div className="text-sm text-gray-400">Followers </div>
-                  </div>
-                </div>
-                <div className="text-center p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-purple-600/10 border border-purple-500/20">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">7M+</div>
-                  <div className="flex flex-row justify-center gap-2 items-center">
-                    <Play size={18} color={"#99a1af"} />
-                    <div className="text-sm text-gray-400">Video Views</div>
-                  </div>
-                </div>
-                <div className="text-center p-4 rounded-lg bg-gradient-to-br from-green-500/10 to-green-600/10 border border-green-500/20">
-                  <div className="text-3xl font-bold text-green-400 mb-2">3+</div>
-                  <div className="flex flex-row justify-center gap-2 items-center">
-                    <Calendar size={18} color={"#99a1af"} />
-                    <div className="text-sm text-gray-400">Years Experience</div>
-                  </div>
-
-                </div>
-                <div className="text-center p-4 rounded-lg bg-gradient-to-br from-orange-500/10 to-orange-600/10 border border-orange-500/20">
-                  <div className="text-3xl font-bold text-orange-400 mb-2">15+</div>
-                  <div className="flex flex-row justify-center gap-2 items-center">
-                    <Presentation size={18} color={"#99a1af"} />
-                    <div className="text-sm text-gray-400">Projects Built</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-6 border-t border-gray-800">
-                <h4 className="text-lg font-semibold text-white mb-4 text-center">Focus Areas</h4>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  <span className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-blue-600/20 text-purple-300 text-sm rounded-full border border-purple-500/30">
-                    Software Development
-                  </span>
-                  <span className="px-3 py-1 bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-300 text-sm rounded-full border border-purple-500/30">
-                    Content Creation
-                  </span>
-                  <span className="px-3 py-1 bg-gradient-to-r from-green-500/20 to-green-600/20 text-green-300 text-sm rounded-full border border-green-500/30">
-                    Community Impact
-                  </span>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div >
       </section >
-
-      <section id="about" className="py-24 px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative text-center mb-16">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-3xl"></div>
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-16 text-center">
-              About Me
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-16">
-            <div className="space-y-8">
-              <div className="p-6 rounded-xl bg-gradient-to-br from-blue-500/5 to-blue-600/5 border border-blue-500/10">
-                <h3 className="text-xl font-semibold text-blue-400 mb-4">Developer</h3>
-                <p className="text-white leading-relaxed">
-                  I like building products that make people's lives easier.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-xl bg-gradient-to-br from-purple-500/5 to-purple-600/5 border border-purple-500/10">
-                <h3 className="text-xl font-semibold text-purple-400 mb-4">Creator</h3>
-                <p className="text-white leading-relaxed">
-                  I post vlogs and funny videos. Also known as a yapper.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-xl bg-gradient-to-br from-green-500/5 to-green-600/5 border border-green-500/10">
-                <h3 className="text-xl font-semibold text-green-400 mb-4">Vision</h3>
-                <p className="text-white leading-relaxed">
-                  I want to inspire and entertain others.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gray-900/30 border border-gray-800 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold text-white mb-8 text-center">Technologies</h3>
-
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-sm font-medium text-gray-400 mb-3">Languages</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-lg border border-blue-500/30">TypeScript</span>
-                    <span className="px-3 py-1 bg-green-500/20 text-green-300 text-sm rounded-lg border border-green-500/30">Python</span>
-                    <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-sm rounded-lg border border-orange-500/30">Swift</span>
-                    <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-lg border border-purple-500/30">Kotlin</span>
-                    <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-lg border border-blue-500/30">PostgreSQL</span>
-                    <span className="px-3 py-1 bg-red-500/20 text-red-300 text-sm rounded-lg border border-red-500/30">C++</span>
-                    <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-sm rounded-lg border border-orange-500/30">Java</span>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="text-sm font-medium text-gray-400 mb-3">Frameworks</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-sm rounded-lg border border-cyan-500/30">React Native</span>
-                    <span className="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-lg border border-gray-700/50">Next.js</span>
-                    <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-sm rounded-lg border border-emerald-500/30">Flask</span>
-                    <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-sm rounded-lg border border-indigo-500/30">Electron.js</span>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="text-sm font-medium text-gray-400 mb-3">Tools & Platforms</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-sm rounded-lg border border-yellow-500/30">AWS</span>
-                    <span className="px-3 py-1 bg-orange-500/20 text-orange-300 text-sm rounded-lg border border-orange-500/30">Firebase</span>
-                    <span className="px-3 py-1 bg-green-500/20 text-green-300 text-sm rounded-lg border border-green-500/30">Supabase</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="experience" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <div className="relative text-center mb-16">
@@ -192,11 +62,11 @@ export default function Home() {
           <div className="flex flex-col gap-8">
             <ExperienceItem
               dates="September 2025 - December 2025"
-              title="Software Developer Intern"
+              title="AI Software Developer Intern"
               company="Autodesk, Montreal, Canada"
-              description={["Incoming"
+              description={["Developing automation features in Flow AI to enhance workflows for designers and engineers.",
               ]}
-              skills={["C++", "TypeScript"]}
+              skills={["Python", "StrandsAgent"]}
               image="images/autodesk.jpg"
               link="https://www.autodesk.com/"
             />

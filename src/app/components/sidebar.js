@@ -42,52 +42,38 @@ export default function Sidebar() {
       <div className="flex-grow flex items-center">
         <nav className="text-white space-y-8 text-left">
           <a
-            href="#about"
-            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${
-              activeSection === "#about"
-                ? "text-white"
-                : "text-gray-500 hover:text-white"
-            }`}
-          >
-            About Me
-          </a>
-          <a
             href="#experience"
-            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${
-              activeSection === "#experience"
-                ? "text-white"
-                : "text-gray-500 hover:text-white"
-            }`}
+            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#experience"
+              ? "text-white"
+              : "text-gray-500 hover:text-white"
+              }`}
           >
             Experience
           </a>
           <a
             href="#projects"
-            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${
-              activeSection === "#projects"
-                ? "text-white"
-                : "text-gray-500 hover:text-white"
-            }`}
+            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#projects"
+              ? "text-white"
+              : "text-gray-500 hover:text-white"
+              }`}
           >
             Projects
           </a>
           <a
             href="#content-creation"
-            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${
-              activeSection === "#content-creation"
-                ? "text-white"
-                : "text-gray-500 hover:text-white"
-            }`}
+            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#content-creation"
+              ? "text-white"
+              : "text-gray-500 hover:text-white"
+              }`}
           >
             Content Creation
           </a>
           <a
             href="#contact"
-            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${
-              activeSection === "#contact"
-                ? "text-white"
-                : "text-gray-500 hover:text-white"
-            }`}
+            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#contact"
+              ? "text-white"
+              : "text-gray-500 hover:text-white"
+              }`}
           >
             Contact
           </a>

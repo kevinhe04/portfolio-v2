@@ -46,14 +46,6 @@ export default function MenuPortfolio() {
         >
           <ListItemButton>
             <a
-              href="#about"
-              className="block text-lg hover:underline transition-all font-petrona duration-300"
-            >
-              About Me
-            </a>
-          </ListItemButton>
-          <ListItemButton>
-            <a
               href="#experience"
               className="block text-lg hover:underline transition-all font-petrona duration-300"
             >
