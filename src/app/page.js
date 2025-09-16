@@ -139,7 +139,7 @@ export default function Home() {
             <ProjectCard
               title="Stacy (Hack The North Winner) - September 2025"
               description="Built Stacy, a voice safety companion that logs incidents, tracks live location, and alerts your loved ones/police. Awarded Best Voice-Powered App by Vapi, as part of a sponsor challenge at Hack The North 2025."
-              imageUrl="images/lc.png"
+              imageUrl="images/stacy.png"
               projectLink="https://devpost.com/software/stacy-g7zptj"
               skills={["Swift", "SwiftUI"]}
             />
