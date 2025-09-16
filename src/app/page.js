@@ -137,10 +137,10 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
             <ProjectCard
-              title="LeetCode 2.0 - July 2025"
-              description="Developed a SwiftUI app for reviewing coding interview problems. Really just because no mobile apps exist for this purpose and I'm really bad at LeetCode."
+              title="Stacy (Hack The North Winner) - September 2025"
+              description="Built Stacy, a voice safety companion that logs incidents, tracks live location, and alerts your loved ones/police. Awarded Best Voice-Powered App by Vapi, as part of a sponsor challenge at Hack The North 2025."
               imageUrl="images/lc.png"
-              projectLink=""
+              projectLink="https://devpost.com/software/stacy-g7zptj"
               skills={["Swift", "SwiftUI"]}
             />
             <ProjectCard
@@ -167,12 +167,6 @@ export default function Home() {
                 "Firebase",
               ]}
             />
-            <ProjectCard
-              title="Virtual Assistant - December 2024"
-              description="Built a task management console app in C++. Designed to streamline personal daily tasks and improve productivity. Integrated dynamic task handling, Google Drive API for automated document updates, and a VBA macro for Word-to-PDF conversions."
-              imageUrl="images/va.jpg"
-              skills={["C++", "Google API", "VBA"]}
-              projectLink="https://github.com/kevinhe04/VirtualAssistant" />
             <ProjectCard
               title="Chéri E-Commerce Website - September 2024"
               description="Developed Chéri's responsive e-commerce platform using Next.js, generating $10,000 in first-week sales. Integrated Supabase for authentication and database management, Stripe for payments, and use-shopping-cart library for seamless purchasing."
