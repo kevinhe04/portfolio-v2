@@ -145,7 +145,7 @@ export default function Home() {
             />
             <ProjectCard
               title="ZenOS - March 2025"
-              description="Developed a cross-platform application using Electron.js and TypeScript (Desktop), and Swift (Mobile), designed to enhance productivity by providing a distraction-free environment."
+              description="Developed a cross-platform application using Electron.js and TypeScript (Desktop), and Swift (Mobile), designed to enhance productivity by providing a distraction-free environment. Awarded highest rating by judges at BagelHacks Hackathon 2025 and won 1st Place at JHKCBA's pitch competition."
               imageUrl="images/zenos.png"
               projectLink="https://www.youtube.com/watch?v=3vmHrCJ-nJs"
               skills={["TypeScript", "Swift", "Electron.js", "Firebase"]}
