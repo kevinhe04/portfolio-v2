@@ -64,7 +64,7 @@ export default function Home() {
               dates="September 2025 - December 2025"
               title="AI Software Developer Intern"
               company="Autodesk, Montreal, Canada"
-              description={["Developing automation features in Flow AI to enhance workflows for designers and engineers.",
+              description={["Optimized Strands multi-agent AI system, reducing MCP tool calls with real-time context sharing between agents.",
               ]}
               skills={["Python", "StrandsAgent"]}
               image="images/autodesk.jpg"
