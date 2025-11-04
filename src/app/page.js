@@ -21,33 +21,43 @@ export default function Home() {
         id="home"
         className="min-h-screen flex flex-col justify-center items-center px-8"
       >
-        <div className="max-w-6xl mx-auto w-full">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center lg:text-left"
-            >
-              <div className="mb-8 mt-20 md:mt-0">
-                <img
-                  src="images/headshot.jpeg"
-                  alt="Kevin He"
-                  className="w-32 h-32 rounded-full object-cover mx-auto lg:mx-0"
-                />
-              </div>
+        <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left w-full lg:flex-1"
+          >
+            <div className="mb-8 mt-20 md:mt-0">
+              <img
+                src="images/headshot.jpeg"
+                alt="Kevin He"
+                className="w-32 h-32 rounded-full object-cover mx-auto lg:mx-0"
+              />
+            </div>
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
-                Kevin He
-              </h1>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
+              Kevin He
+            </h1>
 
-              <p className="text-xl text-gray-400 mb-12 font-light leading-relaxed">
-                <span className="text-blue-400">Software Engineer</span> & <span className="text-purple-400">Content Creator</span>
-                <br />
-                <span className="text-white text-lg">@ McGill University</span>
-              </p>
-
-            </motion.div>
+            <p className="text-xl text-gray-400 mb-12 font-light leading-relaxed">
+              <span className="text-blue-400">Software Engineer</span> & <span className="text-purple-400">Content Creator</span>
+              <br />
+              <span className="text-white text-lg">@ McGill University</span>
+            </p>
+          </motion.div>
+          <div className="w-full lg:flex-1 mt-16 lg:mt-0">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center lg:text-left">PRESENTLY</h3>
+            <ExperienceItem
+              dates="September 2025 - December 2025"
+              title="AI Software Developer Intern"
+              company="Autodesk, Montreal, Canada"
+              description={["Implemented caching within multi-agent workflows, reducing MCP server tool calls and redundant API usage", "Accelerated multimodal RAG pipelines by minimizing telemetry overhead, reducing agent response time by 52%", "Built asynchronous RAG ingestion with AWS Lambda, improving vector embedding and pipeline efficiency"
+              ]}
+              skills={["Python", "StrandsAgent", "MCP", "AWS"]}
+              image="images/autodesk.jpg"
+              link="https://www.autodesk.com/"
+            />
           </div>
         </div >
       </section >
@@ -64,7 +74,7 @@ export default function Home() {
               dates="September 2025 - December 2025"
               title="AI Software Developer Intern"
               company="Autodesk, Montreal, Canada"
-              description={["Optimized Strands multi-agent AI system, reducing MCP tool calls with real-time context sharing between agents.",
+              description={["Implemented caching within multi-agent workflows, reducing MCP server tool calls and redundant API usage", "Accelerated multimodal RAG pipelines by minimizing telemetry overhead, reducing agent response time by 52%", "Built asynchronous RAG ingestion with AWS Lambda, improving vector embedding and pipeline efficiency"
               ]}
               skills={["Python", "StrandsAgent"]}
               image="images/autodesk.jpg"
