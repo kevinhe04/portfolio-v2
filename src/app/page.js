@@ -50,7 +50,7 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-white mb-6 text-center lg:text-left">PRESENTLY</h3>
             <ExperienceItem
               dates="September 2025 - December 2025"
-              title="AI Software Developer Intern"
+              title="MLE Intern"
               company="Autodesk, Montreal, Canada"
               description={["Implemented caching within multi-agent workflows, reducing MCP server tool calls and redundant API usage", "Accelerated multimodal RAG pipelines by minimizing telemetry overhead, reducing agent response time by 52%", "Built asynchronous RAG ingestion with AWS Lambda, improving vector embedding and pipeline efficiency"
               ]}
