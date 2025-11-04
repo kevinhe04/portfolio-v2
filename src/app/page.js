@@ -21,7 +21,7 @@ export default function Home() {
         id="home"
         className="min-h-screen flex flex-col justify-center items-center px-8"
       >
-        <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
+        <div className="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-5">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
