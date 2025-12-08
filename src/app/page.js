@@ -164,7 +164,7 @@ export default function Home() {
               title="PickyEats - February 2024"
               description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 10,000+ downloads."
               imageUrl="images/pickyscreen.png"
-              projectLink="https://pickyeats.me"
+              projectLink="https://picky-eats.vercel.app/"
               skills={[
                 "React Native",
                 "TypeScript",
