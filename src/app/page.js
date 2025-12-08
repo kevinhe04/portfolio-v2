@@ -112,7 +112,7 @@ export default function Home() {
                 "Node.js",
                 "Firebase",
               ]}
-              link="https://pickyeats.me"
+              link="https://picky-eats.vercel.app/"
               image="images/pickyeats.jpg"
             />
             <ExperienceItem
