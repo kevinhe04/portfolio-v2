@@ -47,7 +47,6 @@ export default function Home() {
             </p>
           </motion.div>
           <div className="w-full lg:flex-1 mt-16 lg:mt-0">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center lg:text-left">PRESENTLY</h3>
             <ExperienceItem
               dates="September 2025 - December 2025"
               title="MLE Intern"
