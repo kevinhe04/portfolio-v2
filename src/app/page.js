@@ -46,18 +46,6 @@ export default function Home() {
               <span className="text-white text-lg">@ McGill University</span>
             </p>
           </motion.div>
-          <div className="w-full lg:flex-1 mt-16 lg:mt-0">
-            <ExperienceItem
-              dates="September 2025 - December 2025"
-              title="MLE Intern"
-              company="Autodesk, Montreal, Canada"
-              description={["Implemented caching within multi-agent workflows, reducing MCP server tool calls and redundant API usage", "Accelerated multimodal RAG pipelines by minimizing telemetry overhead, reducing agent response time by 52%", "Built asynchronous RAG ingestion with AWS Lambda, improving vector embedding and pipeline efficiency"
-              ]}
-              skills={["Python", "StrandsAgent", "MCP", "AWS"]}
-              image="images/autodesk.jpg"
-              link="https://www.autodesk.com/"
-            />
-          </div>
         </div >
       </section >
       <section id="experience" className="py-16 px-4">
