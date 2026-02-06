@@ -11,57 +11,61 @@ function ExperienceItem({
   image,
 }) {
   return (
-    <a
-      href={link}
-      target="_blank"
-      className="block bg-gray-900/50 border border-gray-800 hover:border-white backdrop-blur-sm rounded-xl p-6 transition-all duration-300 hover:bg-gray-700 group"
-    >
-      <div className="flex justify-between items-start mb-4">
-        <div className="text-sm text-white font-medium">
-          {dates}
-        </div>
-        <div className="text-gray-500 group-hover:text-gray-300 transition-colors duration-300">
-          <ExternalLink size={18} />
-        </div>
-      </div>
-
-      <div className="flex flex-col lg:flex-row gap-6">
-        <div className="lg:w-20 flex-shrink-0">
-          <img
-            src={image}
-            alt={`${company} logo`}
-            className="w-16 h-16 lg:w-20 lg:h-20 rounded-xl object-contain bg-white/5 p-2"
-          />
-        </div>
-
-        <div className="flex-1">
-          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
-            {title}
-          </h3>
-          <p className="text-white mb-4 font-medium">
-            {company}
-          </p>
-
-          <div className="mb-6">
-            {description.map((item, index) => (
-              <p key={index} className="text-gray-400 leading-relaxed mb-2">
-                • {item}
-              </p>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30 hover:border-blue-400 transition-colors duration-200">
-                {skill}
-              </span>
-            ))}
+    <div className="group">
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block backdrop-blur-sm rounded-xl p-6 transition-colors duration-300"
+      >
+        <div className="flex justify-between items-start mb-4">
+          <div className="text-md text-black">{company}</div>
+          <div className="text-gray-500 group-hover:text-blue-600 transition-colors duration-300">
+            <ExternalLink size={18} />
           </div>
         </div>
+
+        <div className="flex flex-col lg:flex-row gap-6">
+          <div className="lg:w-20 flex-shrink-0">
+            <img
+              src={image}
+              alt={`${company} logo`}
+              className="w-16 h-16 lg:w-20 lg:h-20 rounded-xl object-contain bg-white/5 p-2"
+            />
+          </div>
+
+          <div className="flex-1">
+            <h3 className="text-xl font-bold text-black mb-2 transition-colors duration-300">
+              {title}
+            </h3>
+            <p className="text-black text-sm mb-4">{dates}</p>
+
+            <div className="flex flex-wrap gap-2">
+              {skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1 bg-blue-500/20 text-blue-600 text-sm rounded-full border border-blue-500/30 hover:border-blue-400 transition-colors duration-200"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </a>
+      <div
+        className="max-h-0 overflow-hidden opacity-0 -translate-y-1 pointer-events-none transition-all duration-300 ease-out group-hover:max-h-96 group-hover:opacity-100 group-hover:translate-y-0 group-hover:mt-3 group-hover:pointer-events-auto"
+        aria-hidden="true"
+      >
+        <div className="rounded-xl bg-white/60 backdrop-blur-sm px-6 py-3">
+          {description.map((item, index) => (
+            <p key={index} className="text-gray-500 leading-relaxed mb-2 last:mb-0">
+              • {item}
+            </p>
+          ))}
+        </div>
       </div>
-    </a >
+    </div>
   );
 }
 

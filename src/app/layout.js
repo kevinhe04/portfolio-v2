@@ -3,6 +3,7 @@ import { Petrona } from "next/font/google";
 
 const petrona = Petrona({
   subsets: ["latin"],
+  weight: ["400", "700"],
   display: "swap",
 });
 

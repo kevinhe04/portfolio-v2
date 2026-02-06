@@ -4,16 +4,13 @@ import Sidebar from "./components/sidebar";
 import Navbar from "./components/navbar";
 import { SocialIcon } from "react-social-icons";
 import Menu from "./components/menu";
-import Tiktok from "@/components/tiktok";
-import Tiktok1 from "@/components/tiktok1";
-import Tiktok2 from "@/components/tiktok2";
 import * as motion from "motion/react-client";
 import ProjectCard from "@/components/projectCard";
 import ExperienceItem from "@/components/experienceItem";
 
 export default function Home() {
   return (
-    <div className="bg-slate-950 min-h-screen">
+    <div className="bg-white min-h-screen">
       <Sidebar />
       <Navbar />
       <Menu />
@@ -21,7 +18,7 @@ export default function Home() {
         id="home"
         className="min-h-screen flex flex-col justify-center items-center px-8"
       >
-        <div className="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-5">
+        <div className="max-w-3xl mx-auto w-full flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-5">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -36,10 +33,10 @@ export default function Home() {
               />
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-black mb-6 tracking-tight">
               Kevin He
             </h1>
-            <p className="max-w-xl text-white text-base md:text-lg leading-relaxed">
+            <p className="max-w-xl text-black text-base md:text-lg leading-relaxed">
               I like exploring different interests and building new skills along the way.
             </p>
             <br />
@@ -52,17 +49,16 @@ export default function Home() {
       </section >
       <section id="experience" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="relative text-center mb-16">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-3xl"></div>
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-16 text-center">
-              Experience
+          <div className="relative mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-16">
+              Experience.
             </h2>
           </div>
           <div className="flex flex-col gap-8">
             <ExperienceItem
               dates="September 2025 - December 2025"
               title="AI Software Developer Intern"
-              company="Autodesk, Montreal, Canada"
+              company="Autodesk • Montreal, Canada"
               description={["Accelerated multi-agent workflows through MCP tool caching, reducing agent response time by 52%", "Built an async ingestion pipeline with SQS → S3 events and DynamoDB job tracking, improving scalability", "Integrated RAG multimodal search using Marengo, enabling unified retrieval across text/image/video assets"
               ]}
               skills={["Python", "StrandsAgent", "MCP", "RAG", "AWS"]}
@@ -72,7 +68,7 @@ export default function Home() {
             <ExperienceItem
               dates="May 2025 - August 2025"
               title="Mobile Developer Intern"
-              company="Sun Life Financial, Montreal, Canada"
+              company="Sun Life Financial • Montreal, Canada"
               description={["Integrated push notifications for Hong Kong’s hybrid app using TypeScript, Angular, Ionic Cordova/Capacitor",
                 "Enhanced AI chatbot features in Sun Life’s iOS app using Swift and Amazon Connect, improving customer UX",
                 "Delivered iOS features on navigation, message handling, and read-receipts to increase app stability and test coverage"
@@ -84,7 +80,7 @@ export default function Home() {
             <ExperienceItem
               dates="May 2024 - August 2024"
               title="Software Developer Intern"
-              company="Tedy, Montreal, Canada"
+              company="Tedy • Montreal, Canada"
               description={[
                 "Implemented frontend features and backend workflows using TypeScript, Next.js, and Inngest",
                 "Built Retool dashboards with PostgreSQL queries to identify unattended claims, reducing missed claims by 40%",
@@ -105,49 +101,50 @@ export default function Home() {
       </section>
       <section id="projects" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="relative text-center mb-16">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-3xl"></div>
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-16 text-center">
-              Projects
+          <div className="relative mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-16">
+              Projects.
             </h2>
           </div>
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
             <ProjectCard
-              title="Stacy - Hack The North Winner 🏅"
+              title="Stacy - Hack The North Winner"
+              dates="September 2025"
               description="Voice safety companion that logs incidents, tracks live location, and alerts your loved ones/police. Awarded Best Voice-Powered App by VAPI (Hack The North 2025)."
               imageUrl="images/stacy.png"
               projectLink="https://devpost.com/software/stacy-g7zptj"
               skills={["Swift", "SwiftUI"]}
             />
             <ProjectCard
-              title="ZenOS - BagelHacks Winner 🏅"
+              title="ZenOS - BagelHacks Winner"
+              dates="March 2025"
               description="Productivity environment tool. Awarded highest rating by judges at BagelHacks Hackathon 2025 and won 1st Place at JHKCBA's pitch competition."
               imageUrl="images/zenos.png"
               projectLink="https://www.youtube.com/watch?v=3vmHrCJ-nJs"
               skills={["TypeScript", "Swift", "Electron.js", "Firebase"]}
             />
             <ProjectCard
-              title="PickyEats 🍽️"
+              title="PickyEats"
+              dates="November 2024 - April 2025"
               description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 12k+ downloads. 10k+ restaurants. 5M+ views."
               imageUrl="images/pickyscreen.png"
               projectLink="https://picky-eats.vercel.app/"
               skills={[
+                "AWS",
+                "Expo",
                 "React Native",
                 "TypeScript",
-                "Expo",
-                "PostgreSQL",
-                "Python",
-                "Flask",
-                "AWS",
+                "PostgreSQL"
               ]}
             />
             <ProjectCard
-              title="Chéri 👕"
+              title="Chéri"
+              dates="September 2024"
               description="Developed Chéri's responsive e-commerce, generating $10,000 in first-week sales using Stripe, Next.js, and Supabase."
               imageUrl="images/cheri.png"
               projectLink="https://www.cherimtl.com/"
               skills={[
-                "Node.Js",
+                "Next.js",
                 "Supabase",
                 "Stripe",
               ]}
@@ -157,10 +154,9 @@ export default function Home() {
       </section>
       <section id="content-creation" className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="relative text-center mb-16">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-3xl"></div>
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-16 text-center">
-              Content Creation
+          <div className="relative mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-16">
+              Content Creation.
             </h2>
           </div>
         </div>
@@ -184,77 +180,69 @@ export default function Home() {
         </div>
       </section>
       <section id="contact" className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            Contact Me
-          </h2>
-          <p className="text-gray-400 mb-12 max-w-lg mx-auto">
-            Feel free to reach out via any of the platforms below — I’d love to connect.
-          </p>
-          <div className="flex flex-wrap justify-center gap-8">
-            <div className="flex flex-col items-center cursor-pointer hover:text-blue-400 transition">
-              <SocialIcon
-                url="https://www.linkedin.com/in/kevinhe04/"
-                fgColor="#fff"
-                style={{ width: 48, height: 48 }}
-              />
-              <span className="mt-2 text-sm font-medium text-white text-center">
-                LinkedIn
-              </span>
-            </div>
-            <div className="flex flex-col items-center cursor-pointer hover:text-gray-300 transition">
-              <SocialIcon
-                url="https://github.com/kevinhe04"
-                fgColor="#fff"
-                style={{ width: 48, height: 48 }}
-              />
-              <span className="mt-2 text-sm font-medium text-white text-center">
-                GitHub
-              </span>
-            </div>
-            <div className="flex flex-col items-center cursor-pointer hover:text-red-400 transition">
-              <SocialIcon
-                url="mailto:kvn.04he@gmail.com"
-                fgColor="#fff"
-                style={{ width: 48, height: 48 }}
-              />
-              <span className="mt-2 text-sm font-medium text-white text-center">
-                Email
-              </span>
-            </div>
-            <div className="flex flex-col items-center cursor-pointer hover:text-pink-400 transition">
-              <SocialIcon
-                url="https://www.instagram.com/kvin.he/"
-                fgColor="#fff"
-                style={{ width: 48, height: 48 }}
-              />
-              <span className="mt-2 text-sm font-medium text-white text-center">
-                Instagram
-              </span>
-            </div>
-            <div className="flex flex-col items-center cursor-pointer hover:text-black transition">
-              <SocialIcon
-                url="https://www.tiktok.com/@kvin.he"
-                fgColor="#fff"
-                style={{ width: 48, height: 48 }}
-              />
-              <span className="mt-2 text-sm font-medium text-white text-center">
-                TikTok
-              </span>
-            </div>
-            <div className="flex flex-col items-center cursor-pointer hover:text-red-500 transition">
-              <SocialIcon
-                url="https://www.youtube.com/@kvin.he1"
-                fgColor="#fff"
-                style={{ width: 48, height: 48 }}
-              />
-              <span className="mt-2 text-sm font-medium text-white text-center">
-                YouTube
-              </span>
-            </div>
+        <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-col items-center cursor-pointer hover:text-blue-400 transition">
+            <SocialIcon
+              url="https://www.linkedin.com/in/kevinhe04/"
+              fgColor="#fff"
+              style={{ width: 48, height: 48 }}
+            />
+            <span className="mt-2 text-sm font-medium text-white text-center">
+              LinkedIn
+            </span>
+          </div>
+          <div className="flex flex-col items-center cursor-pointer hover:text-gray-300 transition">
+            <SocialIcon
+              url="https://github.com/kevinhe04"
+              fgColor="#fff"
+              style={{ width: 48, height: 48 }}
+            />
+            <span className="mt-2 text-sm font-medium text-white text-center">
+              GitHub
+            </span>
+          </div>
+          <div className="flex flex-col items-center cursor-pointer hover:text-red-400 transition">
+            <SocialIcon
+              url="mailto:kvn.04he@gmail.com"
+              fgColor="#fff"
+              style={{ width: 48, height: 48 }}
+            />
+            <span className="mt-2 text-sm font-medium text-white text-center">
+              Email
+            </span>
+          </div>
+          <div className="flex flex-col items-center cursor-pointer hover:text-pink-400 transition">
+            <SocialIcon
+              url="https://www.instagram.com/kvin.he/"
+              fgColor="#fff"
+              style={{ width: 48, height: 48 }}
+            />
+            <span className="mt-2 text-sm font-medium text-white text-center">
+              Instagram
+            </span>
+          </div>
+          <div className="flex flex-col items-center cursor-pointer hover:text-black transition">
+            <SocialIcon
+              url="https://www.tiktok.com/@kvin.he"
+              fgColor="#fff"
+              style={{ width: 48, height: 48 }}
+            />
+            <span className="mt-2 text-sm font-medium text-white text-center">
+              TikTok
+            </span>
+          </div>
+          <div className="flex flex-col items-center cursor-pointer hover:text-red-500 transition">
+            <SocialIcon
+              url="https://www.youtube.com/@kvin.he1"
+              fgColor="#fff"
+              style={{ width: 48, height: 48 }}
+            />
+            <span className="mt-2 text-sm font-medium text-white text-center">
+              YouTube
+            </span>
           </div>
         </div>
-      </section>
+      </section >
     </div >
   );
 }

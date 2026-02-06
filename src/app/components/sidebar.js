@@ -26,9 +26,9 @@ export default function Sidebar() {
 
   return (
     <div className="h-screen w-64 bg-darkBlue fixed top-0 left-0 p-8 flex-col hidden md:block">
-      <div className="text-white text-3xl font-bold mb-16">
+      <div className="text-black text-3xl font-bold mb-16">
         <div className="text-4xl">Kevin He</div>
-        <div className="text-lg font-light">Schulich Leader 2023.</div>
+        <div className="text-lg font-light">Schulich Leader 2023</div>
       </div>
 
       <div className="flex-grow flex items-center">
@@ -36,8 +36,8 @@ export default function Sidebar() {
           <a
             href="#experience"
             className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#experience"
-              ? "text-white"
-              : "text-gray-500 hover:text-white"
+              ? "text-black"
+              : "text-gray-500 hover:text-black"
               }`}
           >
             Experience
@@ -45,8 +45,8 @@ export default function Sidebar() {
           <a
             href="#projects"
             className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#projects"
-              ? "text-white"
-              : "text-gray-500 hover:text-white"
+              ? "text-black"
+              : "text-gray-500 hover:text-black"
               }`}
           >
             Projects
@@ -54,8 +54,8 @@ export default function Sidebar() {
           <a
             href="#content-creation"
             className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#content-creation"
-              ? "text-white"
-              : "text-gray-500 hover:text-white"
+              ? "text-black"
+              : "text-gray-500 hover:text-black"
               }`}
           >
             Content Creation
@@ -63,8 +63,8 @@ export default function Sidebar() {
           <a
             href="#contact"
             className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#contact"
-              ? "text-white"
-              : "text-gray-500 hover:text-white"
+              ? "text-black"
+              : "text-gray-500 hover:text-black"
               }`}
           >
             Contact
