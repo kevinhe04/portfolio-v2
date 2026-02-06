@@ -6,31 +6,23 @@ export default function Sidebar() {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    document.documentElement.style.scrollBehavior = "smooth";
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-    const handleScroll = () => {
-      const sections = [
-        "#experience",
-        "#about",
-        "#projects",
-        "#content-creation",
-        "#contact",
-      ];
-      sections.forEach((sectionId) => {
-        const section = document.querySelector(sectionId);
-        const rect = section?.getBoundingClientRect();
-        if (rect && rect.top >= 0 && rect.top < window.innerHeight / 2) {
-          setActiveSection(sectionId);
-        }
-      });
-    };
+    sections.forEach((section) => observer.observe(section));
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      document.documentElement.style.scrollBehavior = "auto";
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
+
 
   return (
     <div className="h-screen w-64 bg-darkBlue fixed top-0 left-0 p-8 flex-col hidden md:block">

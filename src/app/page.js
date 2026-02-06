@@ -134,7 +134,7 @@ export default function Home() {
               skills={[
                 "React Native",
                 "TypeScript",
-                "RESTful API",
+                "Expo",
                 "PostgreSQL",
                 "Python",
                 "Flask",
@@ -163,103 +163,94 @@ export default function Home() {
               Content Creation
             </h2>
           </div>
-          <div className="flex flex-col md:flex-row justify-center gap-32 md:gap-5 mt-20 items-center">
-            <Tiktok />
-            <Tiktok2 />
-            <Tiktok1 />
-          </div>
+        </div>
+        <div className="relative w-full max-w-3xl mx-auto aspect-video my-8">
+          <iframe
+            src="https://www.youtube.com/embed/Rr_jqi_TkW4?si=NHMg55VwKzg2vvwO"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="absolute top-0 left-0 w-full h-full rounded-lg"
+          ></iframe>
+        </div>
+        <div className="relative w-full max-w-3xl mx-auto aspect-video my-8">
+          <iframe
+            src="https://www.youtube.com/embed/jr-HO6HDUik"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="absolute top-0 left-0 w-full h-full rounded-lg"
+          ></iframe>
         </div>
       </section>
-
       <section id="contact" className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative text-center mb-12">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-3xl"></div>
-            <div className="relative text-center mb-16">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-3xl"></div>
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-16 text-center">
-                Contact Me
-              </h2>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            Contact Me
+          </h2>
+          <p className="text-gray-400 mb-12 max-w-lg mx-auto">
+            Feel free to reach out via any of the platforms below — I’d love to connect.
+          </p>
+          <div className="flex flex-wrap justify-center gap-8">
+            <div className="flex flex-col items-center cursor-pointer hover:text-blue-400 transition">
+              <SocialIcon
+                url="https://www.linkedin.com/in/kevinhe04/"
+                fgColor="#fff"
+                style={{ width: 48, height: 48 }}
+              />
+              <span className="mt-2 text-sm font-medium text-white text-center">
+                LinkedIn
+              </span>
             </div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <SocialIcon
-                  target="_blank"
-                  url="https://www.linkedin.com/in/kevinhe04/"
-                  className="mx-auto mb-3"
-                />
-                <h3 className="text-white font-semibold">LinkedIn</h3>
-                <p className="text-white/60 text-sm">Professional Network</p>
-              </div>
+            <div className="flex flex-col items-center cursor-pointer hover:text-gray-300 transition">
+              <SocialIcon
+                url="https://github.com/kevinhe04"
+                fgColor="#fff"
+                style={{ width: 48, height: 48 }}
+              />
+              <span className="mt-2 text-sm font-medium text-white text-center">
+                GitHub
+              </span>
             </div>
-
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-900 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <SocialIcon
-                  target="_blank"
-                  url="https://github.com/kevinhe04"
-                  className="mx-auto mb-3"
-                />
-                <h3 className="text-white font-semibold">GitHub</h3>
-                <p className="text-white/60 text-sm">Code & Projects</p>
-              </div>
+            <div className="flex flex-col items-center cursor-pointer hover:text-red-400 transition">
+              <SocialIcon
+                url="mailto:kvn.04he@gmail.com"
+                fgColor="#fff"
+                style={{ width: 48, height: 48 }}
+              />
+              <span className="mt-2 text-sm font-medium text-white text-center">
+                Email
+              </span>
             </div>
-
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <SocialIcon
-                  target="_blank"
-                  url="mailto:kvn.04he@gmail.com"
-                  className="mx-auto mb-3"
-                />
-                <h3 className="text-white font-semibold">Email</h3>
-                <p className="text-white/60 text-sm">Direct Contact</p>
-              </div>
+            <div className="flex flex-col items-center cursor-pointer hover:text-pink-400 transition">
+              <SocialIcon
+                url="https://www.instagram.com/kvin.he/"
+                fgColor="#fff"
+                style={{ width: 48, height: 48 }}
+              />
+              <span className="mt-2 text-sm font-medium text-white text-center">
+                Instagram
+              </span>
             </div>
-
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <SocialIcon
-                  target="_blank"
-                  url="https://www.instagram.com/kvin.he/"
-                  className="mx-auto mb-3"
-                />
-                <h3 className="text-white font-semibold">Instagram</h3>
-                <p className="text-white/60 text-sm">Personal Updates</p>
-              </div>
+            <div className="flex flex-col items-center cursor-pointer hover:text-black transition">
+              <SocialIcon
+                url="https://www.tiktok.com/@kvin.he"
+                fgColor="#fff"
+                style={{ width: 48, height: 48 }}
+              />
+              <span className="mt-2 text-sm font-medium text-white text-center">
+                TikTok
+              </span>
             </div>
-
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-black to-gray-800 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <SocialIcon
-                  target="_blank"
-                  url="https://www.tiktok.com/@kvin.he"
-                  className="mx-auto mb-3"
-                />
-                <h3 className="text-white font-semibold">TikTok</h3>
-                <p className="text-white/60 text-sm">Short Content</p>
-              </div>
-            </div>
-
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <SocialIcon
-                  target="_blank"
-                  url="https://www.youtube.com/@kvin.he1"
-                  className="mx-auto mb-3"
-                />
-                <h3 className="text-white font-semibold">YouTube</h3>
-                <p className="text-white/60 text-sm">Video Content</p>
-              </div>
+            <div className="flex flex-col items-center cursor-pointer hover:text-red-500 transition">
+              <SocialIcon
+                url="https://www.youtube.com/@kvin.he1"
+                fgColor="#fff"
+                style={{ width: 48, height: 48 }}
+              />
+              <span className="mt-2 text-sm font-medium text-white text-center">
+                YouTube
+              </span>
             </div>
           </div>
         </div>
