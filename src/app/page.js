@@ -39,12 +39,14 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
               Kevin He
             </h1>
-
-            <p className="text-xl text-gray-400 mb-12 font-light leading-relaxed">
-              <span className="text-blue-400">Software Engineer</span> & <span className="text-purple-400">Content Creator</span>
-              <br />
-              <span className="text-white text-lg">@ McGill University</span>
+            <p className="max-w-xl text-white text-base md:text-lg leading-relaxed">
+              I like exploring different interests and building new skills along the way.
             </p>
+            <br />
+            <p className="max-w-xl text-gray-500 text-base md:text-lg leading-relaxed">
+              Current Focus: Startups, AI Development, Travelling
+            </p>
+
           </motion.div>
         </div >
       </section >
@@ -61,9 +63,9 @@ export default function Home() {
               dates="September 2025 - December 2025"
               title="AI Software Developer Intern"
               company="Autodesk, Montreal, Canada"
-              description={["Implemented caching within multi-agent workflows, reducing MCP server tool calls and redundant API usage", "Accelerated multimodal RAG pipelines by minimizing telemetry overhead, reducing agent response time by 52%", "Built asynchronous RAG ingestion with AWS Lambda, improving vector embedding and pipeline efficiency"
+              description={["Accelerated multi-agent workflows through MCP tool caching, reducing agent response time by 52%", "Built an async ingestion pipeline with SQS → S3 events and DynamoDB job tracking, improving scalability", "Integrated RAG multimodal search using Marengo, enabling unified retrieval across text/image/video assets"
               ]}
-              skills={["Python", "StrandsAgent"]}
+              skills={["Python", "StrandsAgent", "MCP", "RAG", "AWS"]}
               image="images/autodesk.jpg"
               link="https://www.autodesk.com/"
             />
@@ -71,44 +73,21 @@ export default function Home() {
               dates="May 2025 - August 2025"
               title="Mobile Developer Intern"
               company="Sun Life Financial, Montreal, Canada"
-              description={["Integrated push notifications and refactored login flow for Sun Life MPF (HK) using TypeScript, Angular, and Ionic.",
-                "Enhanced AI chatbot features in the my Sun Life (CA) iOS app to improve customer experience using Swift & SwiftUI.",
-                "Implemented read receipt functionality in AWS Connect chat interface to enhance user clarity and engagement."
+              description={["Integrated push notifications for Hong Kong’s hybrid app using TypeScript, Angular, Ionic Cordova/Capacitor",
+                "Enhanced AI chatbot features in Sun Life’s iOS app using Swift and Amazon Connect, improving customer UX",
+                "Delivered iOS features on navigation, message handling, and read-receipts to increase app stability and test coverage"
               ]}
               skills={["Swift", "TypeScript", "Ionic Framework"]}
               image="images/SunLife.png"
               link="https://www.sunlife.ca/en/"
             />
             <ExperienceItem
-              dates="September 2024 - March 2025"
-              title="Founder"
-              company="PickyEats, Montreal, Canada"
-              description={[
-                "Founded a mobile app recommending restaurants tailored to users’ choices, resulting in 10,000+ downloads.",
-                "Partnered with RestoMontreal.ca to integrate restaurant data, offering users over 10k+ restaurants.",
-                "Leveraged social media platforms to produce short videos promoting PickyEats, achieving over 1M+ views.",
-              ]}
-              skills={[
-                "React Native",
-                "TypeScript",
-                "RESTful API",
-                "postgreSQL",
-                "Python",
-                "Flask",
-                "AWS",
-                "Node.js",
-                "Firebase",
-              ]}
-              link="https://picky-eats.vercel.app/"
-              image="images/pickyeats.jpg"
-            />
-            <ExperienceItem
               dates="May 2024 - August 2024"
               title="Software Developer Intern"
               company="Tedy, Montreal, Canada"
               description={[
-                "Delivered 40+ completed PRs, coding mainly in TypeScript.",
-                "Managed SQL databases and created Retool workflows to streamline user data retrieval.",
+                "Implemented frontend features and backend workflows using TypeScript, Next.js, and Inngest",
+                "Built Retool dashboards with PostgreSQL queries to identify unattended claims, reducing missed claims by 40%",
               ]}
               skills={[
                 "TypeScript",
@@ -134,49 +113,43 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
             <ProjectCard
-              title="Stacy (Hack The North Winner) - September 2025"
-              description="Built Stacy, a voice safety companion that logs incidents, tracks live location, and alerts your loved ones/police. Awarded Best Voice-Powered App by Vapi, as part of a sponsor challenge at Hack The North 2025."
+              title="Stacy (Hack The North Winner)"
+              description="Voice safety companion that logs incidents, tracks live location, and alerts your loved ones/police. Awarded Best Voice-Powered App by VAPI (Hack The North 2025)."
               imageUrl="images/stacy.png"
               projectLink="https://devpost.com/software/stacy-g7zptj"
               skills={["Swift", "SwiftUI"]}
             />
             <ProjectCard
-              title="ZenOS - March 2025"
-              description="Developed a cross-platform application using Electron.js and TypeScript (Desktop), and Swift (Mobile), designed to enhance productivity by providing a distraction-free environment. Awarded highest rating by judges at BagelHacks Hackathon 2025 and won 1st Place at JHKCBA's pitch competition."
+              title="ZenOS (BagelHacks Winner)"
+              description="Productivity environment tool. Awarded highest rating by judges at BagelHacks Hackathon 2025 and won 1st Place at JHKCBA's pitch competition."
               imageUrl="images/zenos.png"
               projectLink="https://www.youtube.com/watch?v=3vmHrCJ-nJs"
               skills={["TypeScript", "Swift", "Electron.js", "Firebase"]}
             />
             <ProjectCard
-              title="PickyEats - February 2024"
-              description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 10,000+ downloads."
+              title="PickyEats"
+              description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 12k+ downloads. 10k+ restaurants. 5M+ views."
               imageUrl="images/pickyscreen.png"
               projectLink="https://picky-eats.vercel.app/"
               skills={[
                 "React Native",
                 "TypeScript",
                 "RESTful API",
-                "postgreSQL",
+                "PostgreSQL",
                 "Python",
                 "Flask",
                 "AWS",
-                "Node.js",
-                "Firebase",
               ]}
             />
             <ProjectCard
               title="Chéri E-Commerce Website - September 2024"
-              description="Developed Chéri's responsive e-commerce platform using Next.js, generating $10,000 in first-week sales. Integrated Supabase for authentication and database management, Stripe for payments, and use-shopping-cart library for seamless purchasing."
+              description="Developed Chéri's responsive e-commerce, generating $10,000 in first-week sales using Stripe, Next.js, and Supabase."
               imageUrl="images/cheri.png"
               projectLink="https://www.cherimtl.com/"
               skills={[
-                "JavaScript",
                 "Node.Js",
                 "Supabase",
                 "Stripe",
-                "use-shopping-cart",
-                "postgreSQL",
-                "React.Js",
               ]}
             />
           </div>
