@@ -20,7 +20,7 @@ function ExperienceItem({
       >
         <div className="flex justify-between items-start mb-4">
           <div className="text-md text-black">{company}</div>
-          <div className="text-gray-500 group-hover:text-blue-600 transition-colors duration-300">
+          <div className="text-gray-300 group-hover:text-blue-600 transition-colors duration-300">
             <ExternalLink size={18} />
           </div>
         </div>

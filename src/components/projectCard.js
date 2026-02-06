@@ -25,7 +25,7 @@ function ProjectCard({ title, description, imageUrl, projectLink, skills, dates 
               <h3 className="text-xl text-black group-hover:text-blue-400 transition-colors duration-300">
                 {title}
               </h3>
-              <div className="text-gray-400 group-hover:text-blue-600 transition-colors duration-300 ml-2 flex-shrink-0">
+              <div className="text-gray-300 group-hover:text-blue-600 transition-colors duration-300 ml-2 flex-shrink-0">
                 <ExternalLink size={18} />
               </div>
             </div>
