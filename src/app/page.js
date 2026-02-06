@@ -141,7 +141,7 @@ export default function Home() {
               title="Chéri"
               dates="September 2024"
               description="Developed Chéri's responsive e-commerce, generating $10,000 in first-week sales using Stripe, Next.js, and Supabase."
-              imageUrl="images/cheri.png"
+              imageUrl="images/cherimtl_logo.jpg"
               projectLink="https://www.cherimtl.com/"
               skills={[
                 "Next.js",
