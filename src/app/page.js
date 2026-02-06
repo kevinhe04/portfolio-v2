@@ -142,7 +142,7 @@ export default function Home() {
               ]}
             />
             <ProjectCard
-              title="Chéri E-Commerce Website 👕"
+              title="Chéri 👕"
               description="Developed Chéri's responsive e-commerce, generating $10,000 in first-week sales using Stripe, Next.js, and Supabase."
               imageUrl="images/cheri.png"
               projectLink="https://www.cherimtl.com/"
