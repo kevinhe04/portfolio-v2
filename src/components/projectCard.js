@@ -7,7 +7,7 @@ function ProjectCard({ title, description, imageUrl, projectLink, skills, dates 
         href={projectLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="block backdrop-blur-sm rounded-xl p-6 transition-colors duration-300"
+        className="block backdrop-blur-sm rounded-xl p-4 transition-colors duration-300"
       >
         <div className="flex items-start gap-4">
           {imageUrl && (
@@ -29,7 +29,7 @@ function ProjectCard({ title, description, imageUrl, projectLink, skills, dates 
                 <ExternalLink size={18} />
               </div>
             </div>
-            <p className="text-black text-sm mb-4">{dates}</p>
+            <p className="text-gray-500 text-sm mb-4">{dates}</p>
 
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
@@ -51,7 +51,7 @@ function ProjectCard({ title, description, imageUrl, projectLink, skills, dates 
         aria-hidden="true"
       >
         <div className="rounded-xl bg-white/60 backdrop-blur-sm px-6 py-3">
-          <p className="text-gray-500 leading-relaxed">{description}</p>
+          <p className="text-gray-500 leading-relaxed text-sm">{description}</p>
         </div>
       </div>
     </div>

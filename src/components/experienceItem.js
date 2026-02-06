@@ -16,7 +16,7 @@ function ExperienceItem({
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="block backdrop-blur-sm rounded-xl p-6 transition-colors duration-300"
+        className="block backdrop-blur-sm rounded-xl p-4 transition-colors duration-300"
       >
         <div className="flex justify-between items-start mb-4">
           <div className="text-md text-black">{company}</div>
@@ -38,7 +38,7 @@ function ExperienceItem({
             <h3 className="text-xl font-bold text-black mb-2 transition-colors duration-300">
               {title}
             </h3>
-            <p className="text-black text-sm mb-4">{dates}</p>
+            <p className="text-gray-500 text-sm mb-4">{dates}</p>
 
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
@@ -59,7 +59,7 @@ function ExperienceItem({
       >
         <div className="rounded-xl bg-white/60 backdrop-blur-sm px-6 py-3">
           {description.map((item, index) => (
-            <p key={index} className="text-gray-500 leading-relaxed mb-2 last:mb-0">
+            <p key={index} className="text-gray-500 leading-relaxed mb-2 last:mb-0 text-sm">
               • {item}
             </p>
           ))}

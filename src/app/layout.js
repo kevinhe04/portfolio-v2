@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Petrona } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
-const petrona = Petrona({
+const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
@@ -17,7 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={petrona.className}>
+    <html lang="en" className={openSans.className}>
       <body>{children}</body>
     </html>
   );

@@ -54,7 +54,7 @@ export default function Home() {
               Experience.
             </h2>
           </div>
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col">
             <ExperienceItem
               dates="September 2025 - December 2025"
               title="AI Software Developer Intern"
@@ -106,7 +106,7 @@ export default function Home() {
               Projects.
             </h2>
           </div>
-          <div className="flex flex-col md:flex-row md:flex-wrap gap-8">
+          <div className="flex flex-col md:flex-row md:flex-wrap">
             <ProjectCard
               title="Stacy - Hack The North Winner"
               dates="September 2025"

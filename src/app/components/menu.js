@@ -22,7 +22,6 @@ export default function MenuPortfolio() {
       </IconButton>
       <Drawer open={open} onClose={() => setOpen(false)} anchor="right">
         <Box
-          className="font-petrona"
           sx={{
             display: "flex",
             alignItems: "center",
@@ -47,7 +46,7 @@ export default function MenuPortfolio() {
           <ListItemButton>
             <a
               href="#experience"
-              className="block text-lg hover:underline transition-all font-petrona duration-300"
+              className="block text-lg hover:underline transition-all duration-300"
             >
               Experience
             </a>
@@ -55,7 +54,7 @@ export default function MenuPortfolio() {
           <ListItemButton>
             <a
               href="#projects"
-              className="block text-lg hover:underline font-petrona transition-all duration-300"
+              className="block text-lg hover:underline transition-all duration-300"
             >
               Projects
             </a>
@@ -63,7 +62,7 @@ export default function MenuPortfolio() {
           <ListItemButton>
             <a
               href="#content-creation"
-              className="block text-lg hover:underline font-petrona transition-all duration-300"
+              className="block text-lg hover:underline transition-all duration-300"
             >
               Content Creation
             </a>
@@ -71,7 +70,7 @@ export default function MenuPortfolio() {
           <ListItemButton>
             <a
               href="#contact"
-              className="block text-lg hover:underline font-petrona transition-all duration-300"
+              className="block text-lg hover:underline transition-all duration-300"
             >
               Contact
             </a>
@@ -80,7 +79,7 @@ export default function MenuPortfolio() {
             <a
               href="https://drive.google.com/file/d/1JWfl8-4oR-525v0Jn7hS2tYlR8kE_zR9/view?usp=sharing"
               target="_blank"
-              className="font-petrona text-lg"
+              className="text-lg"
             >
               Resume
             </a>
