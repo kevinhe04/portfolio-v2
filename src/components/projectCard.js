@@ -21,7 +21,7 @@ function ProjectCard({ title, description, imageUrl, projectLink, skills, dates 
           )}
 
           <div className="flex-1 min-w-0">
-            <div className="flex items-start justify-between mb-2">
+            <div className="flex items-start justify-between">
               <h3 className="text-xl text-black group-hover:text-blue-400 transition-colors duration-300">
                 {title}
               </h3>
@@ -29,13 +29,13 @@ function ProjectCard({ title, description, imageUrl, projectLink, skills, dates 
                 <ExternalLink size={18} />
               </div>
             </div>
-            <p className="text-gray-500 text-sm mb-4">{dates}</p>
+            <p className="text-gray-500 text-sm mb-2">{dates}</p>
 
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-blue-500/20 text-blue-600 text-sm rounded-full border border-blue-500/30 hover:border-blue-400 transition-colors duration-200"
+                  className="px-3 py-1 bg-blue-500/20 text-blue-600 text-xs rounded-full border border-blue-500/30"
                 >
                   {skill}
                 </span>

@@ -35,16 +35,16 @@ function ExperienceItem({
           </div>
 
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-black mb-2 transition-colors duration-300">
+            <h3 className="text-xl text-black font-bold group-hover:text-blue-400 transition-colors duration-300">
               {title}
             </h3>
-            <p className="text-gray-500 text-sm mb-4">{dates}</p>
+            <p className="text-gray-500 text-sm mb-2">{dates}</p>
 
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-blue-500/20 text-blue-600 text-sm rounded-full border border-blue-500/30 hover:border-blue-400 transition-colors duration-200"
+                  className="px-3 py-1 bg-blue-500/20 text-blue-600 text-xs rounded-full border border-blue-500/30"
                 >
                   {skill}
                 </span>
