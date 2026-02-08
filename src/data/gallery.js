@@ -30,7 +30,7 @@ export const galleryItems = [
     description: "Hiking Ma On Shan with my Hong Kong exchange friends.",
   },
   {
-    imageSrc: "images/club.jpg",
+    imageSrc: "images/Club.jpg",
     imageAlt: "Clubbing in Hong Kong",
     date: "01/09/2026",
     description: "First time clubbing in Hong Kong!",
