@@ -69,6 +69,15 @@ export default function MenuPortfolio() {
           </ListItemButton>
           <ListItemButton>
             <a
+              href="#my-life-in-pictures"
+              className="block text-lg hover:underline transition-all duration-300"
+              onClick={() => setOpen(false)}
+            >
+              My life in pictures
+            </a>
+          </ListItemButton>
+          <ListItemButton>
+            <a
               href="#contact"
               className="block text-lg hover:underline transition-all duration-300"
             >

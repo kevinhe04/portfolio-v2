@@ -7,6 +7,8 @@ import Menu from "./components/menu";
 import * as motion from "motion/react-client";
 import ProjectCard from "@/components/projectCard";
 import ExperienceItem from "@/components/experienceItem";
+import GalleryItem from "@/components/galleryItem";
+import { galleryItems } from "@/data/gallery";
 
 export default function Home() {
   return (
@@ -177,6 +179,20 @@ export default function Home() {
             allowFullScreen
             className="absolute top-0 left-0 w-full h-full rounded-lg"
           ></iframe>
+        </div>
+      </section>
+      <section id="my-life-in-pictures" className="py-16 px-4">
+        <div className="max-w-3xl mx-auto">
+          <div className="relative mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-16">
+              My life in pictures.
+            </h2>
+          </div>
+          <div className="columns-2 md:columns-3 gap-4">
+            {galleryItems.map((item, index) => (
+              <GalleryItem key={`${item.date}-${index}`} {...item} />
+            ))}
+          </div>
         </div>
       </section>
       <section id="contact" className="py-16 px-4">

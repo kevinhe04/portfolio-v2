@@ -61,6 +61,15 @@ export default function Sidebar() {
             Content Creation
           </a>
           <a
+            href="#my-life-in-pictures"
+            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#my-life-in-pictures"
+              ? "text-black"
+              : "text-gray-500 hover:text-black"
+              }`}
+          >
+            My life in pictures
+          </a>
+          <a
             href="#contact"
             className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#contact"
               ? "text-black"
