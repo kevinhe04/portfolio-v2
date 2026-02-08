@@ -33,7 +33,7 @@ export const galleryItems = [
     imageSrc: "images/Club.jpg",
     imageAlt: "Clubbing in Hong Kong",
     date: "01/09/2026",
-    description: "First time clubbing in Hong Kong!",
+    description: "First time clubbing in Hong Kong",
   },
   {
     imageSrc: "images/GBB.jpg",
