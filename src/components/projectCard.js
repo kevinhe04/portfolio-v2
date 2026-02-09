@@ -2,7 +2,7 @@ import { ExternalLink } from "lucide-react";
 
 function ProjectCard({ title, description, imageUrl, projectLink, skills, dates }) {
   return (
-    <div className="group">
+    <div className="group w-full">
       <a
         href={projectLink}
         target="_blank"

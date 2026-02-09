@@ -105,7 +105,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <div className="relative mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-16">
-              Projects.
+              My Proudest Projects.
             </h2>
           </div>
           <div className="flex flex-col md:flex-row md:flex-wrap">

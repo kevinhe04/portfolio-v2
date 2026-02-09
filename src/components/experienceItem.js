@@ -11,7 +11,7 @@ function ExperienceItem({
   image,
 }) {
   return (
-    <div className="group">
+    <div className="group w-full">
       <a
         href={link}
         target="_blank"
