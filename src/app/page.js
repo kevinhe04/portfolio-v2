@@ -112,7 +112,7 @@ export default function Home() {
             <ProjectCard
               title="Stacy - Hack The North Winner"
               dates="September 2025"
-              description="Awarded Best Voice-Powered App by VAPI (Hack The North 2025)."
+              description="1st place at Hack The North (Canada's biggest hackathon)."
               imageUrl="images/stacy.png"
               projectLink="https://devpost.com/software/stacy-g7zptj"
               skills={["Swift", "SwiftUI"]}
@@ -120,7 +120,7 @@ export default function Home() {
             <ProjectCard
               title="ZenOS - BagelHacks Winner"
               dates="March 2025"
-              description="Awarded highest rating by judges at BagelHacks and won 1st Place at JHKCBA's pitch competition."
+              description="Highest rating at BagelHacks and 1st place at JHKCBA's pitch competition."
               imageUrl="images/zenos.png"
               projectLink="https://www.youtube.com/watch?v=3vmHrCJ-nJs"
               skills={["TypeScript", "Swift", "Electron.js", "Firebase"]}
@@ -128,7 +128,7 @@ export default function Home() {
             <ProjectCard
               title="PickyEats"
               dates="November 2024 - April 2025"
-              description="Developed a React Native mobile app that recommends restaurants in Montreal. 12k+ downloads. 10k+ restaurants. 5M+ views."
+              description="12k+ downloads. 10k+ restaurants. 5M+ views."
               imageUrl="images/pickyeats.jpg"
               projectLink="https://picky-eats.vercel.app/"
               skills={[
@@ -142,7 +142,7 @@ export default function Home() {
             <ProjectCard
               title="Chéri"
               dates="September 2024"
-              description="Generated $10,000 in first-week sales using Stripe, Next.js, and Supabase."
+              description="$10,000 in first-week sales."
               imageUrl="images/cherimtl_logo.jpg"
               projectLink="https://www.cherimtl.com/"
               skills={[
