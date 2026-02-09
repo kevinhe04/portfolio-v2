@@ -112,7 +112,7 @@ export default function Home() {
             <ProjectCard
               title="Stacy - Hack The North Winner"
               dates="September 2025"
-              description="Voice safety companion that logs incidents, tracks live location, and alerts your loved ones/police. Awarded Best Voice-Powered App by VAPI (Hack The North 2025)."
+              description="Awarded Best Voice-Powered App by VAPI (Hack The North 2025)."
               imageUrl="images/stacy.png"
               projectLink="https://devpost.com/software/stacy-g7zptj"
               skills={["Swift", "SwiftUI"]}
@@ -120,7 +120,7 @@ export default function Home() {
             <ProjectCard
               title="ZenOS - BagelHacks Winner"
               dates="March 2025"
-              description="Productivity environment tool. Awarded highest rating by judges at BagelHacks Hackathon 2025 and won 1st Place at JHKCBA's pitch competition."
+              description="Awarded highest rating by judges at BagelHacks and won 1st Place at JHKCBA's pitch competition."
               imageUrl="images/zenos.png"
               projectLink="https://www.youtube.com/watch?v=3vmHrCJ-nJs"
               skills={["TypeScript", "Swift", "Electron.js", "Firebase"]}
@@ -128,7 +128,7 @@ export default function Home() {
             <ProjectCard
               title="PickyEats"
               dates="November 2024 - April 2025"
-              description="Developed a React Native Mobile Application that recommends restaurants in Montreal based on user-specified choices. 12k+ downloads. 10k+ restaurants. 5M+ views."
+              description="Developed a React Native mobile app that recommends restaurants in Montreal. 12k+ downloads. 10k+ restaurants. 5M+ views."
               imageUrl="images/pickyeats.jpg"
               projectLink="https://picky-eats.vercel.app/"
               skills={[
@@ -142,7 +142,7 @@ export default function Home() {
             <ProjectCard
               title="Chéri"
               dates="September 2024"
-              description="Developed Chéri's responsive e-commerce, generating $10,000 in first-week sales using Stripe, Next.js, and Supabase."
+              description="Generated $10,000 in first-week sales using Stripe, Next.js, and Supabase."
               imageUrl="images/cherimtl_logo.jpg"
               projectLink="https://www.cherimtl.com/"
               skills={[
