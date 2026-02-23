@@ -110,12 +110,20 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex-row md:flex-wrap">
             <ProjectCard
+              title="Clove - TreeHacks (Stanford Hackathon)"
+              dates="February 2026"
+              description="Not a winner, but proud of what we built at the most competitive collegiate hackathon!"
+              imageUrl="images/clove-logo.png"
+              projectLink="https://devpost.com/software/clove-ga6v5p"
+              skills={["Swift", "Render", "Zoom"]}
+            />
+            <ProjectCard
               title="Stacy - Hack The North Winner"
               dates="September 2025"
               description="Best Voice Assistant project at Hack The North (Canada's biggest hackathon)."
               imageUrl="images/stacy.png"
               projectLink="https://devpost.com/software/stacy-g7zptj"
-              skills={["Swift", "SwiftUI"]}
+              skills={["Swift", "SwiftUI", "VAPI"]}
             />
             <ProjectCard
               title="ZenOS - BagelHacks Winner"
