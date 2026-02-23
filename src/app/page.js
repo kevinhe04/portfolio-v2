@@ -39,7 +39,7 @@ export default function Home() {
               Kevin He
             </h1>
             <p className="max-w-xl text-black text-base md:text-lg leading-relaxed">
-              I like exploring different interests and building new skills along the way.
+              I like exploring new interests and building skills along the way.
             </p>
             <br />
             <p className="max-w-xl text-gray-500 text-base md:text-lg leading-relaxed">
