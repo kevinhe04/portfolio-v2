@@ -112,7 +112,7 @@ export default function Home() {
             <ProjectCard
               title="Clove - TreeHacks (Stanford Hackathon)"
               dates="February 2026"
-              description="Not a winner, but proud of what we built at the most competitive collegiate hackathon!"
+              description="Not a winner, but proud to have competed in the world's most competitive collegiate hackathon!"
               imageUrl="images/clove-logo.png"
               projectLink="https://devpost.com/software/clove-ga6v5p"
               skills={["Swift", "Render", "Zoom"]}
