@@ -112,7 +112,7 @@ export default function Home() {
             <ProjectCard
               title="Stacy - Hack The North Winner"
               dates="September 2025"
-              description="1st place at Hack The North (Canada's biggest hackathon)."
+              description="Best Voice Assistant project at Hack The North (Canada's biggest hackathon)."
               imageUrl="images/stacy.png"
               projectLink="https://devpost.com/software/stacy-g7zptj"
               skills={["Swift", "SwiftUI"]}
