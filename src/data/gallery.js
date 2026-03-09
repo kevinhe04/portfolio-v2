@@ -71,4 +71,16 @@ export const galleryItems = [
     date: "02/01/2026",
     description: "I'm in Shenzhen!",
   },
+  {
+    imageSrc: "images/saigon.jpg",
+    imageAlt: "Saigon",
+    date: "03/03/2026",
+    description: "I'm in Saigon!",
+  },
+  {
+    imageSrc: "images/hanoi.jpg",
+    imageAlt: "Hanoi",
+    date: "03/07/2026",
+    description: "I'm in Hanoi!",
+  },
 ];
