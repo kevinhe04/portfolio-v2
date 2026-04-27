@@ -207,7 +207,7 @@ export default function Home() {
         <div className="flex flex-wrap justify-center gap-8">
           <div className="flex flex-col items-center cursor-pointer hover:text-blue-400 transition">
             <SocialIcon
-              url="https://www.linkedin.com/in/kevinhe04/"
+              url="https://www.linkedin.com/in/kvinhe/"
               fgColor="#fff"
               style={{ width: 48, height: 48 }}
             />
