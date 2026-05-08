@@ -6,9 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
-  ,
-  "format": "prettier --write ."
+    "lint": "next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -17,15 +16,18 @@
     "@mui/joy": "^5.0.0-beta.48",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "d3-geo": "^3.1.1",
     "lucide-react": "^0.441.0",
     "motion": "^12.4.2",
     "next": "14.2.11",
     "react": "^18",
     "react-dom": "^18",
+    "react-globe.gl": "^2.37.1",
     "react-social-icons": "^6.18.0",
     "shadcn": "^2.0.6",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "topojson-client": "^3.1.0"
   },
   "devDependencies": {
     "postcss": "^8",

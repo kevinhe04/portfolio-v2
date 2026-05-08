@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    transpilePackages: ["react-globe.gl", "three", "three-globe"],
+};
 
 export default nextConfig;

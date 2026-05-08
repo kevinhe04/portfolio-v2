@@ -2,6 +2,14 @@
 
 import React, { useEffect, useState } from "react";
 
+const navItems = [
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#content-creation", label: "Content Creation" },
+  { href: "#my-life-in-pictures", label: "My life in pictures" },
+  { href: "#contact", label: "Contact" },
+];
+
 export default function Sidebar() {
   const [activeSection, setActiveSection] = useState("");
 
@@ -15,69 +23,43 @@ export default function Sidebar() {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     sections.forEach((section) => observer.observe(section));
-
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
-
   return (
-    <div className="h-screen w-64 bg-darkBlue fixed top-0 left-0 p-8 flex-col hidden md:block">
-      <div className="text-black text-3xl font-bold mb-16">
-        <div className="text-4xl">Kevin He</div>
-        <div className="text-lg font-light">Schulich Leader 2023</div>
+    <div className="h-screen w-64 fixed top-0 left-0 p-8 flex-col hidden md:block">
+      <div className="text-black mb-16">
+        <div className="text-4xl font-bold">Kevin He</div>
+        <div className="text-lg font-light text-gray-400">Schulich Leader 2023</div>
       </div>
 
       <div className="flex-grow flex items-center">
-        <nav className="text-white space-y-8 text-left">
-          <a
-            href="#experience"
-            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#experience"
-              ? "text-black"
-              : "text-gray-500 hover:text-black"
-              }`}
-          >
-            Experience
-          </a>
-          <a
-            href="#projects"
-            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#projects"
-              ? "text-black"
-              : "text-gray-500 hover:text-black"
-              }`}
-          >
-            Projects
-          </a>
-          <a
-            href="#content-creation"
-            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#content-creation"
-              ? "text-black"
-              : "text-gray-500 hover:text-black"
-              }`}
-          >
-            Content Creation
-          </a>
-          <a
-            href="#my-life-in-pictures"
-            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#my-life-in-pictures"
-              ? "text-black"
-              : "text-gray-500 hover:text-black"
-              }`}
-          >
-            My life in pictures
-          </a>
-          <a
-            href="#contact"
-            className={`block text-lg hover:translate-x-10 transition-all duration-300 ${activeSection === "#contact"
-              ? "text-black"
-              : "text-gray-500 hover:text-black"
-              }`}
-          >
-            Contact
-          </a>
+        <nav className="space-y-6 text-left">
+          {navItems.map(({ href, label }) => {
+            const isActive = activeSection === href;
+            return (
+              <a
+                key={href}
+                href={href}
+                className={`flex items-center gap-3 text-lg transition-all duration-300 ${
+                  isActive
+                    ? "text-black translate-x-2"
+                    : "text-gray-400 hover:text-gray-600 hover:translate-x-2"
+                }`}
+              >
+                <span
+                  className={`h-px rounded-full transition-all duration-300 ${
+                    isActive ? "w-6 bg-blue-500" : "w-0 bg-transparent"
+                  }`}
+                />
+                {label}
+              </a>
+            );
+          })}
         </nav>
       </div>
     </div>

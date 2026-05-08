@@ -10,263 +10,365 @@ import ExperienceItem from "@/components/experienceItem";
 import GalleryItem from "@/components/galleryItem";
 import { galleryItems } from "@/data/gallery";
 
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-60px" },
+  transition: { duration: 0.5, delay },
+});
+
+function Divider() {
+  return (
+    <div className="max-w-3xl mx-auto px-4">
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div className="bg-white min-h-screen">
       <Sidebar />
       <Navbar />
       <Menu />
+
       <section
         id="home"
         className="min-h-screen flex flex-col justify-center items-center px-8"
       >
         <div className="max-w-3xl mx-auto w-full flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-5">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left w-full lg:flex-1"
-          >
-            <div className="mb-8 mt-20 md:mt-0">
+          <div className="text-center lg:text-left w-full lg:flex-1">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="mb-8 mt-20 md:mt-0"
+            >
               <img
                 src="images/headshot.jpeg"
                 alt="Kevin He"
-                className="w-32 h-32 rounded-full object-cover mx-auto lg:mx-0"
+                className="w-32 h-32 rounded-full object-cover mx-auto lg:mx-0 ring-4 ring-blue-50"
               />
-            </div>
+            </motion.div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-black mb-6 tracking-tight">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold text-black mb-6 tracking-tight"
+            >
               Kevin He
-            </h1>
-            <p className="max-w-xl text-black text-base md:text-lg leading-relaxed">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="max-w-xl text-black text-base md:text-lg leading-relaxed"
+            >
               I like exploring new interests and building skills along the way.
-            </p>
-            <br />
-            <p className="max-w-xl text-gray-500 text-base md:text-lg leading-relaxed">
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.45 }}
+              className="max-w-xl text-gray-400 text-base md:text-lg leading-relaxed mt-4"
+            >
               Current Focus: Startups, AI Development, Travelling
-            </p>
+            </motion.p>
+          </div>
+        </div>
+      </section>
 
-          </motion.div>
-        </div >
-      </section >
-      <section id="experience" className="py-16 px-4">
+      <Divider />
+
+      <section id="experience" className="py-20 px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="relative mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-16">
+          <motion.div {...fadeUp()} className="mb-16">
+            <div className="w-8 h-0.5 bg-blue-500 rounded-full mb-4" />
+            <h2 className="text-4xl md:text-5xl font-bold text-black">
               Experience.
             </h2>
-          </div>
+          </motion.div>
           <div className="flex flex-col">
-            <ExperienceItem
-              dates="September 2025 - December 2025"
-              title="AI Software Developer Intern"
-              company="Autodesk • Montreal, Canada"
-              description={["Accelerated multi-agent workflows through MCP tool caching, reducing agent response time by 52%", "Built an async ingestion pipeline with SQS → S3 events and DynamoDB job tracking, improving scalability", "Integrated RAG multimodal search using Marengo, enabling unified retrieval across text/image/video assets"
-              ]}
-              skills={["Python", "StrandsAgent", "MCP", "RAG", "AWS"]}
-              image="images/autodesk.jpg"
-              link="https://www.autodesk.com/"
-            />
-            <ExperienceItem
-              dates="May 2025 - August 2025"
-              title="Mobile Developer Intern"
-              company="Sun Life Financial • Montreal, Canada"
-              description={["Integrated push notifications for Hong Kong’s hybrid app using TypeScript, Angular, Ionic Cordova/Capacitor",
-                "Enhanced AI chatbot features in Sun Life’s iOS app using Swift and Amazon Connect, improving customer UX",
-                "Delivered iOS features on navigation, message handling, and read-receipts to increase app stability and test coverage"
-              ]}
-              skills={["Swift", "TypeScript", "Ionic Framework"]}
-              image="images/SunLife.png"
-              link="https://www.sunlife.ca/en/"
-            />
-            <ExperienceItem
-              dates="May 2024 - August 2024"
-              title="Software Developer Intern"
-              company="Tedy • Montreal, Canada"
-              description={[
-                "Implemented frontend features and backend workflows using TypeScript, Next.js, and Inngest",
-                "Built Retool dashboards with PostgreSQL queries to identify unattended claims, reducing missed claims by 40%",
-              ]}
-              skills={[
-                "TypeScript",
-                "JavaScript",
-                "Node.Js",
-                "SQL",
-                "Supabase",
-                "Next.Js",
-              ]}
-              link="https://www.tedy.app/?r=0"
-              image="images/tedy.png"
-            />
+            <motion.div {...fadeUp(0)}>
+              <ExperienceItem
+                dates="September 2025 - December 2025"
+                title="AI Software Developer Intern"
+                company="Autodesk • Montreal, Canada"
+                description={[
+                  "Accelerated multi-agent workflows through MCP tool caching, reducing agent response time by 52%",
+                  "Built an async ingestion pipeline with SQS → S3 events and DynamoDB job tracking, improving scalability",
+                  "Integrated RAG multimodal search using Marengo, enabling unified retrieval across text/image/video assets",
+                ]}
+                skills={["Python", "StrandsAgent", "MCP", "RAG", "AWS"]}
+                image="images/autodesk.jpg"
+                link="https://www.autodesk.com/"
+              />
+            </motion.div>
+            <motion.div {...fadeUp(0.1)}>
+              <ExperienceItem
+                dates="May 2025 - August 2025"
+                title="Mobile Developer Intern"
+                company="Sun Life Financial • Montreal, Canada"
+                description={[
+                  "Integrated push notifications for Hong Kong's hybrid app using TypeScript, Angular, Ionic Cordova/Capacitor",
+                  "Enhanced AI chatbot features in Sun Life's iOS app using Swift and Amazon Connect, improving customer UX",
+                  "Delivered iOS features on navigation, message handling, and read-receipts to increase app stability and test coverage",
+                ]}
+                skills={["Swift", "TypeScript", "Ionic Framework"]}
+                image="images/SunLife.png"
+                link="https://www.sunlife.ca/en/"
+              />
+            </motion.div>
+            <motion.div {...fadeUp(0.2)}>
+              <ExperienceItem
+                dates="May 2024 - August 2024"
+                title="Software Developer Intern"
+                company="Tedy • Montreal, Canada"
+                description={[
+                  "Implemented frontend features and backend workflows using TypeScript, Next.js, and Inngest",
+                  "Built Retool dashboards with PostgreSQL queries to identify unattended claims, reducing missed claims by 40%",
+                ]}
+                skills={[
+                  "TypeScript",
+                  "JavaScript",
+                  "Node.Js",
+                  "SQL",
+                  "Supabase",
+                  "Next.Js",
+                ]}
+                link="https://www.tedy.app/?r=0"
+                image="images/tedy.png"
+              />
+            </motion.div>
           </div>
         </div>
       </section>
-      <section id="projects" className="py-16 px-4">
+
+      <Divider />
+
+      <section id="projects" className="py-20 px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="relative mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-16">
+          <motion.div {...fadeUp()} className="mb-16">
+            <div className="w-8 h-0.5 bg-blue-500 rounded-full mb-4" />
+            <h2 className="text-4xl md:text-5xl font-bold text-black">
               My Proudest Projects.
             </h2>
-          </div>
+          </motion.div>
           <div className="flex flex-col md:flex-row md:flex-wrap">
-            <ProjectCard
-              title="Clove - TreeHacks (Stanford Hackathon)"
-              dates="February 2026"
-              description="Not a winner, but proud to have competed in the world's most competitive collegiate hackathon!"
-              imageUrl="images/clove-logo.png"
-              projectLink="https://devpost.com/software/clove-ga6v5p"
-              skills={["Swift", "Render", "Zoom"]}
-            />
-            <ProjectCard
-              title="Stacy - Hack The North Winner"
-              dates="September 2025"
-              description="Best Voice Assistant project at Hack The North (Canada's biggest hackathon)."
-              imageUrl="images/stacy.png"
-              projectLink="https://devpost.com/software/stacy-g7zptj"
-              skills={["Swift", "SwiftUI", "VAPI"]}
-            />
-            <ProjectCard
-              title="ZenOS - BagelHacks Winner"
-              dates="March 2025"
-              description="Highest rating at BagelHacks and 1st place at JHKCBA's pitch competition."
-              imageUrl="images/zenos.png"
-              projectLink="https://www.youtube.com/watch?v=3vmHrCJ-nJs"
-              skills={["TypeScript", "Swift", "Electron.js", "Firebase"]}
-            />
-            <ProjectCard
-              title="PickyEats"
-              dates="November 2024 - April 2025"
-              description="12k+ downloads. 10k+ restaurants. 5M+ views."
-              imageUrl="images/pickyeats.jpg"
-              projectLink="https://picky-eats.vercel.app/"
-              skills={[
-                "AWS",
-                "Expo",
-                "React Native",
-                "TypeScript",
-                "PostgreSQL"
-              ]}
-            />
-            <ProjectCard
-              title="Chéri"
-              dates="September 2024"
-              description="$10,000 in first-week sales."
-              imageUrl="images/cherimtl_logo.jpg"
-              projectLink="https://www.cherimtl.com/"
-              skills={[
-                "Next.js",
-                "Supabase",
-                "Stripe",
-              ]}
-            />
+            <motion.div {...fadeUp(0)} className="w-full">
+              <ProjectCard
+                title="Clove - TreeHacks (Stanford Hackathon)"
+                dates="February 2026"
+                description="Not a winner, but proud to have competed in the world's most competitive collegiate hackathon!"
+                imageUrl="images/clove-logo.png"
+                projectLink="https://devpost.com/software/clove-ga6v5p"
+                skills={["Swift", "Render", "Zoom"]}
+              />
+            </motion.div>
+            <motion.div {...fadeUp(0.08)} className="w-full">
+              <ProjectCard
+                title="Stacy - Hack The North Winner"
+                dates="September 2025"
+                description="Best Voice Assistant project at Hack The North (Canada's biggest hackathon)."
+                imageUrl="images/stacy.png"
+                projectLink="https://devpost.com/software/stacy-g7zptj"
+                skills={["Swift", "SwiftUI", "VAPI"]}
+              />
+            </motion.div>
+            <motion.div {...fadeUp(0.16)} className="w-full">
+              <ProjectCard
+                title="ZenOS - BagelHacks Winner"
+                dates="March 2025"
+                description="Highest rating at BagelHacks and 1st place at JHKCBA's pitch competition."
+                imageUrl="images/zenos.png"
+                projectLink="https://www.youtube.com/watch?v=3vmHrCJ-nJs"
+                skills={["TypeScript", "Swift", "Electron.js", "Firebase"]}
+              />
+            </motion.div>
+            <motion.div {...fadeUp(0.24)} className="w-full">
+              <ProjectCard
+                title="PickyEats"
+                dates="November 2024 - April 2025"
+                description="12k+ downloads. 10k+ restaurants. 5M+ views."
+                imageUrl="images/pickyeats.jpg"
+                projectLink="https://picky-eats.vercel.app/"
+                skills={[
+                  "AWS",
+                  "Expo",
+                  "React Native",
+                  "TypeScript",
+                  "PostgreSQL",
+                ]}
+              />
+            </motion.div>
+            <motion.div {...fadeUp(0.32)} className="w-full">
+              <ProjectCard
+                title="Chéri"
+                dates="September 2024"
+                description="$10,000 in first-week sales."
+                imageUrl="images/cherimtl_logo.jpg"
+                projectLink="https://www.cherimtl.com/"
+                skills={["Next.js", "Supabase", "Stripe"]}
+              />
+            </motion.div>
           </div>
         </div>
       </section>
-      <section id="content-creation" className="py-16 px-4">
+
+      <Divider />
+
+      <section id="content-creation" className="py-20 px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="relative mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-16">
+          <motion.div {...fadeUp()} className="mb-16">
+            <div className="w-8 h-0.5 bg-blue-500 rounded-full mb-4" />
+            <h2 className="text-4xl md:text-5xl font-bold text-black">
               Content Creation.
             </h2>
-          </div>
+          </motion.div>
         </div>
-        <div className="relative w-full max-w-3xl mx-auto aspect-video my-8">
+        <motion.div
+          {...fadeUp(0.1)}
+          className="relative w-full max-w-3xl mx-auto aspect-video my-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5"
+        >
           <iframe
             src="https://www.youtube.com/embed/Rr_jqi_TkW4?si=NHMg55VwKzg2vvwO"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-            className="absolute top-0 left-0 w-full h-full rounded-lg"
+            className="absolute top-0 left-0 w-full h-full"
           ></iframe>
-        </div>
-        <div className="relative w-full max-w-3xl mx-auto aspect-video my-8">
+        </motion.div>
+        <motion.div
+          {...fadeUp(0.2)}
+          className="relative w-full max-w-3xl mx-auto aspect-video my-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5"
+        >
           <iframe
             src="https://www.youtube.com/embed/jr-HO6HDUik"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-            className="absolute top-0 left-0 w-full h-full rounded-lg"
+            className="absolute top-0 left-0 w-full h-full"
           ></iframe>
-        </div>
+        </motion.div>
       </section>
-      <section id="my-life-in-pictures" className="py-16 px-4">
+
+      <Divider />
+
+      <section id="my-life-in-pictures" className="py-20 px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="relative mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-16">
+          <motion.div {...fadeUp()} className="mb-16">
+            <div className="w-8 h-0.5 bg-blue-500 rounded-full mb-4" />
+            <h2 className="text-4xl md:text-5xl font-bold text-black">
               My life in pictures.
             </h2>
-          </div>
+          </motion.div>
           <div className="columns-2 md:columns-3 gap-4">
             {galleryItems.map((item, index) => (
-              <GalleryItem key={`${item.date}-${index}`} {...item} />
+              <motion.div
+                key={`${item.date}-${index}`}
+                className="break-inside-avoid"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.4, delay: (index % 3) * 0.08 }}
+              >
+                <GalleryItem {...item} />
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
-      <section id="contact" className="py-16 px-4">
-        <div className="flex flex-wrap justify-center gap-8">
-          <div className="flex flex-col items-center cursor-pointer hover:text-blue-400 transition">
-            <SocialIcon
-              url="https://www.linkedin.com/in/kvinhe/"
-              fgColor="#fff"
-              style={{ width: 48, height: 48 }}
-            />
-            <span className="mt-2 text-sm font-medium text-white text-center">
-              LinkedIn
-            </span>
-          </div>
-          <div className="flex flex-col items-center cursor-pointer hover:text-gray-300 transition">
-            <SocialIcon
-              url="https://github.com/kevinhe04"
-              fgColor="#fff"
-              style={{ width: 48, height: 48 }}
-            />
-            <span className="mt-2 text-sm font-medium text-white text-center">
-              GitHub
-            </span>
-          </div>
-          <div className="flex flex-col items-center cursor-pointer hover:text-red-400 transition">
-            <SocialIcon
-              url="mailto:kvn.04he@gmail.com"
-              fgColor="#fff"
-              style={{ width: 48, height: 48 }}
-            />
-            <span className="mt-2 text-sm font-medium text-white text-center">
-              Email
-            </span>
-          </div>
-          <div className="flex flex-col items-center cursor-pointer hover:text-pink-400 transition">
-            <SocialIcon
-              url="https://www.instagram.com/kvin.he/"
-              fgColor="#fff"
-              style={{ width: 48, height: 48 }}
-            />
-            <span className="mt-2 text-sm font-medium text-white text-center">
-              Instagram
-            </span>
-          </div>
-          <div className="flex flex-col items-center cursor-pointer hover:text-black transition">
-            <SocialIcon
-              url="https://www.tiktok.com/@kvin.he"
-              fgColor="#fff"
-              style={{ width: 48, height: 48 }}
-            />
-            <span className="mt-2 text-sm font-medium text-white text-center">
-              TikTok
-            </span>
-          </div>
-          <div className="flex flex-col items-center cursor-pointer hover:text-red-500 transition">
-            <SocialIcon
-              url="https://www.youtube.com/@kvin.he1"
-              fgColor="#fff"
-              style={{ width: 48, height: 48 }}
-            />
-            <span className="mt-2 text-sm font-medium text-white text-center">
-              YouTube
-            </span>
-          </div>
+
+      <Divider />
+
+      <section id="contact" className="py-20 px-4">
+        <div className="max-w-3xl mx-auto">
+          <motion.div {...fadeUp()} className="mb-12">
+            <div className="w-8 h-0.5 bg-blue-500 rounded-full mb-4" />
+            <h2 className="text-4xl md:text-5xl font-bold text-black">
+              Get in touch.
+            </h2>
+          </motion.div>
+          <motion.div
+            {...fadeUp(0.15)}
+            className="flex flex-wrap justify-center gap-10"
+          >
+            <div className="flex flex-col items-center group cursor-pointer">
+              <div className="group-hover:scale-110 transition-transform duration-300">
+                <SocialIcon
+                  url="https://www.linkedin.com/in/kvinhe/"
+                  fgColor="#fff"
+                  style={{ width: 48, height: 48 }}
+                />
+              </div>
+              <span className="mt-2 text-sm font-medium text-gray-400 group-hover:text-blue-500 transition-colors duration-300">
+                LinkedIn
+              </span>
+            </div>
+            <div className="flex flex-col items-center group cursor-pointer">
+              <div className="group-hover:scale-110 transition-transform duration-300">
+                <SocialIcon
+                  url="https://github.com/kevinhe04"
+                  fgColor="#fff"
+                  style={{ width: 48, height: 48 }}
+                />
+              </div>
+              <span className="mt-2 text-sm font-medium text-gray-400 group-hover:text-gray-800 transition-colors duration-300">
+                GitHub
+              </span>
+            </div>
+            <div className="flex flex-col items-center group cursor-pointer">
+              <div className="group-hover:scale-110 transition-transform duration-300">
+                <SocialIcon
+                  url="mailto:kvn.04he@gmail.com"
+                  fgColor="#fff"
+                  style={{ width: 48, height: 48 }}
+                />
+              </div>
+              <span className="mt-2 text-sm font-medium text-gray-400 group-hover:text-red-400 transition-colors duration-300">
+                Email
+              </span>
+            </div>
+            <div className="flex flex-col items-center group cursor-pointer">
+              <div className="group-hover:scale-110 transition-transform duration-300">
+                <SocialIcon
+                  url="https://www.instagram.com/kvin.he/"
+                  fgColor="#fff"
+                  style={{ width: 48, height: 48 }}
+                />
+              </div>
+              <span className="mt-2 text-sm font-medium text-gray-400 group-hover:text-pink-400 transition-colors duration-300">
+                Instagram
+              </span>
+            </div>
+            <div className="flex flex-col items-center group cursor-pointer">
+              <div className="group-hover:scale-110 transition-transform duration-300">
+                <SocialIcon
+                  url="https://www.tiktok.com/@kvin.he"
+                  fgColor="#fff"
+                  style={{ width: 48, height: 48 }}
+                />
+              </div>
+              <span className="mt-2 text-sm font-medium text-gray-400 group-hover:text-gray-800 transition-colors duration-300">
+                TikTok
+              </span>
+            </div>
+            <div className="flex flex-col items-center group cursor-pointer">
+              <div className="group-hover:scale-110 transition-transform duration-300">
+                <SocialIcon
+                  url="https://www.youtube.com/@kvin.he1"
+                  fgColor="#fff"
+                  style={{ width: 48, height: 48 }}
+                />
+              </div>
+              <span className="mt-2 text-sm font-medium text-gray-400 group-hover:text-red-500 transition-colors duration-300">
+                YouTube
+              </span>
+            </div>
+          </motion.div>
         </div>
-      </section >
-    </div >
+      </section>
+    </div>
   );
 }
