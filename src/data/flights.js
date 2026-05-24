@@ -25,7 +25,7 @@ export const flights = [
     { id: 4, from: "URC", to: "CGO", date: "2025-12-21", label: "Dec 21" },
     { id: 5, from: "CGO", to: "PEK", date: "2026-01-06", label: "Jan 6", connection: true },
     { id: 6, from: "PEK", to: "HKG", date: "2026-01-06", label: "Jan 6" },
-    { id: 7, from: "HKG", to: "SIN", date: "2026-01-20", label: "Jan 20" },
+    { id: 7, from: "HKG", to: "SIN", date: "2026-01-20", label: "Jan 20", video: "/videos/Singapore.mp4" },
     { id: 8, from: "SIN", to: "KUL", date: "2026-01-24", label: "Jan 24" },
     { id: 9, from: "KUL", to: "BKK", date: "2026-01-26", label: "Jan 26" },
     { id: 10, from: "BKK", to: "CKG", date: "2026-01-28", label: "Jan 28" },

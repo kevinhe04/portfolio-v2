@@ -20,7 +20,13 @@ export default function GlobeView({ currentIndex, centerLat, centerLng, size = 5
   }, []);
 
   const globeMaterial = useMemo(
-    () => new MeshPhongMaterial({ color: "#d6e3f0", emissive: "#e8eff7", emissiveIntensity: 0.4, shininess: 8 }),
+    () =>
+      new MeshPhongMaterial({
+        color: "#0f172a",
+        emissive: "#1e293b",
+        emissiveIntensity: 0.3,
+        shininess: 15,
+      }),
     [],
   );
 
@@ -37,7 +43,7 @@ export default function GlobeView({ currentIndex, centerLat, centerLng, size = 5
         startLng: f.lng,
         endLat: t.lat,
         endLng: t.lng,
-        color: "rgba(59,130,246,0.1)",
+        color: "rgba(96,165,250,0.15)",
         order: 0,
       });
     }
@@ -49,7 +55,7 @@ export default function GlobeView({ currentIndex, centerLat, centerLng, size = 5
       startLng: f.lng,
       endLat: t.lat,
       endLng: t.lng,
-      color: "rgba(59,130,246,0.85)",
+      color: "rgba(96,165,250,0.9)",
       order: 1,
     });
     return result;
@@ -70,7 +76,7 @@ export default function GlobeView({ currentIndex, centerLat, centerLng, size = 5
         name: loc.name,
         active,
         size: active ? 0.4 : 0.15,
-        color: active ? "#3b82f6" : "#94a3b8",
+        color: active ? "#60a5fa" : "#475569",
       };
     });
   }, [currentIndex, currentFlight]);
@@ -100,12 +106,12 @@ export default function GlobeView({ currentIndex, centerLat, centerLng, size = 5
       onGlobeReady={onGlobeReady}
       globeMaterial={globeMaterial}
       backgroundColor="rgba(0,0,0,0)"
-      atmosphereColor="#93c5fd"
-      atmosphereAltitude={0.12}
+      atmosphereColor="#3b82f6"
+      atmosphereAltitude={0.15}
       polygonsData={countries}
-      polygonCapColor={() => "#e8eff7"}
+      polygonCapColor={() => "#1e293b"}
       polygonSideColor={() => "rgba(0,0,0,0)"}
-      polygonStrokeColor={() => "#bfd0e4"}
+      polygonStrokeColor={() => "#334155"}
       polygonAltitude={0.005}
       arcsData={arcs}
       arcColor="color"
@@ -126,7 +132,7 @@ export default function GlobeView({ currentIndex, centerLat, centerLng, size = 5
       labelSize={(d) => (d.active ? 1.2 : 0.7)}
       labelDotRadius={(d) => (d.active ? 0.4 : 0.2)}
       labelDotOrientation={() => "bottom"}
-      labelColor={(d) => (d.active ? "#1e40af" : "#94a3b8")}
+      labelColor={(d) => (d.active ? "#93c5fd" : "#64748b")}
       labelAltitude={0.015}
       labelResolution={3}
       width={size}

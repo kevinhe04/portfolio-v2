@@ -11,7 +11,6 @@ const GlobeView = dynamic(() => import("@/components/globeView"), { ssr: false }
 
 export default function ExchangePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const [globeSize, setGlobeSize] = useState(550);
 
   const currentFlight = flights[currentIndex];
@@ -32,20 +31,14 @@ export default function ExchangePage() {
 
   useEffect(() => {
     const handler = (e) => {
-      if (e.key === "ArrowLeft") {
-        prev();
-
-      }
-      if (e.key === "ArrowRight") {
-        next();
-
-      }
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [prev, next]);
 
-useEffect(() => {
+  useEffect(() => {
     const updateSize = () => {
       const vh = window.innerHeight;
       const vw = window.innerWidth;
@@ -58,23 +51,32 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className="bg-white h-screen flex flex-col overflow-hidden">
+    <div
+      className="h-screen flex flex-col overflow-hidden"
+      style={{
+        background:
+          "radial-gradient(ellipse at 50% 40%, #0f1d3a 0%, #0a0f1e 50%, #060a14 100%)",
+      }}
+    >
       <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="w-full z-50 bg-white/80 backdrop-blur-md border-b border-blue-100/50"
+        className="w-full z-50 bg-white/[0.03] backdrop-blur-xl border-b border-white/[0.06]"
       >
         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center relative">
-          <a href="/" className="text-sm text-gray-400 hover:text-blue-500 transition-colors duration-300">
-            ← back
+          <a
+            href="/"
+            className="text-sm text-slate-500 hover:text-blue-400 transition-colors duration-300"
+          >
+            &larr; back
           </a>
-          <span className="absolute left-1/2 -translate-x-1/2 text-xs tracking-[0.2em] uppercase text-gray-800 font-medium">
+          <span className="absolute left-1/2 -translate-x-1/2 text-xs tracking-[0.25em] uppercase text-slate-300 font-medium">
             Exchange 2026
           </span>
-          <div className="ml-auto hidden sm:flex items-center gap-3 text-[11px] text-gray-400 tracking-wider">
+          <div className="ml-auto hidden sm:flex items-center gap-3 text-[11px] text-slate-500 tracking-wider">
             <span>{visitedCities.size} cities</span>
-            <span className="w-px h-3 bg-blue-200/50" />
+            <span className="w-px h-3 bg-white/10" />
             <span>
               {currentIndex + 1} / {flights.length}
             </span>
@@ -92,35 +94,53 @@ useEffect(() => {
             transition={{ duration: 0.2 }}
             className="flex flex-col items-center gap-1 mb-2"
           >
-            <div className="flex items-center justify-center gap-5">
-              <div className="text-right min-w-[100px]">
-                <p className="text-base font-semibold text-gray-800">{from.name}</p>
-                <p className="text-[10px] text-gray-400 tracking-[0.15em] mt-0.5">{currentFlight.from}</p>
-              </div>
-              <div className="flex items-center gap-2.5 flex-shrink-0">
-                <div className="w-6 h-px bg-gradient-to-r from-transparent to-blue-300" />
-                <Plane size={13} className="text-blue-500" />
-                <div className="w-6 h-px bg-gradient-to-r from-blue-300 to-transparent" />
-              </div>
-              <div className="text-left min-w-[100px]">
-                <p className="text-base font-semibold text-gray-800">{to.name}</p>
-                <p className="text-[10px] text-gray-400 tracking-[0.15em] mt-0.5">{currentFlight.to}</p>
+            <div className="bg-white/[0.04] backdrop-blur-md border border-white/[0.08] rounded-2xl px-8 py-3">
+              <div className="flex items-center justify-center gap-6">
+                <div className="text-right min-w-[100px]">
+                  <p className="text-base font-semibold text-white">{from.name}</p>
+                  <p className="text-[10px] text-blue-400/60 tracking-[0.2em] mt-0.5">
+                    {currentFlight.from}
+                  </p>
+                </div>
+                <div className="flex items-center gap-2.5 flex-shrink-0">
+                  <div className="w-8 h-px bg-gradient-to-r from-transparent to-blue-500/40" />
+                  <div className="relative">
+                    <Plane size={13} className="text-blue-400 relative z-10" />
+                    <div className="absolute -inset-1 bg-blue-400/20 rounded-full blur-sm" />
+                  </div>
+                  <div className="w-8 h-px bg-gradient-to-r from-blue-500/40 to-transparent" />
+                </div>
+                <div className="text-left min-w-[100px]">
+                  <p className="text-base font-semibold text-white">{to.name}</p>
+                  <p className="text-[10px] text-blue-400/60 tracking-[0.2em] mt-0.5">
+                    {currentFlight.to}
+                  </p>
+                </div>
               </div>
             </div>
             {currentFlight.connection && (
-              <span className="text-[10px] text-blue-400 tracking-[0.1em]">Connection flight</span>
+              <span className="text-[10px] text-blue-400/40 tracking-[0.15em] mt-1">
+                Connection flight
+              </span>
             )}
           </motion.div>
         </AnimatePresence>
 
-        <p className="text-sm text-gray-700 font-medium tracking-[0.15em] uppercase mb-1">{currentFlight.label}</p>
+        <p className="text-sm text-slate-500 font-medium tracking-[0.2em] uppercase mb-1">
+          {currentFlight.label}
+        </p>
 
         <div className="relative" style={{ width: globeSize, height: globeSize }}>
           <div
             className="transition-opacity duration-700 ease-in-out"
             style={{ opacity: currentFlight.video ? 0 : 1 }}
           >
-            <GlobeView currentIndex={currentIndex} centerLat={centerLat} centerLng={centerLng} size={globeSize} />
+            <GlobeView
+              currentIndex={currentIndex}
+              centerLat={centerLat}
+              centerLng={centerLng}
+              size={globeSize}
+            />
           </div>
 
           <AnimatePresence mode="wait">
@@ -133,7 +153,7 @@ useEffect(() => {
                 transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
                 className="absolute inset-0 flex items-center justify-center"
               >
-                <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-blue-200/40 bg-black">
+                <div className="rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/10 ring-1 ring-white/10 bg-black">
                   <video
                     src={currentFlight.video}
                     autoPlay
@@ -154,15 +174,12 @@ useEffect(() => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
-          onClick={() => {
-            prev();
-    
-          }}
+          onClick={prev}
           disabled={currentIndex === 0}
           className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full
-            border border-blue-200/50 items-center justify-center text-gray-400 hover:text-blue-500
-            hover:border-blue-300 hover:shadow-sm transition-all duration-300
-            disabled:opacity-20 disabled:cursor-not-allowed bg-white/80 backdrop-blur-sm"
+            bg-white/[0.05] backdrop-blur-sm border border-white/[0.1] items-center justify-center
+            text-slate-500 hover:text-blue-400 hover:bg-white/[0.1] hover:border-white/[0.15]
+            transition-all duration-300 disabled:opacity-20 disabled:cursor-not-allowed"
         >
           <ChevronLeft size={18} />
         </motion.button>
@@ -170,15 +187,12 @@ useEffect(() => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
-          onClick={() => {
-            next();
-    
-          }}
+          onClick={next}
           disabled={currentIndex === flights.length - 1}
           className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full
-            border border-blue-200/50 items-center justify-center text-gray-400 hover:text-blue-500
-            hover:border-blue-300 hover:shadow-sm transition-all duration-300
-            disabled:opacity-20 disabled:cursor-not-allowed bg-white/80 backdrop-blur-sm"
+            bg-white/[0.05] backdrop-blur-sm border border-white/[0.1] items-center justify-center
+            text-slate-500 hover:text-blue-400 hover:bg-white/[0.1] hover:border-white/[0.15]
+            transition-all duration-300 disabled:opacity-20 disabled:cursor-not-allowed"
         >
           <ChevronRight size={18} />
         </motion.button>
@@ -188,7 +202,7 @@ useEffect(() => {
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.5, ease: [0.25, 1, 0.5, 1] }}
-        className="w-full bg-white border-t border-blue-100/50 shadow-[0_-4px_30px_rgba(59,130,246,0.04)]"
+        className="w-full bg-white/[0.03] backdrop-blur-xl border-t border-white/[0.06]"
       >
         <div className="max-w-xl mx-auto px-6 py-5">
           <AnimatePresence mode="wait">
@@ -201,7 +215,7 @@ useEffect(() => {
                 transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
                 className="lg:hidden overflow-hidden flex justify-center mb-5"
               >
-                <div className="rounded-2xl overflow-hidden shadow-xl ring-1 ring-blue-200/40">
+                <div className="rounded-2xl overflow-hidden shadow-xl shadow-blue-500/10 ring-1 ring-white/10">
                   <video
                     src={currentFlight.video}
                     autoPlay
@@ -218,32 +232,30 @@ useEffect(() => {
 
           <div className="relative mb-3">
             <div className="relative h-8 flex items-center">
-              <div className="absolute inset-x-0 h-px bg-gray-200 top-1/2" />
+              <div className="absolute inset-x-0 h-px bg-white/[0.08] top-1/2" />
               <div
                 className="absolute h-px top-1/2 left-0 transition-all duration-500"
                 style={{
                   width: `${(currentIndex / (flights.length - 1)) * 100}%`,
-                  background: "linear-gradient(to right, #60a5fa, #3b82f6)",
+                  background: "linear-gradient(to right, #3b82f6, #60a5fa)",
+                  boxShadow: "0 0 12px rgba(59,130,246,0.4)",
                 }}
               />
               <div className="relative w-full flex justify-between items-center">
                 {flights.map((flight, i) => (
                   <button
                     key={flight.id}
-                    onClick={() => {
-                      setCurrentIndex(i);
-              
-                    }}
+                    onClick={() => setCurrentIndex(i)}
                     className="relative group flex items-center justify-center w-4 h-8"
                     title={`${locations[flight.from].name} → ${locations[flight.to].name}`}
                   >
                     <div
                       className={`rounded-full transition-all duration-300 ${
                         i === currentIndex
-                          ? "w-2.5 h-2.5 bg-blue-500"
+                          ? "w-2.5 h-2.5 bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.6)]"
                           : i < currentIndex
-                            ? "w-1.5 h-1.5 bg-blue-400 group-hover:bg-blue-500 group-hover:scale-150"
-                            : "w-1.5 h-1.5 bg-gray-200 group-hover:bg-gray-400 group-hover:scale-150"
+                            ? "w-1.5 h-1.5 bg-blue-500/60 group-hover:bg-blue-400 group-hover:scale-150"
+                            : "w-1.5 h-1.5 bg-white/[0.15] group-hover:bg-white/30 group-hover:scale-150"
                       }`}
                     />
                     {i === currentIndex && (
@@ -258,13 +270,13 @@ useEffect(() => {
               </div>
             </div>
             <div className="flex justify-between items-center mt-0.5">
-              <span className="text-[10px] text-gray-400 tracking-wider">Dec 2025</span>
-              <span className="text-[10px] text-gray-400 tracking-wider">Apr 2026</span>
+              <span className="text-[10px] text-slate-600 tracking-wider">Dec 2025</span>
+              <span className="text-[10px] text-slate-600 tracking-wider">Apr 2026</span>
             </div>
           </div>
 
-          <p className="text-center text-[10px] text-gray-300 tracking-[0.15em]">
-            ← → keys · drag to rotate
+          <p className="text-center text-[10px] text-slate-600 tracking-[0.15em]">
+            &larr; &rarr; keys &middot; drag to rotate
           </p>
         </div>
       </motion.div>
