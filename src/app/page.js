@@ -20,14 +20,23 @@ const fadeUp = (delay = 0) => ({
 function Divider() {
   return (
     <div className="max-w-3xl mx-auto px-4">
-      <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-warm-200 to-transparent" />
     </div>
   );
 }
 
+const socialLinks = [
+  { url: "https://www.linkedin.com/in/kvinhe/", label: "LinkedIn" },
+  { url: "https://github.com/kevinhe04", label: "GitHub" },
+  { url: "mailto:kvn.04he@gmail.com", label: "Email" },
+  { url: "https://www.instagram.com/kvin.he/", label: "Instagram" },
+  { url: "https://www.tiktok.com/@kvin.he", label: "TikTok" },
+  { url: "https://www.youtube.com/@kvin.he1", label: "YouTube" },
+];
+
 export default function Home() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-warm-50 min-h-screen">
       <Sidebar />
       <Navbar />
       <Menu />
@@ -47,7 +56,7 @@ export default function Home() {
               <img
                 src="images/headshot.jpeg"
                 alt="Kevin He"
-                className="w-32 h-32 rounded-full object-cover mx-auto lg:mx-0 ring-4 ring-blue-50"
+                className="w-32 h-32 rounded-full object-cover mx-auto lg:mx-0 ring-2 ring-warm-200"
               />
             </motion.div>
 
@@ -55,7 +64,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-bold text-black mb-6 tracking-tight"
+              className="text-5xl md:text-7xl lg:text-8xl font-serif italic text-warm-900 mb-6 tracking-tight"
             >
               Kevin He
             </motion.h1>
@@ -63,7 +72,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="max-w-xl text-black text-base md:text-lg leading-relaxed"
+              className="max-w-xl text-warm-600 text-base md:text-lg leading-relaxed"
             >
               I like exploring new interests and building skills along the way.
             </motion.p>
@@ -71,9 +80,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.45 }}
-              className="max-w-xl text-gray-400 text-base md:text-lg leading-relaxed mt-4"
+              className="max-w-xl text-warm-400 text-sm uppercase tracking-widest mt-5"
             >
-              Current Focus: Startups, AI Development, Travelling
+              Startups · AI Development · Travelling
             </motion.p>
           </div>
         </div>
@@ -81,11 +90,11 @@ export default function Home() {
 
       <Divider />
 
-      <section id="experience" className="py-20 px-4">
+      <section id="experience" className="py-24 px-4">
         <div className="max-w-3xl mx-auto">
           <motion.div {...fadeUp()} className="mb-16">
-            <div className="w-8 h-0.5 bg-blue-500 rounded-full mb-4" />
-            <h2 className="text-4xl md:text-5xl font-bold text-black">
+            <div className="w-8 h-px bg-accent mb-6" />
+            <h2 className="text-4xl md:text-5xl font-serif text-warm-900">
               Experience.
             </h2>
           </motion.div>
@@ -147,11 +156,11 @@ export default function Home() {
 
       <Divider />
 
-      <section id="projects" className="py-20 px-4">
+      <section id="projects" className="py-24 px-4">
         <div className="max-w-3xl mx-auto">
           <motion.div {...fadeUp()} className="mb-16">
-            <div className="w-8 h-0.5 bg-blue-500 rounded-full mb-4" />
-            <h2 className="text-4xl md:text-5xl font-bold text-black">
+            <div className="w-8 h-px bg-accent mb-6" />
+            <h2 className="text-4xl md:text-5xl font-serif text-warm-900">
               My Proudest Projects.
             </h2>
           </motion.div>
@@ -218,18 +227,18 @@ export default function Home() {
 
       <Divider />
 
-      <section id="content-creation" className="py-20 px-4">
+      <section id="content-creation" className="py-24 px-4">
         <div className="max-w-3xl mx-auto">
           <motion.div {...fadeUp()} className="mb-16">
-            <div className="w-8 h-0.5 bg-blue-500 rounded-full mb-4" />
-            <h2 className="text-4xl md:text-5xl font-bold text-black">
+            <div className="w-8 h-px bg-accent mb-6" />
+            <h2 className="text-4xl md:text-5xl font-serif text-warm-900">
               Content Creation.
             </h2>
           </motion.div>
         </div>
         <motion.div
           {...fadeUp(0.1)}
-          className="relative w-full max-w-3xl mx-auto aspect-video my-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5"
+          className="relative w-full max-w-3xl mx-auto aspect-video my-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-warm-200"
         >
           <iframe
             src="https://www.youtube.com/embed/Rr_jqi_TkW4?si=NHMg55VwKzg2vvwO"
@@ -241,7 +250,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           {...fadeUp(0.2)}
-          className="relative w-full max-w-3xl mx-auto aspect-video my-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5"
+          className="relative w-full max-w-3xl mx-auto aspect-video my-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-warm-200"
         >
           <iframe
             src="https://www.youtube.com/embed/jr-HO6HDUik"
@@ -255,11 +264,11 @@ export default function Home() {
 
       <Divider />
 
-      <section id="my-life-in-pictures" className="py-20 px-4">
+      <section id="my-life-in-pictures" className="py-24 px-4">
         <div className="max-w-3xl mx-auto">
           <motion.div {...fadeUp()} className="mb-16">
-            <div className="w-8 h-0.5 bg-blue-500 rounded-full mb-4" />
-            <h2 className="text-4xl md:text-5xl font-bold text-black">
+            <div className="w-8 h-px bg-accent mb-6" />
+            <h2 className="text-4xl md:text-5xl font-serif text-warm-900">
               My life in pictures.
             </h2>
           </motion.div>
@@ -282,11 +291,11 @@ export default function Home() {
 
       <Divider />
 
-      <section id="contact" className="py-20 px-4">
+      <section id="contact" className="py-24 px-4">
         <div className="max-w-3xl mx-auto">
           <motion.div {...fadeUp()} className="mb-12">
-            <div className="w-8 h-0.5 bg-blue-500 rounded-full mb-4" />
-            <h2 className="text-4xl md:text-5xl font-bold text-black">
+            <div className="w-8 h-px bg-accent mb-6" />
+            <h2 className="text-4xl md:text-5xl font-serif text-warm-900">
               Get in touch.
             </h2>
           </motion.div>
@@ -294,78 +303,24 @@ export default function Home() {
             {...fadeUp(0.15)}
             className="flex flex-wrap justify-center gap-10"
           >
-            <div className="flex flex-col items-center group cursor-pointer">
-              <div className="group-hover:scale-110 transition-transform duration-300">
-                <SocialIcon
-                  url="https://www.linkedin.com/in/kvinhe/"
-                  fgColor="#fff"
-                  style={{ width: 48, height: 48 }}
-                />
+            {socialLinks.map(({ url, label }) => (
+              <div
+                key={label}
+                className="flex flex-col items-center group cursor-pointer"
+              >
+                <div className="group-hover:scale-110 transition-transform duration-300">
+                  <SocialIcon
+                    url={url}
+                    bgColor="#292524"
+                    fgColor="#faf9f7"
+                    style={{ width: 44, height: 44 }}
+                  />
+                </div>
+                <span className="mt-2 text-sm text-warm-400 group-hover:text-warm-800 transition-colors duration-300">
+                  {label}
+                </span>
               </div>
-              <span className="mt-2 text-sm font-medium text-gray-400 group-hover:text-blue-500 transition-colors duration-300">
-                LinkedIn
-              </span>
-            </div>
-            <div className="flex flex-col items-center group cursor-pointer">
-              <div className="group-hover:scale-110 transition-transform duration-300">
-                <SocialIcon
-                  url="https://github.com/kevinhe04"
-                  fgColor="#fff"
-                  style={{ width: 48, height: 48 }}
-                />
-              </div>
-              <span className="mt-2 text-sm font-medium text-gray-400 group-hover:text-gray-800 transition-colors duration-300">
-                GitHub
-              </span>
-            </div>
-            <div className="flex flex-col items-center group cursor-pointer">
-              <div className="group-hover:scale-110 transition-transform duration-300">
-                <SocialIcon
-                  url="mailto:kvn.04he@gmail.com"
-                  fgColor="#fff"
-                  style={{ width: 48, height: 48 }}
-                />
-              </div>
-              <span className="mt-2 text-sm font-medium text-gray-400 group-hover:text-red-400 transition-colors duration-300">
-                Email
-              </span>
-            </div>
-            <div className="flex flex-col items-center group cursor-pointer">
-              <div className="group-hover:scale-110 transition-transform duration-300">
-                <SocialIcon
-                  url="https://www.instagram.com/kvin.he/"
-                  fgColor="#fff"
-                  style={{ width: 48, height: 48 }}
-                />
-              </div>
-              <span className="mt-2 text-sm font-medium text-gray-400 group-hover:text-pink-400 transition-colors duration-300">
-                Instagram
-              </span>
-            </div>
-            <div className="flex flex-col items-center group cursor-pointer">
-              <div className="group-hover:scale-110 transition-transform duration-300">
-                <SocialIcon
-                  url="https://www.tiktok.com/@kvin.he"
-                  fgColor="#fff"
-                  style={{ width: 48, height: 48 }}
-                />
-              </div>
-              <span className="mt-2 text-sm font-medium text-gray-400 group-hover:text-gray-800 transition-colors duration-300">
-                TikTok
-              </span>
-            </div>
-            <div className="flex flex-col items-center group cursor-pointer">
-              <div className="group-hover:scale-110 transition-transform duration-300">
-                <SocialIcon
-                  url="https://www.youtube.com/@kvin.he1"
-                  fgColor="#fff"
-                  style={{ width: 48, height: 48 }}
-                />
-              </div>
-              <span className="mt-2 text-sm font-medium text-gray-400 group-hover:text-red-500 transition-colors duration-300">
-                YouTube
-              </span>
-            </div>
+            ))}
           </motion.div>
         </div>
       </section>

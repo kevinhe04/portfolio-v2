@@ -1,100 +1,97 @@
 "use client";
-import * as React from "react";
-import Box from "@mui/joy/Box";
-import IconButton from "@mui/joy/IconButton";
-import Drawer from "@mui/joy/Drawer";
-import List from "@mui/joy/List";
-import ListItemButton from "@mui/joy/ListItemButton";
-import ModalClose from "@mui/joy/ModalClose";
-import { Menu } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Menu, X, FileText, Plane } from "lucide-react";
+
+const navItems = [
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#content-creation", label: "Content Creation" },
+  { href: "#my-life-in-pictures", label: "Gallery" },
+  { href: "#contact", label: "Contact" },
+];
 
 export default function MenuPortfolio() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
-    <div className="fixed right-0 md:hidden">
-      <IconButton
-        variant="outlined"
-        color="neutral"
+    <div className="md:hidden">
+      <button
         onClick={() => setOpen(true)}
+        className="fixed top-5 right-5 z-50 p-2 text-warm-700"
+        aria-label="Open menu"
       >
-        <Menu color="#ffffff" />
-      </IconButton>
-      <Drawer open={open} onClose={() => setOpen(false)} anchor="right">
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            gap: 0.5,
-            ml: "auto",
-            mt: 1,
-            mr: 2,
-          }}
-        >
-          Close
-          <ModalClose id="close-icon" sx={{ position: "initial" }} />
-        </Box>
-        <List
-          size="lg"
-          component="nav"
-          sx={{
-            flex: "none",
-            fontSize: "xl",
-            "& > div": { justifyContent: "center" },
-          }}
-        >
-          <ListItemButton>
-            <a
-              href="#experience"
-              className="block text-lg hover:underline transition-all duration-300"
-            >
-              Experience
-            </a>
-          </ListItemButton>
-          <ListItemButton>
-            <a
-              href="#projects"
-              className="block text-lg hover:underline transition-all duration-300"
-            >
-              Projects
-            </a>
-          </ListItemButton>
-          <ListItemButton>
-            <a
-              href="#content-creation"
-              className="block text-lg hover:underline transition-all duration-300"
-            >
-              Content Creation
-            </a>
-          </ListItemButton>
-          <ListItemButton>
-            <a
-              href="#my-life-in-pictures"
-              className="block text-lg hover:underline transition-all duration-300"
-              onClick={() => setOpen(false)}
-            >
-              My life in pictures
-            </a>
-          </ListItemButton>
-          <ListItemButton>
-            <a
-              href="#contact"
-              className="block text-lg hover:underline transition-all duration-300"
-            >
-              Contact
-            </a>
-          </ListItemButton>
-          <ListItemButton>
-            <a
-              href="https://drive.google.com/file/d/1JWfl8-4oR-525v0Jn7hS2tYlR8kE_zR9/view?usp=sharing"
-              target="_blank"
-              className="text-lg"
-            >
-              Resume
-            </a>
-          </ListItemButton>
-        </List>
-      </Drawer>
+        <Menu size={24} />
+      </button>
+
+      <div
+        className={`fixed inset-0 z-[60] bg-warm-900/20 backdrop-blur-sm transition-opacity duration-300 ${
+          open ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setOpen(false)}
+      />
+
+      <div
+        className={`fixed top-0 right-0 z-[70] h-full w-72 bg-warm-50 shadow-2xl transition-transform duration-300 ease-out ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex justify-end p-5">
+          <button
+            onClick={() => setOpen(false)}
+            className="p-2 text-warm-400 hover:text-warm-700 transition-colors"
+            aria-label="Close menu"
+          >
+            <X size={20} />
+          </button>
+        </div>
+
+        <nav className="px-8 py-4">
+          <ul className="space-y-5">
+            {navItems.map(({ href, label }) => (
+              <li key={href}>
+                <a
+                  href={href}
+                  onClick={() => setOpen(false)}
+                  className="text-lg text-warm-600 hover:text-warm-900 transition-colors"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+            <li className="pt-6 border-t border-warm-200">
+              <a
+                href="/exchange"
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-2 text-lg text-warm-600 hover:text-warm-900 transition-colors"
+              >
+                <Plane size={18} />
+                Exchange
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1JWfl8-4oR-525v0Jn7hS2tYlR8kE_zR9/view?usp=sharing"
+                target="_blank"
+                className="flex items-center gap-2 text-lg text-warm-600 hover:text-warm-900 transition-colors"
+              >
+                <FileText size={18} />
+                Resume
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   );
 }

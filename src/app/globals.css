@@ -3,21 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #faf9f7;
+  --foreground: #1a1a1a;
+  --accent: #b45309;
+  --muted: #78716c;
+  --border: #e7e5e4;
+  --radius: 0.5rem;
 }
 
 html,
 body {
-  background-color: #ffffff;
+  background-color: var(--background);
+  color: var(--foreground);
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
@@ -26,12 +28,7 @@ body {
   }
 }
 
-@layer base {
-  :root {
-    --radius: 0.5rem;
-  }
-}
-
-html {
-  scroll-behavior: smooth;
+::selection {
+  background-color: #fef3c7;
+  color: #92400e;
 }

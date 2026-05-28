@@ -6,7 +6,7 @@ const navItems = [
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#content-creation", label: "Content Creation" },
-  { href: "#my-life-in-pictures", label: "My life in pictures" },
+  { href: "#my-life-in-pictures", label: "Gallery" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -32,9 +32,11 @@ export default function Sidebar() {
 
   return (
     <div className="h-screen w-64 fixed top-0 left-0 p-8 flex-col hidden md:block">
-      <div className="text-black mb-16">
-        <div className="text-4xl font-bold">Kevin He</div>
-        <div className="text-lg font-light text-gray-400">Schulich Leader 2023</div>
+      <div className="text-warm-900 mb-16">
+        <div className="text-3xl font-serif">Kevin He</div>
+        <div className="text-sm tracking-wide text-warm-400">
+          Schulich Leader 2023
+        </div>
       </div>
 
       <div className="flex-grow flex items-center">
@@ -47,13 +49,13 @@ export default function Sidebar() {
                 href={href}
                 className={`flex items-center gap-3 text-lg transition-all duration-300 ${
                   isActive
-                    ? "text-black translate-x-2"
-                    : "text-gray-400 hover:text-gray-600 hover:translate-x-2"
+                    ? "text-warm-900 translate-x-2"
+                    : "text-warm-400 hover:text-warm-600 hover:translate-x-2"
                 }`}
               >
                 <span
                   className={`h-px rounded-full transition-all duration-300 ${
-                    isActive ? "w-6 bg-blue-500" : "w-0 bg-transparent"
+                    isActive ? "w-6 bg-accent" : "w-0 bg-transparent"
                   }`}
                 />
                 {label}

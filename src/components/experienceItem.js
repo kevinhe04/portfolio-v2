@@ -1,5 +1,4 @@
 import { ExternalLink } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 
 function ExperienceItem({
   dates,
@@ -16,11 +15,11 @@ function ExperienceItem({
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="block backdrop-blur-sm rounded-xl p-4 transition-colors duration-300"
+        className="block rounded-xl p-4 transition-all duration-300 hover:bg-warm-100/50"
       >
         <div className="flex justify-between items-start mb-4">
-          <div className="text-md text-black">{company}</div>
-          <div className="text-gray-300 group-hover:text-blue-600 transition-colors duration-300">
+          <div className="text-md text-warm-700">{company}</div>
+          <div className="text-warm-300 group-hover:text-accent transition-colors duration-300">
             <ExternalLink size={18} />
           </div>
         </div>
@@ -35,16 +34,16 @@ function ExperienceItem({
           </div>
 
           <div className="flex-1">
-            <h3 className="text-xl text-black font-bold group-hover:text-blue-400 transition-colors duration-300">
+            <h3 className="text-xl text-warm-900 font-semibold group-hover:text-accent transition-colors duration-300">
               {title}
             </h3>
-            <p className="text-gray-500 text-sm mb-2">{dates}</p>
+            <p className="text-warm-400 text-sm mb-2">{dates}</p>
 
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-blue-500/20 text-blue-600 text-xs rounded-full border border-blue-500/30"
+                  className="px-3 py-1 bg-warm-100 text-warm-600 text-xs rounded-full border border-warm-200"
                 >
                   {skill}
                 </span>
@@ -57,9 +56,12 @@ function ExperienceItem({
         className="max-h-0 overflow-hidden opacity-0 -translate-y-1 pointer-events-none transition-all duration-300 ease-out group-hover:max-h-96 group-hover:opacity-100 group-hover:translate-y-0 group-hover:mt-3 group-hover:pointer-events-auto"
         aria-hidden="true"
       >
-        <div className="rounded-xl bg-white/60 backdrop-blur-sm px-6 py-3">
+        <div className="rounded-xl bg-warm-100/80 backdrop-blur-sm px-6 py-3">
           {description.map((item, index) => (
-            <p key={index} className="text-gray-500 leading-relaxed mb-2 last:mb-0 text-sm">
+            <p
+              key={index}
+              className="text-warm-500 leading-relaxed mb-2 last:mb-0 text-sm"
+            >
               • {item}
             </p>
           ))}

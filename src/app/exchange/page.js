@@ -19,6 +19,7 @@ export default function ExchangePage() {
 
   const centerLat = (from.lat + to.lat) / 2;
   const centerLng = (from.lng + to.lng) / 2;
+  const hasMedia = currentFlight.video || currentFlight.youtube;
 
   const visitedCities = new Set();
   for (let i = 0; i <= currentIndex; i++) {
@@ -51,32 +52,26 @@ export default function ExchangePage() {
   }, []);
 
   return (
-    <div
-      className="h-screen flex flex-col overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(ellipse at 50% 40%, #0f1d3a 0%, #0a0f1e 50%, #060a14 100%)",
-      }}
-    >
+    <div className="h-screen flex flex-col overflow-hidden bg-warm-50">
       <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="w-full z-50 bg-white/[0.03] backdrop-blur-xl border-b border-white/[0.06]"
+        className="w-full z-50 border-b border-warm-200"
       >
         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center relative">
           <a
             href="/"
-            className="text-sm text-slate-500 hover:text-blue-400 transition-colors duration-300"
+            className="text-sm text-warm-400 hover:text-warm-700 transition-colors duration-300"
           >
             &larr; back
           </a>
-          <span className="absolute left-1/2 -translate-x-1/2 text-xs tracking-[0.25em] uppercase text-slate-300 font-medium">
+          <span className="absolute left-1/2 -translate-x-1/2 text-xs tracking-[0.25em] uppercase text-warm-700 font-serif">
             Exchange 2026
           </span>
-          <div className="ml-auto hidden sm:flex items-center gap-3 text-[11px] text-slate-500 tracking-wider">
+          <div className="ml-auto hidden sm:flex items-center gap-3 text-[11px] text-warm-400 tracking-wider">
             <span>{visitedCities.size} cities</span>
-            <span className="w-px h-3 bg-white/10" />
+            <span className="w-px h-3 bg-warm-200" />
             <span>
               {currentIndex + 1} / {flights.length}
             </span>
@@ -94,46 +89,46 @@ export default function ExchangePage() {
             transition={{ duration: 0.2 }}
             className="flex flex-col items-center gap-1 mb-2"
           >
-            <div className="bg-white/[0.04] backdrop-blur-md border border-white/[0.08] rounded-2xl px-8 py-3">
+            <div className="bg-white/80 backdrop-blur-md border border-warm-200 rounded-2xl px-8 py-3 shadow-sm">
               <div className="flex items-center justify-center gap-6">
                 <div className="text-right min-w-[100px]">
-                  <p className="text-base font-semibold text-white">{from.name}</p>
-                  <p className="text-[10px] text-blue-400/60 tracking-[0.2em] mt-0.5">
+                  <p className="text-base font-semibold text-warm-900">{from.name}</p>
+                  <p className="text-[10px] text-warm-400 tracking-[0.2em] mt-0.5">
                     {currentFlight.from}
                   </p>
                 </div>
                 <div className="flex items-center gap-2.5 flex-shrink-0">
-                  <div className="w-8 h-px bg-gradient-to-r from-transparent to-blue-500/40" />
+                  <div className="w-8 h-px bg-gradient-to-r from-transparent to-accent/40" />
                   <div className="relative">
-                    <Plane size={13} className="text-blue-400 relative z-10" />
-                    <div className="absolute -inset-1 bg-blue-400/20 rounded-full blur-sm" />
+                    <Plane size={13} className="text-accent relative z-10" />
+                    <div className="absolute -inset-1 bg-amber-400/20 rounded-full blur-sm" />
                   </div>
-                  <div className="w-8 h-px bg-gradient-to-r from-blue-500/40 to-transparent" />
+                  <div className="w-8 h-px bg-gradient-to-r from-accent/40 to-transparent" />
                 </div>
                 <div className="text-left min-w-[100px]">
-                  <p className="text-base font-semibold text-white">{to.name}</p>
-                  <p className="text-[10px] text-blue-400/60 tracking-[0.2em] mt-0.5">
+                  <p className="text-base font-semibold text-warm-900">{to.name}</p>
+                  <p className="text-[10px] text-warm-400 tracking-[0.2em] mt-0.5">
                     {currentFlight.to}
                   </p>
                 </div>
               </div>
             </div>
             {currentFlight.connection && (
-              <span className="text-[10px] text-blue-400/40 tracking-[0.15em] mt-1">
+              <span className="text-[10px] text-warm-400 tracking-[0.15em] mt-1">
                 Connection flight
               </span>
             )}
           </motion.div>
         </AnimatePresence>
 
-        <p className="text-sm text-slate-500 font-medium tracking-[0.2em] uppercase mb-1">
+        <p className="text-sm text-warm-400 font-medium tracking-[0.2em] uppercase mb-1">
           {currentFlight.label}
         </p>
 
         <div className="relative" style={{ width: globeSize, height: globeSize }}>
           <div
             className="transition-opacity duration-700 ease-in-out"
-            style={{ opacity: currentFlight.video ? 0 : 1 }}
+            style={{ opacity: hasMedia ? 0 : 1 }}
           >
             <GlobeView
               currentIndex={currentIndex}
@@ -144,26 +139,36 @@ export default function ExchangePage() {
           </div>
 
           <AnimatePresence mode="wait">
-            {currentFlight.video && (
+            {hasMedia && (
               <motion.div
-                key={currentFlight.video}
+                key={currentFlight.video || currentFlight.youtube}
                 initial={{ opacity: 0, scale: 0.97 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.97 }}
                 transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
                 className="absolute inset-0 flex items-center justify-center"
               >
-                <div className="rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/10 ring-1 ring-white/10 bg-black">
-                  <video
-                    src={currentFlight.video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    controls
-                    style={{ height: globeSize * 0.7 }}
-                    className="w-auto object-cover"
-                  />
+                <div className="rounded-2xl overflow-hidden shadow-xl ring-1 ring-warm-200 bg-warm-900">
+                  {currentFlight.video ? (
+                    <video
+                      src={currentFlight.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controls
+                      style={{ height: globeSize * 0.7 }}
+                      className="w-auto object-cover"
+                    />
+                  ) : (
+                    <iframe
+                      src={currentFlight.youtube}
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      style={{ width: globeSize, height: globeSize * (9 / 16) }}
+                    />
+                  )}
                 </div>
               </motion.div>
             )}
@@ -177,9 +182,9 @@ export default function ExchangePage() {
           onClick={prev}
           disabled={currentIndex === 0}
           className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full
-            bg-white/[0.05] backdrop-blur-sm border border-white/[0.1] items-center justify-center
-            text-slate-500 hover:text-blue-400 hover:bg-white/[0.1] hover:border-white/[0.15]
-            transition-all duration-300 disabled:opacity-20 disabled:cursor-not-allowed"
+            bg-white/80 backdrop-blur-sm border border-warm-200 items-center justify-center
+            text-warm-400 hover:text-accent hover:border-warm-300
+            transition-all duration-300 disabled:opacity-20 disabled:cursor-not-allowed shadow-sm"
         >
           <ChevronLeft size={18} />
         </motion.button>
@@ -190,9 +195,9 @@ export default function ExchangePage() {
           onClick={next}
           disabled={currentIndex === flights.length - 1}
           className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full
-            bg-white/[0.05] backdrop-blur-sm border border-white/[0.1] items-center justify-center
-            text-slate-500 hover:text-blue-400 hover:bg-white/[0.1] hover:border-white/[0.15]
-            transition-all duration-300 disabled:opacity-20 disabled:cursor-not-allowed"
+            bg-white/80 backdrop-blur-sm border border-warm-200 items-center justify-center
+            text-warm-400 hover:text-accent hover:border-warm-300
+            transition-all duration-300 disabled:opacity-20 disabled:cursor-not-allowed shadow-sm"
         >
           <ChevronRight size={18} />
         </motion.button>
@@ -202,29 +207,39 @@ export default function ExchangePage() {
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.5, ease: [0.25, 1, 0.5, 1] }}
-        className="w-full bg-white/[0.03] backdrop-blur-xl border-t border-white/[0.06]"
+        className="w-full border-t border-warm-200"
       >
         <div className="max-w-xl mx-auto px-6 py-5">
           <AnimatePresence mode="wait">
-            {currentFlight.video && (
+            {hasMedia && (
               <motion.div
-                key={currentFlight.video + "-m"}
+                key={(currentFlight.video || currentFlight.youtube) + "-m"}
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
                 className="lg:hidden overflow-hidden flex justify-center mb-5"
               >
-                <div className="rounded-2xl overflow-hidden shadow-xl shadow-blue-500/10 ring-1 ring-white/10">
-                  <video
-                    src={currentFlight.video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    controls
-                    className="h-[180px] md:h-[220px] w-auto object-cover"
-                  />
+                <div className="rounded-2xl overflow-hidden shadow-xl ring-1 ring-warm-200">
+                  {currentFlight.video ? (
+                    <video
+                      src={currentFlight.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controls
+                      className="h-[180px] md:h-[220px] w-auto object-cover"
+                    />
+                  ) : (
+                    <iframe
+                      src={currentFlight.youtube}
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="h-[180px] md:h-[220px] aspect-video"
+                    />
+                  )}
                 </div>
               </motion.div>
             )}
@@ -232,13 +247,13 @@ export default function ExchangePage() {
 
           <div className="relative mb-3">
             <div className="relative h-8 flex items-center">
-              <div className="absolute inset-x-0 h-px bg-white/[0.08] top-1/2" />
+              <div className="absolute inset-x-0 h-px bg-warm-200 top-1/2" />
               <div
                 className="absolute h-px top-1/2 left-0 transition-all duration-500"
                 style={{
                   width: `${(currentIndex / (flights.length - 1)) * 100}%`,
-                  background: "linear-gradient(to right, #3b82f6, #60a5fa)",
-                  boxShadow: "0 0 12px rgba(59,130,246,0.4)",
+                  background: "linear-gradient(to right, #b45309, #f59e0b)",
+                  boxShadow: "0 0 8px rgba(180,83,9,0.25)",
                 }}
               />
               <div className="relative w-full flex justify-between items-center">
@@ -252,16 +267,16 @@ export default function ExchangePage() {
                     <div
                       className={`rounded-full transition-all duration-300 ${
                         i === currentIndex
-                          ? "w-2.5 h-2.5 bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.6)]"
+                          ? "w-2.5 h-2.5 bg-accent shadow-[0_0_8px_rgba(180,83,9,0.4)]"
                           : i < currentIndex
-                            ? "w-1.5 h-1.5 bg-blue-500/60 group-hover:bg-blue-400 group-hover:scale-150"
-                            : "w-1.5 h-1.5 bg-white/[0.15] group-hover:bg-white/30 group-hover:scale-150"
+                            ? "w-1.5 h-1.5 bg-accent/50 group-hover:bg-accent group-hover:scale-150"
+                            : "w-1.5 h-1.5 bg-warm-300 group-hover:bg-warm-400 group-hover:scale-150"
                       }`}
                     />
                     {i === currentIndex && (
                       <motion.div
                         layoutId="active-dot"
-                        className="absolute w-5 h-5 rounded-full border border-blue-400/30"
+                        className="absolute w-5 h-5 rounded-full border border-accent/30"
                         transition={{ type: "spring", stiffness: 400, damping: 30 }}
                       />
                     )}
@@ -270,12 +285,12 @@ export default function ExchangePage() {
               </div>
             </div>
             <div className="flex justify-between items-center mt-0.5">
-              <span className="text-[10px] text-slate-600 tracking-wider">Dec 2025</span>
-              <span className="text-[10px] text-slate-600 tracking-wider">Apr 2026</span>
+              <span className="text-[10px] text-warm-400 tracking-wider">Dec 2025</span>
+              <span className="text-[10px] text-warm-400 tracking-wider">Apr 2026</span>
             </div>
           </div>
 
-          <p className="text-center text-[10px] text-slate-600 tracking-[0.15em]">
+          <p className="text-center text-[10px] text-warm-400 tracking-[0.15em]">
             &larr; &rarr; keys &middot; drag to rotate
           </p>
         </div>

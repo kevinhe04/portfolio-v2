@@ -1,10 +1,18 @@
 import "./globals.css";
-import { Open_Sans } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 
-const openSans = Open_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"],
   display: "swap",
+  variable: "--font-inter",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-serif",
 });
 
 export const metadata = {
@@ -17,7 +25,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={openSans.className}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${instrumentSerif.variable} ${inter.className}`}
+    >
       <body>{children}</body>
     </html>
   );

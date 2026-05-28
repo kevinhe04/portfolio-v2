@@ -1,6 +1,6 @@
 function GalleryItem({ imageSrc, imageAlt, date, description }) {
   return (
-    <article className="group relative break-inside-avoid mb-4 rounded-xl overflow-hidden bg-gray-100">
+    <article className="group relative break-inside-avoid mb-4 rounded-xl overflow-hidden bg-warm-100">
       <img
         src={imageSrc}
         alt={imageAlt}
