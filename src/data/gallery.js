@@ -9,7 +9,7 @@ export const galleryItems = [
     imageSrc: "images/AUTO.jpg",
     imageAlt: "Autodesk",
     date: "09/05/2025",
-    description: "First week of my internship at Autodesk done!",
+    description: "First week at Autodesk",
   },
   {
     imageSrc: "images/HTN.jpg",
