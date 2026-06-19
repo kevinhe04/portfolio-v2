@@ -45,13 +45,13 @@ export const galleryItems = [
     imageSrc: "images/KL.jpg",
     imageAlt: "Kuala Lumpur",
     date: "01/25/2026",
-    description: "I'm in Kuala Lumpur!",
+    description: "I'm in Malaysia!",
   },
   {
-    imageSrc: "images/Massage.jpg",
-    imageAlt: "Massage in Thailand",
+    imageSrc: "images/Life/DSC00494.jpeg",
+    imageAlt: "Mount Batur",
     date: "01/26/2026",
-    description: "We're about to get a massage in Thailand...",
+    description: "Hiking the Mount Batur volcano",
   },
   {
     imageSrc: "images/BK.jpg",
@@ -78,9 +78,9 @@ export const galleryItems = [
     description: "I'm in Saigon!",
   },
   {
-    imageSrc: "images/hanoi.jpg",
-    imageAlt: "Hanoi",
+    imageSrc: "images/Life/DSC00502.jpeg",
+    imageAlt: "Bali",
     date: "03/07/2026",
-    description: "I'm in Hanoi!",
+    description: "I'm in Bali!",
   },
 ];
