@@ -82,7 +82,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.45 }}
               className="max-w-xl text-warm-400 text-sm uppercase tracking-widest mt-5"
             >
-              Startups · AI Development · Travelling
+              Startups
             </motion.p>
           </div>
         </div>
