@@ -101,6 +101,16 @@ export default function Home() {
           <div className="flex flex-col">
             <motion.div {...fadeUp(0)}>
               <ExperienceItem
+                dates="June 2026 - Present"
+                title=""
+                company="AWL-Electricity • Montreal, Canada"
+                description={[]}
+                skills={[]}
+                image="images/AWL.jpeg"
+              />
+            </motion.div>
+            <motion.div {...fadeUp(0.1)}>
+              <ExperienceItem
                 dates="September 2025 - December 2025"
                 title="AI Software Developer Intern"
                 company="Autodesk • Montreal, Canada"
@@ -114,7 +124,7 @@ export default function Home() {
                 link="https://www.autodesk.com/"
               />
             </motion.div>
-            <motion.div {...fadeUp(0.1)}>
+            <motion.div {...fadeUp(0.2)}>
               <ExperienceItem
                 dates="May 2025 - August 2025"
                 title="Mobile Developer Intern"
@@ -129,7 +139,7 @@ export default function Home() {
                 link="https://www.sunlife.ca/en/"
               />
             </motion.div>
-            <motion.div {...fadeUp(0.2)}>
+            <motion.div {...fadeUp(0.3)}>
               <ExperienceItem
                 dates="May 2024 - August 2024"
                 title="Software Developer Intern"
