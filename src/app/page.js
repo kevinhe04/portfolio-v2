@@ -107,6 +107,7 @@ export default function Home() {
                 description={[]}
                 skills={[]}
                 image="images/AWL.jpeg"
+                link="https://www.awl-e.com/"
               />
             </motion.div>
             <motion.div {...fadeUp(0.1)}>
