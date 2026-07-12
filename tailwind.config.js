@@ -9,24 +9,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "rgb(var(--background) / <alpha-value>)",
+        foreground: "rgb(var(--foreground) / <alpha-value>)",
         accent: {
-          DEFAULT: "#b45309",
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
           light: "#fef3c7",
           dark: "#92400e",
         },
         warm: {
-          50: "#faf9f7",
-          100: "#f5f5f0",
-          200: "#e7e5e4",
-          300: "#d6d3d1",
-          400: "#a8a29e",
-          500: "#78716c",
-          600: "#57534e",
-          700: "#44403c",
-          800: "#292524",
-          900: "#1c1917",
+          50: "rgb(var(--warm-50) / <alpha-value>)",
+          100: "rgb(var(--warm-100) / <alpha-value>)",
+          200: "rgb(var(--warm-200) / <alpha-value>)",
+          300: "rgb(var(--warm-300) / <alpha-value>)",
+          400: "rgb(var(--warm-400) / <alpha-value>)",
+          500: "rgb(var(--warm-500) / <alpha-value>)",
+          600: "rgb(var(--warm-600) / <alpha-value>)",
+          700: "rgb(var(--warm-700) / <alpha-value>)",
+          800: "rgb(var(--warm-800) / <alpha-value>)",
+          900: "rgb(var(--warm-900) / <alpha-value>)",
         },
       },
       borderRadius: {

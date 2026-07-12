@@ -2,24 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  Palette is exposed as space-separated RGB channels so Tailwind's opacity
+  modifiers (e.g. divide-warm-200/70) keep working. Dark mode simply flips the
+  channel values under .dark — no per-component classes needed.
+*/
 :root {
-  --background: #faf9f7;
-  --foreground: #1a1a1a;
-  --accent: #b45309;
-  --muted: #78716c;
-  --border: #e7e5e4;
+  color-scheme: light;
+
+  --warm-50: 250 249 247;
+  --warm-100: 245 245 240;
+  --warm-200: 231 229 228;
+  --warm-300: 214 211 209;
+  --warm-400: 168 162 158;
+  --warm-500: 120 113 108;
+  --warm-600: 87 83 78;
+  --warm-700: 68 64 60;
+  --warm-800: 41 37 36;
+  --warm-900: 28 25 23;
+
+  --accent: 180 83 9;
+
+  --background: var(--warm-50);
+  --foreground: var(--warm-900);
   --radius: 0.5rem;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --warm-50: 24 22 20;
+  --warm-100: 32 29 27;
+  --warm-200: 45 41 39;
+  --warm-300: 68 64 60;
+  --warm-400: 140 132 126;
+  --warm-500: 175 168 163;
+  --warm-600: 209 205 201;
+  --warm-700: 228 226 223;
+  --warm-800: 242 241 237;
+  --warm-900: 250 249 247;
+
+  --accent: 245 158 11;
 }
 
 html,
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
   overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Smooth the light/dark transition without animating layout */
+body {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 @layer utilities {

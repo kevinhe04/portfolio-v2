@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Menu, X, FileText, Plane } from "lucide-react";
+import ThemeToggle from "./themeToggle";
 
 const navItems = [
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
-  { href: "#content-creation", label: "Content Creation" },
-  { href: "#my-life-in-pictures", label: "Gallery" },
+  { href: "#accolades", label: "Accolades" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -88,6 +88,12 @@ export default function MenuPortfolio() {
                 <FileText size={18} />
                 Resume
               </a>
+            </li>
+            <li>
+              <ThemeToggle
+                showLabel
+                className="text-lg !text-warm-600 hover:!text-warm-900"
+              />
             </li>
           </ul>
         </nav>

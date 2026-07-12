@@ -1,5 +1,6 @@
 import React from "react";
 import { FileText, Plane } from "lucide-react";
+import ThemeToggle from "./themeToggle";
 
 const Navbar = () => {
   return (
@@ -22,6 +23,7 @@ const Navbar = () => {
               <FileText className="w-5 h-5" />
               <span>Resume</span>
             </a>
+            <ThemeToggle />
           </div>
         </div>
       </div>
