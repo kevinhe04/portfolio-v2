@@ -102,9 +102,9 @@ export default function Home() {
             <motion.div {...fadeUp(0)}>
               <ExperienceItem
                 dates="June 2026 - Present"
-                title=""
+                title="Systems Integration Engineer Intern"
                 company="AWL-Electricity • Montreal, Canada"
-                description={[]}
+                description={["Built PCBs", "Acted as a client representative for projects"]}
                 skills={[]}
                 image="images/AWL.jpeg"
                 link="https://www.awl-e.com/"
