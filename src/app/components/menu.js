@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Menu, X, FileText, Plane } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import ThemeToggle from "./themeToggle";
 
 const navItems = [
@@ -70,16 +70,6 @@ export default function MenuPortfolio() {
               </li>
             ))}
             <li className="pt-6 border-t border-warm-200">
-              <a
-                href="/exchange"
-                onClick={() => setOpen(false)}
-                className="flex items-center gap-2 text-lg text-warm-600 hover:text-warm-900 transition-colors"
-              >
-                <Plane size={18} />
-                Exchange
-              </a>
-            </li>
-            <li>
               <a
                 href="https://drive.google.com/file/d/1JWfl8-4oR-525v0Jn7hS2tYlR8kE_zR9/view?usp=sharing"
                 target="_blank"

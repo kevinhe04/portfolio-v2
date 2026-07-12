@@ -47,7 +47,7 @@ export default function Home() {
             Kevin He
           </motion.h1>
           <motion.a
-            href="/reflections"
+            href="/timeline"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
@@ -179,8 +179,17 @@ export default function Home() {
             <motion.div {...fadeUp(0)}>
               <ListRow
                 title="36ᵉ Concours littéraire français"
-                dates="Lauréat"
-                blurb="My text was selected among the prize-winning entries and published in the contest's official anthology." link="https://drive.google.com/file/d/11GNb1nG4f0VEkx4P7qUbTt0eO3LlwVKR/view"
+                dates="2nd Place"
+                blurb="Prose · 5ᵉ secondaire · Mixte"
+                link="https://drive.google.com/file/d/11GNb1nG4f0VEkx4P7qUbTt0eO3LlwVKR/view"
+              />
+            </motion.div>
+            <motion.div {...fadeUp(0.06)}>
+              <ListRow
+                title="RCM Level 10 Piano"
+                dates="Quebec Gold Medalist"
+                blurb="Awarded for the highest Level 10 piano examination mark in Quebec."
+                link="https://rcmusic-kentico-cdn.s3.amazonaws.com/rcm/media/main/learning/quebec_book2021.pdf"
               />
             </motion.div>
           </div>
