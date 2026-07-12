@@ -105,7 +105,7 @@ export default function Home() {
                 title="Systems Integration Engineer Intern"
                 company="AWL-Electricity • Montreal, Canada"
                 description={["Built PCBs", "Acted as a client representative for projects"]}
-                skills={[]}
+                skills={["Hardware", "International Business Development"]}
                 image="images/AWL.jpeg"
                 link="https://www.awl-e.com/"
               />
