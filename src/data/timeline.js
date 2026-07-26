@@ -204,7 +204,7 @@ export const timeline = [
     dateISO: "2022-06-28",
     event: "Valcartier summer training camp",
     tag: "Cadets",
-    images: ["/images/cadets/cadets.jpg", "/images/cadets/cadets2.jpg", "/images/cadets/cadets3.jpg", "/images/cadets/cadets4.jpg", "/images/cadets/cadets5.jpg", "/images/cadets/cadets6.jpg", "/images/cadets/cadets7.jpg", "/images/cadets/cadets8.jpg"],
+    images: ["/images/cadets/cadets.JPG", "/images/cadets/cadets2.JPG", "/images/cadets/cadets3.JPG", "/images/cadets/cadets4.jpg", "/images/cadets/cadets5.JPG", "/images/cadets/cadets6.JPG", "/images/cadets/cadets7.JPG", "/images/cadets/cadets8.JPG"],
   },
   {
     slug: "spain",
