@@ -202,7 +202,7 @@ export const timeline = [
     slug: "cadets",
     date: "June 28, 2022",
     dateISO: "2022-06-28",
-    event: "Valcartier summer training camp",
+    event: "Participated in Valcartier summer training camp",
     tag: "Cadets",
     images: ["/images/cadets/cadets.JPG", "/images/cadets/cadets2.JPG", "/images/cadets/cadets3.JPG", "/images/cadets/cadets4.jpg", "/images/cadets/cadets5.jpg", "/images/cadets/cadets6.jpg", "/images/cadets/cadets7.jpg", "/images/cadets/cadets8.JPG"],
   },
