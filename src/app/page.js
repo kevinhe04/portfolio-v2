@@ -26,8 +26,7 @@ const socialLinks = [
   { url: "https://github.com/kevinhe04", label: "GitHub" },
   { url: "mailto:kvn.04he@gmail.com", label: "Email" },
   { url: "https://www.instagram.com/kvin.he/", label: "Instagram" },
-  { url: "https://www.tiktok.com/@kvin.he", label: "TikTok" },
-  { url: "https://www.youtube.com/@kvin.he1", label: "YouTube" },
+  { url: "https://www.youtube.com/@kvinhe", label: "YouTube" },
 ];
 
 export default function Home() {
