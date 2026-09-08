@@ -1,10 +1,11 @@
 "use client";
 
 import Navbar from "./components/navbar";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Menu from "./components/menu";
 import * as motion from "motion/react-client";
 import ListRow from "@/components/listRow";
+import { focus } from "@/data/focus";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -52,10 +53,32 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="group inline-flex flex-shrink-0 items-center gap-1 text-sm text-warm-500 transition-colors duration-300 hover:text-accent cursor-pointer"
           >
-            Learn more about me
+            Timeline
             <ArrowUpRight
               size={15}
               className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </motion.a>
+        </div>
+
+        {/* Current focus — a live status line that opens the journal. */}
+        <div className="max-w-3xl mx-auto mt-4">
+          <motion.a
+            href={focus.href}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="group inline-flex items-center gap-2.5 rounded-full border border-warm-300/70 bg-warm-100/60 py-1.5 pl-3.5 pr-3 text-sm text-warm-600 transition-colors duration-300 cursor-pointer hover:border-accent/50 hover:bg-accent/5 hover:text-accent"
+          >
+            <span>
+              Current focus:{" "}
+              <span className="text-warm-800 transition-colors duration-300 group-hover:text-accent">
+                {focus.label}
+              </span>
+            </span>
+            <ArrowRight
+              size={14}
+              className="flex-shrink-0 text-warm-400 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-accent"
             />
           </motion.a>
         </div>
@@ -175,12 +198,12 @@ export default function Home() {
           </motion.div>
           <div className="divide-y divide-warm-200/70">
             {/* TODO: fill in the year and, if you like, the title of your piece / prize category */}
-            <motion.div {...fadeUp(0)}>
+            <motion.div {...fadeUp(0.06)}>
               <ListRow
-                title="36ᵉ Concours littéraire français"
-                dates="2nd Place"
-                blurb="Prose · 5ᵉ secondaire · Mixte"
-                link="https://drive.google.com/file/d/11GNb1nG4f0VEkx4P7qUbTt0eO3LlwVKR/view"
+                title="Pitch Competition Winner"
+                dates="1st Place"
+                blurb="JHKCBA's iPitch Competition · 2025"
+                link="https://www.instagram.com/p/DHgafWkg_4Z/"
               />
             </motion.div>
             <motion.div {...fadeUp(0.06)}>
@@ -189,6 +212,14 @@ export default function Home() {
                 dates="Quebec Gold Medalist"
                 blurb="Awarded for the highest Level 10 piano examination mark in Quebec."
                 link="https://rcmusic-kentico-cdn.s3.amazonaws.com/rcm/media/main/learning/quebec_book2021.pdf"
+              />
+            </motion.div>
+            <motion.div {...fadeUp(0)}>
+              <ListRow
+                title="36ᵉ Concours littéraire français"
+                dates="2nd Place"
+                blurb="Prose · 5ᵉ secondaire · Mixte"
+                link="https://drive.google.com/file/d/11GNb1nG4f0VEkx4P7qUbTt0eO3LlwVKR/view"
               />
             </motion.div>
           </div>
