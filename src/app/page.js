@@ -1,11 +1,10 @@
 "use client";
 
 import Navbar from "./components/navbar";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Menu from "./components/menu";
 import * as motion from "motion/react-client";
 import ListRow from "@/components/listRow";
-import { focus } from "@/data/focus";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -57,28 +56,6 @@ export default function Home() {
             <ArrowUpRight
               size={15}
               className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
-          </motion.a>
-        </div>
-
-        {/* Current focus — a live status line that opens the journal. */}
-        <div className="max-w-3xl mx-auto mt-4">
-          <motion.a
-            href={focus.href}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="group inline-flex items-center gap-2.5 rounded-full border border-warm-300/70 bg-warm-100/60 py-1.5 pl-3.5 pr-3 text-sm text-warm-600 transition-colors duration-300 cursor-pointer hover:border-accent/50 hover:bg-accent/5 hover:text-accent"
-          >
-            <span>
-              Current focus:{" "}
-              <span className="text-warm-800 transition-colors duration-300 group-hover:text-accent">
-                {focus.label}
-              </span>
-            </span>
-            <ArrowRight
-              size={14}
-              className="flex-shrink-0 text-warm-400 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-accent"
             />
           </motion.a>
         </div>
