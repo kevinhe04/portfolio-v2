@@ -13,7 +13,7 @@
     date     "May 12, 2026" · "May 2026" · or "2023"
     dateISO  sort key: "2026-05-12" · "2026-05" · "2023-05"
     event    the headline
-    tag      optional → Award · Travel · Work · Launch · Hackathon · Life
+    tag      optional → Award · Travel · Work · Launch · Hackathon · Robotics · Life
     link     optional external URL (used only when there's no media)
     video    optional local file  →  "/videos/Foo.mp4"
     youtube  optional embed URL   →  "https://www.youtube.com/embed/ID"
@@ -23,6 +23,13 @@
 */
 
 export const timeline = [
+  {
+    slug: "first-firmware",
+    date: "September 1, 2026",
+    dateISO: "2026-09-01",
+    event: "Flashed my first ESP32-S3 firmware written from scratch",
+    tag: "Robotics",
+  },
   {
     slug: "awl-electricity",
     date: "June 29, 2026",

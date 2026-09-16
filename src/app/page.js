@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import Menu from "./components/menu";
 import * as motion from "motion/react-client";
 import ListRow from "@/components/listRow";
+import ProjectsSection from "@/components/projectsSection";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -20,6 +21,9 @@ function Divider() {
     </div>
   );
 }
+
+const headline =
+  "McGill Software Engineering - I find robots really cool!";
 
 const socialLinks = [
   { url: "https://www.linkedin.com/in/kvinhe/", label: "LinkedIn" },
@@ -59,11 +63,22 @@ export default function Home() {
             />
           </motion.a>
         </div>
+
+        <div className="max-w-3xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="mt-4 max-w-2xl text-base md:text-lg leading-relaxed text-warm-600"
+          >
+            {headline}
+          </motion.p>
+        </div>
       </section>
 
       <Divider />
 
-      <section id="experience" className="py-10 px-4">
+      <section id="experience" className="py-10 px-4 scroll-mt-24">
         <div className="max-w-3xl mx-auto">
           <motion.div {...fadeUp()} className="mb-6">
             <div className="w-8 h-px bg-accent mb-4" />
@@ -77,6 +92,7 @@ export default function Home() {
                 dates="Jun 2026 — Present"
                 title="Systems Integration Engineer Intern"
                 subtitle="AWL-Electricity · Montreal, Canada"
+                meta={["C++", "Python", "Altium", "PCB bring-up"]}
                 link="https://www.awl-e.com/"
               />
             </motion.div>
@@ -85,6 +101,7 @@ export default function Home() {
                 dates="Sep — Dec 2025"
                 title="AI Software Developer Intern"
                 subtitle="Autodesk · Montreal, Canada"
+                meta={["Python", "AWS", "Docker", "Multi-agent systems", "RAG"]}
                 link="https://www.autodesk.com/"
               />
             </motion.div>
@@ -93,6 +110,7 @@ export default function Home() {
                 dates="May — Aug 2025"
                 title="Mobile Developer Intern"
                 subtitle="Sun Life Financial · Montreal, Canada"
+                meta={["Swift", "SwiftUI", "TypeScript", "Angular", "Ionic"]}
                 link="https://www.sunlife.ca/en/"
               />
             </motion.div>
@@ -101,6 +119,7 @@ export default function Home() {
                 dates="May — Aug 2024"
                 title="Software Developer Intern"
                 subtitle="Tedy · Montreal, Canada"
+                meta={["TypeScript", "Next.js", "PostgreSQL", "Retool"]}
                 link="https://www.tedy.app/?r=0"
               />
             </motion.div>
@@ -110,62 +129,11 @@ export default function Home() {
 
       <Divider />
 
-      <section id="projects" className="py-10 px-4">
-        <div className="max-w-3xl mx-auto">
-          <motion.div {...fadeUp()} className="mb-6">
-            <div className="w-8 h-px bg-accent mb-4" />
-            <h2 className="text-2xl md:text-3xl font-serif text-warm-900">
-              My Proudest Projects.
-            </h2>
-          </motion.div>
-          <div className="divide-y divide-warm-200/70">
-            <motion.div {...fadeUp(0)}>
-              <ListRow
-                compact
-                title="Clove — TreeHacks (Stanford Hackathon)"
-                dates="Feb 2026"
-                link="https://devpost.com/software/clove-ga6v5p"
-              />
-            </motion.div>
-            <motion.div {...fadeUp(0.06)}>
-              <ListRow
-                compact
-                title="Stacy — Hack The North Winner"
-                dates="Sep 2025"
-                link="https://devpost.com/software/stacy-g7zptj"
-              />
-            </motion.div>
-            <motion.div {...fadeUp(0.12)}>
-              <ListRow
-                compact
-                title="ZenOS — BagelHacks Winner"
-                dates="Mar 2025"
-                link="https://www.youtube.com/watch?v=3vmHrCJ-nJs"
-              />
-            </motion.div>
-            <motion.div {...fadeUp(0.18)}>
-              <ListRow
-                compact
-                title="PickyEats — 10k+ downloads"
-                dates="2024 — 2025"
-                link="https://picky-eats.vercel.app/"
-              />
-            </motion.div>
-            <motion.div {...fadeUp(0.24)}>
-              <ListRow
-                compact
-                title="Chéri"
-                dates="Sep 2024"
-                link="https://www.cherimtl.com/"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <ProjectsSection />
 
       <Divider />
 
-      <section id="accolades" className="py-10 px-4">
+      <section id="accolades" className="py-10 px-4 scroll-mt-24">
         <div className="max-w-3xl mx-auto">
           <motion.div {...fadeUp()} className="mb-6">
             <div className="w-8 h-px bg-accent mb-4" />
@@ -205,7 +173,7 @@ export default function Home() {
 
       <Divider />
 
-      <section id="contact" className="py-10 px-4">
+      <section id="contact" className="py-10 px-4 scroll-mt-24">
         <div className="max-w-3xl mx-auto">
           <motion.div {...fadeUp()} className="mb-6">
             <div className="w-8 h-px bg-accent mb-4" />
