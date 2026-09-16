@@ -76,6 +76,7 @@ export default function ProjectsSection() {
             >
               <ListRow
                 compact
+                logo={project.logo}
                 title={project.title}
                 dates={project.dates}
                 link={rowLink(project)}

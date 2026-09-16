@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
  * Minimal editorial list row — replaces the old logo/pill cards.
  *
  * Anatomy (top to bottom):
- *   title ............................ dates      (baseline-aligned, date right)
+ *   logo title ....................... dates      (baseline-aligned, date right)
  *   subtitle                                       (e.g. company · location)
  *   blurb                                          (always-visible one-liner)
  *   meta joined by " · "                           (light, e.g. skills/stack)
@@ -13,6 +13,7 @@ import { ArrowUpRight } from "lucide-react";
  */
 function ListRow({
   dates,
+  logo,
   title,
   subtitle,
   blurb,
@@ -32,6 +33,14 @@ function ListRow({
     >
       <div className="flex items-baseline justify-between gap-4">
         <h3 className="flex items-center gap-1.5 text-base md:text-lg font-medium tracking-tight text-warm-800 transition-colors duration-300 group-hover:text-accent">
+          {logo && (
+            <img
+              src={logo}
+              alt=""
+              aria-hidden
+              className="h-[1em] w-[1em] flex-shrink-0 rounded-[3px] object-contain"
+            />
+          )}
           {title}
           <ArrowUpRight
             size={16}

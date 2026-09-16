@@ -45,18 +45,18 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-serif italic text-warm-900 tracking-tight"
+            className="text-4xl md:text-5xl font-serif text-warm-900 tracking-tight"
           >
             Kevin He
           </motion.h1>
           <motion.a
-            href="/timeline"
+            href="/life"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="group inline-flex flex-shrink-0 items-center gap-1 text-sm text-warm-500 transition-colors duration-300 hover:text-accent cursor-pointer"
           >
-            Timeline
+            Everything else
             <ArrowUpRight
               size={15}
               className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -90,6 +90,7 @@ export default function Home() {
             <motion.div {...fadeUp(0)}>
               <ListRow
                 dates="Jun 2026 — Present"
+                logo="/images/logos/AWL_logo.jpeg"
                 title="Systems Integration Engineer Intern"
                 subtitle="AWL-Electricity · Montreal, Canada"
                 meta={["C++", "Python", "Altium", "PCB bring-up"]}
@@ -99,6 +100,7 @@ export default function Home() {
             <motion.div {...fadeUp(0.06)}>
               <ListRow
                 dates="Sep — Dec 2025"
+                logo="/images/logos/autodesk_logo.jpg"
                 title="AI Software Developer Intern"
                 subtitle="Autodesk · Montreal, Canada"
                 meta={["Python", "AWS", "Docker", "Multi-agent systems", "RAG"]}
@@ -108,6 +110,7 @@ export default function Home() {
             <motion.div {...fadeUp(0.12)}>
               <ListRow
                 dates="May — Aug 2025"
+                logo="/images/logos/sunlife_logo.png"
                 title="Mobile Developer Intern"
                 subtitle="Sun Life Financial · Montreal, Canada"
                 meta={["Swift", "SwiftUI", "TypeScript", "Angular", "Ionic"]}
@@ -117,6 +120,7 @@ export default function Home() {
             <motion.div {...fadeUp(0.18)}>
               <ListRow
                 dates="May — Aug 2024"
+                logo="/images/logos/tedy_logo.png"
                 title="Software Developer Intern"
                 subtitle="Tedy · Montreal, Canada"
                 meta={["TypeScript", "Next.js", "PostgreSQL", "Retool"]}

@@ -9,6 +9,7 @@
   Fields:
     slug      unique id → the page URL, /projects/<slug>
     category  "robotics" | "software" — which tab it appears under
+    logo      optional image beside the row title, sized to the title height
     title     the row headline
     dates     right-aligned on the row, same format as the other sections
     blurb     one line, shown under the title on the detail page
@@ -67,12 +68,11 @@ export const projects = [
   // ── Software ───────────────────────────────────────────────────────────
   {
     slug: "clove",
+    logo: "/images/logos/clove-logo.png",
     category: "software",
     title: "Clove — TreeHacks (Stanford Hackathon)",
     dates: "Feb 2026",
     blurb: "Built at TreeHacks, Stanford's hackathon.",
-    meta: [],
-    bullets: [],
     // TODO (Kevin): what Clove does, and what you built. One paragraph is plenty.
     links: [
       { label: "Devpost", href: "https://devpost.com/software/clove-ga6v5p" },
@@ -80,12 +80,11 @@ export const projects = [
   },
   {
     slug: "stacy",
+    logo: "/images/logos/stacy.png",
     category: "software",
     title: "Stacy — Hack The North Winner",
     dates: "Sep 2025",
     blurb: "Won Best Voice Assistant at Hack The North.",
-    meta: [],
-    bullets: [],
     // TODO (Kevin): what Stacy does, and which part was yours.
     links: [
       { label: "Devpost", href: "https://devpost.com/software/stacy-g7zptj" },
@@ -93,12 +92,11 @@ export const projects = [
   },
   {
     slug: "zenos",
+    logo: "/images/logos/zenos_logo.png",
     category: "software",
     title: "ZenOS — BagelHacks Winner",
     dates: "Mar 2025",
     blurb: "Won BagelHacks.",
-    meta: [],
-    bullets: [],
     // TODO (Kevin): what ZenOS does.
     youtube: "https://www.youtube.com/embed/3vmHrCJ-nJs",
     links: [
@@ -110,6 +108,7 @@ export const projects = [
   },
   {
     slug: "pickyeats",
+    logo: "/images/logos/pickyeats_logo.jpg",
     category: "software",
     title: "PickyEats — 10k+ downloads",
     dates: "2024 — 2025",
@@ -124,12 +123,11 @@ export const projects = [
   },
   {
     slug: "cheri",
+    logo: "/images/logos/cherimtl_logo.jpg",
     category: "software",
     title: "Chéri",
     dates: "Sep 2024",
     blurb: "",
-    meta: [],
-    bullets: [],
     // TODO (Kevin): what Chéri is — this one has no description anywhere yet.
     links: [{ label: "Website", href: "https://www.cherimtl.com/" }],
   },
