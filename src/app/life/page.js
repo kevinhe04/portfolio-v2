@@ -241,7 +241,7 @@ function Quote({ quote, i }) {
       </span>
 
       <blockquote
-        className={`relative font-serif italic leading-[1.15] tracking-tight text-white ${quoteScale(
+        className={`relative font-light leading-snug tracking-tight text-white ${quoteScale(
           quote.text,
         )}`}
       >
