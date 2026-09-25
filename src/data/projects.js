@@ -57,14 +57,14 @@ export const projects = [
         {
           src: "/videos/robot-arm/assembly-bench.mp4",
           poster: "/images/robot-arm/assembly-bench.jpg",
-          title: "Joint by joint",
+          title: "Pt. 1",
           caption:
             "Horns, screws and servos, following the assembly guide one joint at a time.",
         },
         {
           src: "/videos/robot-arm/assembly-together.mp4",
           poster: "/images/robot-arm/assembly-together.jpg",
-          title: "Four hands on the last joints",
+          title: "Pt. 2",
           caption:
             "Seating the final servos with a friend, until the arm stands on its own.",
         },
