@@ -4,6 +4,7 @@ import * as motion from "motion/react-client";
 import { useParams } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
 import ThemeToggle from "../../components/themeToggle";
+import BuildReel from "@/components/buildReel";
 import { categories, projects } from "@/data/projects";
 
 const categoryLabel = (key) =>
@@ -108,6 +109,10 @@ export default function ProjectPage() {
                   </li>
                 ))}
               </ul>
+            )}
+
+            {project.build?.clips?.length > 0 && (
+              <BuildReel {...project.build} />
             )}
 
             {project.body && (

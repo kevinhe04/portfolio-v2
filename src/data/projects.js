@@ -21,6 +21,10 @@
   Media works exactly like the timeline: add `images: ["/images/foo.jpg"]`,
   `video: "/videos/foo.mp4"`, or `youtube: "https://youtube.com/embed/ID"`
   and the detail page renders it above the text.
+
+  For a build log, add `build: { title, clips: [{ src, poster, title,
+  caption }] }`. The clips play in order as one muted reel below the
+  bullets. Encode them to 720p H.264 MP4 and keep each one under 30s.
   ─────────────────────────────────────────────────────────────────────────
 */
 
@@ -33,9 +37,9 @@ export const categories = [
 export const projects = [
   // ── Robotics ───────────────────────────────────────────────────────────
   {
-    slug: "duolingo-robot-arm",
+    slug: "robotic-arm",
     category: "robotics",
-    title: "Duolingo Robot Arm",
+    title: "Robotic Arm",
     dates: "Sep 2026 — Present",
     blurb:
       "A 4-DOF arm that autonomously completes Duolingo lessons on a physical phone.",
@@ -47,6 +51,25 @@ export const projects = [
     ],
     // TODO (Kevin): a demo clip does more here than any paragraph.
     // video: "/videos/robot-arm.mp4",
+    build: {
+      title: "Assembling the robotic arm",
+      clips: [
+        {
+          src: "/videos/robot-arm/assembly-bench.mp4",
+          poster: "/images/robot-arm/assembly-bench.jpg",
+          title: "Joint by joint",
+          caption:
+            "Horns, screws and servos, following the assembly guide one joint at a time.",
+        },
+        {
+          src: "/videos/robot-arm/assembly-together.mp4",
+          poster: "/images/robot-arm/assembly-together.jpg",
+          title: "Four hands on the last joints",
+          caption:
+            "Seating the final servos with a friend, until the arm stands on its own.",
+        },
+      ],
+    },
     links: [],
   },
   {
