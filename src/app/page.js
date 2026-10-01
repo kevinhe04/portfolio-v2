@@ -23,7 +23,7 @@ function Divider() {
 }
 
 const headline =
-  "McGill Software Engineering - I find robots really cool!";
+  "McGill Software Eng --- current focus... robotics!";
 
 const socialLinks = [
   { url: "https://www.linkedin.com/in/kvinhe/", label: "LinkedIn" },
@@ -73,6 +73,14 @@ export default function Home() {
           >
             {headline}
           </motion.p>
+
+          <img
+            src="/images/smile.jpg"
+            alt="Kevin He"
+            width={1170}
+            height={1170}
+            className="mx-auto mt-8 block w-full max-w-md"
+          />
         </div>
       </section>
 
@@ -134,46 +142,6 @@ export default function Home() {
       <Divider />
 
       <ProjectsSection />
-
-      <Divider />
-
-      <section id="accolades" className="py-10 px-4 scroll-mt-24">
-        <div className="max-w-3xl mx-auto">
-          <motion.div {...fadeUp()} className="mb-6">
-            <div className="w-8 h-px bg-accent mb-4" />
-            <h2 className="text-2xl md:text-3xl font-serif text-warm-900">
-              Accolades.
-            </h2>
-          </motion.div>
-          <div className="divide-y divide-warm-200/70">
-            {/* TODO: fill in the year and, if you like, the title of your piece / prize category */}
-            <motion.div {...fadeUp(0.06)}>
-              <ListRow
-                title="Pitch Competition Winner"
-                dates="1st Place"
-                blurb="JHKCBA's iPitch Competition · 2025"
-                link="https://www.instagram.com/p/DHgafWkg_4Z/"
-              />
-            </motion.div>
-            <motion.div {...fadeUp(0.06)}>
-              <ListRow
-                title="RCM Level 10 Piano"
-                dates="Quebec Gold Medalist"
-                blurb="Awarded for the highest Level 10 piano examination mark in Quebec."
-                link="https://rcmusic-kentico-cdn.s3.amazonaws.com/rcm/media/main/learning/quebec_book2021.pdf"
-              />
-            </motion.div>
-            <motion.div {...fadeUp(0)}>
-              <ListRow
-                title="36ᵉ Concours littéraire français"
-                dates="2nd Place"
-                blurb="Prose · 5ᵉ secondaire · Mixte"
-                link="https://drive.google.com/file/d/11GNb1nG4f0VEkx4P7qUbTt0eO3LlwVKR/view"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       <Divider />
 
